@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <!-- #Region Company -->
+  <searchdialog type="company" methodname="GetvCompanyList" filterexpression="IsDeleted = 0" keyfieldname="CompanyCode">
+    <gridcolumns>
+      <gridcolumn datafield="CompanyCode" headertext="Code" width="80px" />
+      <gridcolumn datafield="CompanyName" headertext="Company Name" width="250px" />
+      <gridcolumn datafield="CompanyAddress" headertext="Address" width="350px" />
+      <gridcolumn datafield="PhoneNo1" headertext="Phone #1" width="100px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="ShortName" headertext="Short Name" description="" />
+      <intellisensetext datafield="CompanyName" headertext="Company Name" description="" />
+      <intellisensetext datafield="CompanyAddress" headertext="Address" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Employee -->
+  <searchdialog type="employee" methodname="GetvEmployeeList" keyfieldname="EmployeeCode">
+    <gridcolumns>
+      <gridcolumn datafield="EmployeeCode" headertext="Employee Code" width="100px" />
+      <gridcolumn datafield="FirstName" displaycustomfield="EmployeeName" headertext="Employee Name" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="FirstName MiddleName LastName" headertext="Employee Name" description="" />
+      <intellisensetext datafield="EmployeeCode" headertext="Employee Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Event -->
+  <searchdialog type="event" methodname="GetvEventList" filterexpression="GCEventStatus != 'X150^003'" keyfieldname="EventCode">
+    <gridcolumns>
+      <gridcolumn datafield="EventCode" headertext="Event Code" width="100px" />
+      <gridcolumn datafield="EventName" headertext="Event Name" width="300px" />
+      <gridcolumn datafield="TrainingName" headertext="Training Name" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="EventName" headertext="Event Name" description="" />
+      <intellisensetext datafield="TrainingName" headertext="Training Name" description="" />
+      <intellisensetext datafield="EventCode" headertext="Event Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Filter Parameter -->
+  <searchdialog type="filterparameter" methodname="GetFilterParameterList" keyfieldname="FilterParameterCode">
+    <gridcolumns>
+      <gridcolumn datafield="FilterParameterCode" headertext="Filter Parameter Code" width="100px" />
+      <gridcolumn datafield="FilterParameterName" headertext="Filter Parameter Name" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="FilterParameterName" headertext="Filter Parameter Name" description="" />
+      <intellisensetext datafield="FilterParameterCode" headertext="Filter Parameter Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region LOB Class -->
+  <searchdialog type="lobclass" methodname="GetvLOBClassificationList" keyfieldname="LOBClassCode">
+    <gridcolumns>
+      <gridcolumn datafield="LOBClassCode" headertext="Code" width="100px" />
+      <gridcolumn datafield="LOBClassName" headertext="Name" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="LOBClassName" headertext="Name" description="" />
+      <intellisensetext datafield="LOBClassCode" headertext="Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Member -->
+  <searchdialog type="member" methodname="GetvMemberList" keyfieldname="MemberID">
+    <gridcolumns>
+      <gridcolumn datafield="FirstName" displaycustomfield="MemberName" headertext="Member Name" width="200px" />
+      <gridcolumn datafield="Department" headertext="Department" width="200px" />
+      <gridcolumn datafield="CompanyName" headertext="Company" width="200px" />
+      <gridcolumn datafield="OccupationLevel" headertext="Occupation Level" width="100px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="FirstName MiddleName LastName" headertext="Member Name" description="" />
+      <intellisensetext datafield="Department" headertext="Department" description="" />
+      <intellisensetext datafield="CompanyName" headertext="Company" description="" />
+      <intellisensetext datafield="OccupationLevel" headertext="Occupation Level" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <searchdialog type="membercontactperson" filterexpression="IsCompanyContactPerson = 1" searchdialogbase="member"></searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Menu -->
+  <searchdialog type="menu" methodname="GetMenuMasterList" keyfieldname="MenuCode">
+    <gridcolumns>
+      <gridcolumn datafield="MenuCode" headertext="Kode" width="100px" />
+      <gridcolumn datafield="MenuCaption" headertext="Nama" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="MenuCaption" headertext="Name" description="" />
+      <intellisensetext datafield="MenuCode" headertext="Kode" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Region -->
+  <searchdialog type="region" methodname="GetRegionList" filterexpression="IsDeleted = 0" keyfieldname="RegionCode">
+    <gridcolumns>
+      <gridcolumn datafield="RegionCode" headertext="Code" width="100px" />
+      <gridcolumn datafield="RegionName" headertext="Name" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="RegionName" headertext="Name" description="" />
+      <intellisensetext datafield="RegionCode" headertext="Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Standard Code -->
+  <searchdialog type="stdcode" methodname="GetStandardCodeList" keyfieldname="cfStandardCodeID">
+    <gridcolumns>
+      <gridcolumn datafield="StandardCodeID" displaycustomfield="cfStandardCodeID" headertext="Code" width="100px" />
+      <gridcolumn datafield="StandardCodeName" headertext="Name" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="StandardCodeName" headertext="Name" description="" />
+      <intellisensetext datafield="StandardCodeID" headertext="Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+
+  <searchdialog type="nationality" filterexpression="ParentID = '0212' AND IsDeleted = 0" searchdialogbase="stdcode"></searchdialog>
+  <searchdialog type="province" filterexpression="ParentID = '0347' AND IsDeleted = 0" searchdialogbase="stdcode"></searchdialog>
+  <searchdialog type="companydepartment" filterexpression="ParentID = 'X003' AND IsDeleted = 0" searchdialogbase="stdcode"></searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Trainer -->
+  <searchdialog type="trainer" methodname="GetvTrainerList" keyfieldname="TrainerCode">
+    <gridcolumns>
+      <gridcolumn datafield="TrainerCode" headertext="Trainer Code" width="100px" />
+      <gridcolumn datafield="FirstName" displaycustomfield="TrainerName" headertext="Trainer Name" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="FirstName MiddleName LastName" headertext="Trainer Name" description="" />
+      <intellisensetext datafield="TrainerCode" headertext="Trainer Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Training -->
+  <searchdialog type="training" methodname="GetvTrainingList" keyfieldname="TrainingCode">
+    <gridcolumns>
+      <gridcolumn datafield="TrainingCode" headertext="Training Code" width="100px" />
+      <gridcolumn datafield="TrainingName" headertext="Training Name" width="300px" />
+      <gridcolumn datafield="TrainingType" headertext="Training Type" width="200px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="TrainingName" headertext="Training Name" description="" />
+      <intellisensetext datafield="TrainingType" headertext="Training Type" description="" />
+      <intellisensetext datafield="TrainingCode" headertext="Training Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Venue -->
+  <searchdialog type="venue" methodname="GetvVenueList" keyfieldname="VenueCode">
+    <gridcolumns>
+      <gridcolumn datafield="VenueCode" headertext="Venue Code" width="100px" />
+      <gridcolumn datafield="VenueName" headertext="Venue Name" width="300px" />
+      <gridcolumn datafield="StreetName" displaycustomfield="Address" headertext="Address" width="200px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="VenueName" headertext="Venue Name" description="" />
+      <intellisensetext datafield="VenueCode" headertext="Venue Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Zip Codes -->
+  <searchdialog type="zipcodes" methodname="GetZipCodesList" keyfieldname="ZipCode">
+    <gridcolumns>
+      <gridcolumn datafield="ZipCode" headertext="Kode Pos" width="100px" />
+      <gridcolumn datafield="District" headertext="District" width="200px" />
+      <gridcolumn datafield="County" headertext="County" width="200px" />
+      <gridcolumn datafield="City" headertext="City" width="200px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="ZipCode" headertext="Kode Pos" description="" />
+      <intellisensetext datafield="District" headertext="District" description="" />
+      <intellisensetext datafield="County" headertext="County" description="" />
+      <intellisensetext datafield="City" headertext="City" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+</root>

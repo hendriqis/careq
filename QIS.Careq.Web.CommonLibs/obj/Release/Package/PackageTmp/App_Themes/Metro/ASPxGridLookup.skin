@@ -1,0 +1,70 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxgv" Namespace="DevExpress.Web.ASPxGridLookup" Assembly="DevExpress.Web.ASPxGridView.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %> 
+
+<dxgv:ASPxGridLookup runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+	SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" Spacing="0" Font-Names="Calibri" Font-Size="9pt" Height="24px">
+    <GridViewImages SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</GridViewImages>	
+    <GridViewImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </GridViewImagesFilterControl>
+    <GridViewProperties>
+        <SettingsPager CurrentPageNumberFormat="{0}" />
+    </GridViewProperties>
+    <GridViewStyles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+    </GridViewStyles>	
+    <GridViewStylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </GridViewStylesEditors>
+    <GridViewStylesPager>
+        <PageNumber ForeColor="#3e4846" />
+        <Summary ForeColor="#1e395b" />
+    </GridViewStylesPager>
+    <ButtonStyle Width="13" />
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+    </ValidationSettings>
+    <DisabledStyle BackColor="#f5f5f5" ForeColor="#800000" />
+</dxgv:ASPxGridLookup>
+<dxgv:ASPxGridLookup runat="server" SkinID="RequiredField" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+	SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" Spacing="0" Font-Names="Calibri" Font-Size="9pt" Height="24px">
+    <GridViewImages SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</GridViewImages>	
+    <GridViewImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </GridViewImagesFilterControl>
+    <GridViewProperties>
+        <SettingsPager CurrentPageNumberFormat="{0}" />
+    </GridViewProperties>
+    <GridViewStyles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+    </GridViewStyles>	
+    <GridViewStylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </GridViewStylesEditors>
+    <GridViewStylesPager>
+        <PageNumber ForeColor="#3e4846" />
+        <Summary ForeColor="#1e395b" />
+    </GridViewStylesPager>
+    <ButtonStyle Width="13" />
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RequiredField IsRequired="True" ErrorText="Required Field"></RequiredField>
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>     
+</dxgv:ASPxGridLookup>

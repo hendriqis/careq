@@ -1,0 +1,197 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxwgv" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.ASPxGridView.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxwgv:ASPxGridView runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro">
+	<Images SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </ImagesFilterControl>
+    <Settings GridLines="Both" />
+    <SettingsPager PageSize="15" CurrentPageNumberFormat="{0}" />
+    <Styles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+        <GroupRow Font-Bold="true" />
+    </Styles>	
+    <StylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </StylesEditors>
+    <StylesPager>
+        <PageNumber ForeColor="#3e4846" />
+        <Summary ForeColor="#1e395b" />
+    </StylesPager>
+</dxwgv:ASPxGridView>
+
+<dxwgv:ASPxGridView SkinID="matrix" runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro">
+	<Images SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </ImagesFilterControl>
+    <Settings GridLines="Both" />
+    <SettingsPager PageSize="10" CurrentPageNumberFormat="{0}" />
+    <Styles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+        <GroupRow Font-Bold="true" />
+    </Styles>	
+    <StylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </StylesEditors>
+    <StylesPager>
+        <PageNumber ForeColor="#3e4846" />
+        <Summary ForeColor="#1e395b" />
+    </StylesPager>
+</dxwgv:ASPxGridView>
+
+<dxwgv:ASPxGridView SkinID="miniGrid" runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro" Font-Names="Calibri" Font-Size="9pt">
+	<Images SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </ImagesFilterControl>
+    <Settings GridLines="Both" />
+    <SettingsPager PageSize="2" CurrentPageNumberFormat="{0}" />
+    <Styles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+        <GroupRow Font-Bold="true" />
+    </Styles>	
+    <StylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </StylesEditors>
+    <StylesPager>
+        <PageNumber ForeColor="#3e4846" />
+        <Summary ForeColor="#1e395b" />
+    </StylesPager>
+</dxwgv:ASPxGridView>
+
+<dxwgv:ASPxGridView SkinID="gridNotes" runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro" Font-Names="Calibri" Font-Size="9pt">
+	<Images SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </ImagesFilterControl>
+    <Settings GridLines="Both" />
+    <SettingsPager PageSize="4" CurrentPageNumberFormat="{0}" />
+    <Styles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+        <GroupRow Font-Bold="true" />
+    </Styles>	
+    <StylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </StylesEditors>
+    <StylesPager>
+        <PageNumber ForeColor="#3e4846" />
+        <Summary ForeColor="#1e395b" />
+    </StylesPager>
+</dxwgv:ASPxGridView>
+
+<dxwgv:ASPxGridView SkinID="gridQuickPicks" runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro" Font-Names="Calibri" Font-Size="9pt">
+	<Images SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </ImagesFilterControl>
+    <Settings GridLines="Both" />
+    <SettingsPager PageSize="7" CurrentPageNumberFormat="{0}" />
+    <Styles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+        <GroupRow Font-Bold="true" />
+    </Styles>	
+    <StylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </StylesEditors>
+    <StylesPager>
+        <PageNumber ForeColor="#3e4846" />
+        <Summary ForeColor="#1e395b" />
+    </StylesPager>
+</dxwgv:ASPxGridView>
+
+<dxwgv:ASPxGridView SkinID="grdTreatmentDetail" runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro" Font-Names="Calibri" Font-Size="9pt">
+	<Images SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </ImagesFilterControl>
+    <Settings GridLines="Both" />
+    <SettingsPager PageSize="6" CurrentPageNumberFormat="{0}" />
+    <Styles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+        <GroupRow Font-Bold="true" />
+    </Styles>	
+    <StylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </StylesEditors>
+    <StylesPager>
+        <PageNumber ForeColor="#3e4846" />
+        <Summary ForeColor="#1e395b" />
+    </StylesPager>
+</dxwgv:ASPxGridView>
+
+<dxwgv:ASPxGridView SkinID="grdNextTreatment" runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro" Font-Names="Calibri" Font-Size="9pt">
+	<Images SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </ImagesFilterControl>
+    <Settings GridLines="Both" />
+    <SettingsPager PageSize="8" CurrentPageNumberFormat="{0}" />
+    <Styles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+        <GroupRow Font-Bold="true" />
+    </Styles>	
+    <StylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </StylesEditors>
+    <StylesPager>
+        <PageNumber ForeColor="#3e4846" />
+        <Summary ForeColor="#1e395b" />
+    </StylesPager>
+</dxwgv:ASPxGridView>
+
+<dxwgv:ASPxGridView SkinID="noPagingGrid" runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro" Font-Names="Calibri" Font-Size="9pt">
+	<Images SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Metro/GridView/Loading.gif" />
+	</Images>	
+    <ImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Metro/GridView/Loading.gif" />
+    </ImagesFilterControl>
+    <Settings GridLines="Both" />
+    <Styles>
+        <Header SortingImageSpacing="5" />
+	    <LoadingPanel ImageSpacing="5" />
+        <GroupRow Font-Bold="true" />
+    </Styles>	
+    <StylesEditors ButtonEditCellSpacing="0">
+        <ProgressBar Height="21" />
+    </StylesEditors>
+</dxwgv:ASPxGridView>
+
+<dxwgv:ASPxGridView SkinID="userDesktopGrid" runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro" Settings-ShowVerticalScrollBar="true" Settings-VerticalScrollableHeight="350">
+    <SettingsBehavior AllowFocusedRow="True" ColumnResizeMode="NextColumn" />
+    <Settings ShowFilterRow="False" ShowGroupPanel="False" GridLines="Vertical" />
+        <SettingsPager Visible="False" />
+</dxwgv:ASPxGridView>
+
+

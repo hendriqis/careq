@@ -1,0 +1,162 @@
+.dxGridView_gvCollapsedButton_Metro,
+.dxGridView_gvCollapsedButtonRtl_Metro,
+.dxGridView_gvExpandedButton_Metro,
+.dxGridView_gvExpandedButtonRtl_Metro,
+.dxGridView_gvDetailCollapsedButton_Metro,
+.dxGridView_gvDetailCollapsedButtonRtl_Metro,
+.dxGridView_gvDetailExpandedButton_Metro,
+.dxGridView_gvDetailExpandedButtonRtl_Metro,
+.dxGridView_gvFilterRowButton_Metro,
+.dxGridView_gvHeaderFilter_Metro,
+.dxGridView_gvHeaderFilterActive_Metro,
+.dxGridView_gvHeaderSortDown_Metro,
+.dxGridView_gvHeaderSortUp_Metro,
+.dxGridView_gvDragAndDropArrowDown_Metro,
+.dxGridView_gvDragAndDropArrowUp_Metro,
+.dxGridView_gvDragAndDropHideColumn_Metro,
+.dxGridView_gvParentGroupRows_Metro,
+.dxGridView_WindowResizer_Metro,
+.dxGridView_WindowResizerRtl_Metro {
+    background-image: url('sprite.png');
+    -background-image: url('sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.dxGridView_edtRadioButtonChecked_Metro,
+.dxGridView_edtRadioButtonUnchecked_Metro,
+.dxGridView_edtRadioButtonCheckedDisabled_Metro,
+.dxGridView_edtRadioButtonUncheckedDisabled_Metro,
+.dxGridView_edtRadioButtonGrayedDisabled_Metro {
+	background-image: url('Editors/sprite.png');
+    -background-image: url('Editors/sprite.gif'); /* for IE6 */
+    background-repeat: no-repeat;
+    background-color: transparent;
+    width: 15px;
+    height: 15px;
+}
+.dxGridView_edtRadioButtonUnchecked_Metro {
+	background-position: 0px -51px; 
+}
+.dxGridView_edtRadioButtonChecked_Metro {
+	background-position: -15px -51px; 
+}
+.dxGridView_edtRadioButtonUncheckedDisabled_Metro {
+	background-position: -30px -51px; 
+}
+.dxGridView_edtRadioButtonCheckedDisabled_Metro {
+	background-position: -45px -51px; 
+}
+
+.dxGridView_gvCollapsedButton_Metro {
+    background-position: -36px 0px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvCollapsedButtonRtl_Metro {
+    background-position: -94px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvExpandedButton_Metro {
+    background-position: -36px -17px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvExpandedButtonRtl_Metro {
+    background-position: -94px -17px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvDetailCollapsedButton_Metro {
+    background-position: -53px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvDetailCollapsedButtonRtl_Metro {
+    background-position: -111px 0px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvDetailExpandedButton_Metro {
+    background-position: -53px -17px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvDetailExpandedButtonRtl_Metro {
+    background-position: -111px -17px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvFilterRowButton_Metro {
+    background-position: 0px -54px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_gvHeaderFilter_Metro {
+    background-position: 0px -36px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvHeaderFilterActive_Metro {
+    background-position: -23px -36px;
+    width: 15px;
+    height: 15px;
+}
+
+.dxGridView_gvHeaderSortDown_Metro {
+    background-position: -19px 0px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxGridView_gvHeaderSortUp_Metro {
+    background-position: -19px -17px;
+    width: 7px;
+    height: 5px;
+}
+
+.dxGridView_gvDragAndDropArrowDown_Metro {
+    background-position: 0px 0px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropArrowUp_Metro {
+    background-position: 0px -17px;
+    width: 11px;
+    height: 9px;
+}
+
+.dxGridView_gvDragAndDropHideColumn_Metro {
+    background-position: -70px 0px;
+    width: 22px;
+    height: 22px;
+}
+
+.dxGridView_gvParentGroupRows_Metro {
+    background-position: -70px -36px;
+    width: 18px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizer_Metro {
+    background-position: -46px -36px;
+    width: 13px;
+    height: 13px;
+}
+
+.dxGridView_WindowResizerRtl_Metro {
+    background-position: -46px -54px;
+    width: 13px;
+    height: 13px;
+}

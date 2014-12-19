@@ -1,0 +1,231 @@
+/* ----------------- Main ----------------- */
+/* Loading panel */
+.dxheLoadingDiv_Metro
+{
+    background: White;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    cursor: wait;
+}
+.dxheLoadingPanel_Metro
+{
+    font: 8pt Verdana;
+    color: #1e395b;
+}
+.dxheLoadingPanel_Metro td.dx
+{
+    white-space: nowrap;
+    text-align: center;
+    padding: 10px 14px;
+}
+
+.dxheControl_Metro
+{
+    border: 1px solid #8ba0bc;
+}
+
+/* Area */
+.dxheContentArea_Metro
+{
+    padding: 0;
+    background-color: #cfddee;
+}
+.dxheContentArea_Metro .dxheErrorFrame_Metro
+{
+    font-size: 8pt;
+    font-family: Verdana;
+    color: #D00707;
+    background-color: #FBC7C7;
+    border-bottom: solid 1px #DEC0C0;
+}
+.dxheContentArea_Metro .dxheErrorFrame_Metro .dxhe {
+    padding: 5px;
+}
+.dxheContentArea_Metro .dxheErrorFrame_Metro .dxhe td {
+    padding: 0px;
+}
+.dxheContentArea_Metro .dxheErrorFrame_Metro .dxheErrorFrameCloseButton_Metro {
+    cursor: pointer;
+}
+.dxheViewArea_Metro,
+.dxheViewArea_Metro.dxeMemo_Metro
+{
+    border-width: 0;
+}
+.dxheHtmlViewArea_Metro,
+.dxheDesignViewArea_Metro,
+.dxhePreviewArea_Metro
+{
+    margin: 0px;
+    background-color: White;
+    background-image: none;
+    font-size: smaller;
+    font: normal 12px Arial;
+}
+.dxheHtmlViewArea_Metro td,
+.dxheHtmlViewArea_Metro.dxeMemo_Metro td,
+body.dxheDesignViewArea_Metro, 
+body.dxhePreviewArea_Metro
+{
+    padding: 4px 0 0 4px;
+}
+.dxheControl_Metro.dxhe-rtl .dxheHtmlViewArea_Metro td,
+.dxheControl_Metro.dxhe-rtl .dxheHtmlViewArea_Metro.dxeMemo_Metro td,
+body.dxheDesignViewArea_Metro.dxhe-rtl, 
+body.dxhePreviewArea_Metro.dxhe-rtl
+{
+    padding: 4px 4px 0 0;
+}
+.dxheControl_Metro .dxeMemo_Metro textarea 
+{
+	resize:none;
+}
+/* Element appearance in DesignView */
+body.dxheDesignViewArea_Metro table.dxEmptyBorderTable,
+body.dxheDesignViewArea_Metro table.dxEmptyBorderTable td
+{
+    border: 1px dotted Gray;
+}
+@media print
+{
+	body.dxheDesignViewArea_Metro table.dxEmptyBorderTable,
+	body.dxheDesignViewArea_Metro table.dxEmptyBorderTable td
+	{
+		border:0px;
+	}
+}
+
+/* Status Bar */
+.dxheStatusBar_Metro
+{
+}
+.dxheStatusBar_Metro .dxheStatusBarTab_Metro
+{
+    padding-left: 34px;
+    padding-right: 35px;
+    padding-bottom: 5px;
+    border-bottom-width: 0;
+    border-left-width: 0;
+}
+.dxheControl_Metro.dxhe-rtl .dxheStatusBar_Metro .dxheStatusBarTab_Metro
+{
+    border-left-width: 1px;
+    border-right-width: 0;
+}
+.dxheStatusBarActiveTab_Metro
+{
+}
+.dxHtmlEditor_heSizeGrip_Metro
+{
+    cursor: se-resize;
+}
+.dxHtmlEditor_heSizeGripRtl_Metro
+{
+    cursor: ne-resize;
+}
+.dxheSizeGripContainer_Metro
+{
+    float: left;
+    height: 0;
+    width: 100%;
+    text-align: right;
+    font-size: 0;
+    margin-top: -13px;
+}
+.dxheControl_Metro.dxhe-rtl .dxheSizeGripContainer_Metro 
+{
+	text-align: left;
+}
+/* ----------------- Dialog Forms ----------------- */
+#dxInsertTableForm .buttonsCell,
+#dxInsertLinkForm .buttonsCell,
+#dxInsertImageForm .buttonsCell,
+#dxPasteFromWordForm .buttonsCell,
+#dxTableColumnPropertiesForm .buttonsCell,
+.dxheCustomDialog_Metro .dxhecd-Buttons
+{
+    background-color: #cfddee;
+    border-top: 1px solid #aec0d5;
+    padding: 11px;
+}
+#dxInsertImageForm .imagePreviewCell
+{
+    color: #737373;
+    border: 1px dashed #cac8c8;
+}
+#dxPasteFromWordForm .pasteContainerCell td
+{
+	border: 1px solid #8ba0bc;
+}
+/*----------------- Toolbars -----------------*/
+.dxtbSpacing_Metro
+{
+	height: 1px;
+}
+.dxtbControl_Metro
+{
+    font: 8pt Verdana;
+    color: Black;
+    background-color: #cfddee;
+    width: 100%;
+    border-bottom: 1px solid #859ebf;
+}
+.dxtbControl_Metro td.dxmMenu_Metro
+{
+	border: 0;
+}
+.dxtbComboBoxMenuItem_Metro
+{
+    padding: 2px 2px 1px;
+}
+
+/* Toolbars Lightweight Mode */
+.dxtbControl_Metro .dxmLite_Metro .dxm-main
+{
+    border-width: 0;
+}
+.dxtbControl_Metro .dxmLite_Metro .dxm-horizontal.dxmtb .dxtb-comboBoxMenuItem
+{
+	border-width: 0;
+	padding: 2px 2px 1px !important;
+}
+.dxtbControl_Metro .dxmLite_Metro .dxm-horizontal.dxmtb .dxm-image-l .dxm-dropDownMode.dxtb-cb .dxm-content, 
+.dxtbControl_Metro .dxmLite_Metro .dxm-horizontal.dxmtb .dxm-image-r .dxm-dropDownMode.dxtb-cb .dxm-content
+{
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+.dxtbControl_Metro .dxmLite_Metro .dxm-horizontal.dxmtb .dxm-image-l .dxm-item.dxtb-cddi .dxm-content, 
+.dxtbControl_Metro .dxmLite_Metro .dxm-horizontal.dxmtb .dxm-image-r .dxm-item.dxtb-cddi .dxm-content
+{
+	padding-top: 4px;
+	padding-bottom: 3px;
+}
+.dxtbControl_Metro .dxmLite_Metro .dxm-horizontal.dxmtb .dxm-image-l .dxm-item.dxtb-cddi .dxm-content img,
+.dxtbControl_Metro .dxmLite_Metro .dxm-horizontal.dxmtb .dxm-image-r .dxm-item.dxtb-cddi .dxm-content img
+{
+	margin-top: -1px;
+}
+.dxmLite_Metro .dxhetipControl_Metro img
+{
+	vertical-align: top;
+}
+
+/* ToolbarColorButton */
+.dxtcbControl_Metro
+{
+}
+.dxtcbColorDiv_Metro
+{
+	width: 16px;
+	height: 3px;
+	font-size: 0pt;
+	background-color: Transparent;
+}
+
+/*----------------- RoundPanel -----------------*/
+.dxheRP.dxrpControl_Metro .dxrpcontent
+{
+    padding: 9px 8px;
+}
+

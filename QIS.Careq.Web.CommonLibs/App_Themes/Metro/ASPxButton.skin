@@ -1,0 +1,40 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxe:ASPxButton runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro" Height="24px" Font-Names="Calibri" Font-Size="8pt">
+</dxe:ASPxButton>
+<dxe:ASPxButton runat="server" SkinID="toolbarButton" Width="32px" Height="32px"  Border-BorderStyle="None"  EnableDefaultAppearance="false" Cursor="pointer" Wrap="False" AutoPostBack="false"/>
+
+<dxe:ASPxButton runat="server" ToolTip="Add" SkinID="toolbarAddButton" Border-BorderStyle="None" EnableDefaultAppearance="false" Cursor="pointer" Width="32px" Height="32px" AutoPostBack="false">
+    <Image Url="~/Images/Menu/MenuBar_New.png"
+        UrlDisabled="~/Images/Menu/MenuBar_New_D.png"
+        UrlHottracked="~/Images/Menu/MenuBar_New.png" />
+</dxe:ASPxButton>
+
+<dxe:ASPxButton runat="server" ToolTip="Edit" SkinID="toolbarEditButton" Border-BorderStyle="None" EnableDefaultAppearance="false" Cursor="pointer" Width="32px" Height="32px" AutoPostBack="false">
+    <Image Url="~/Images/Menu/MenuBar_Edit.png"
+        UrlDisabled="~/Images/Menu/MenuBar_Edit_D.png"
+        UrlHottracked="~/Images/Menu/MenuBar_Edit.png" />
+</dxe:ASPxButton>
+
+<dxe:ASPxButton runat="server" ToolTip="Delete" SkinID="toolbarDeleteButton" Border-BorderStyle="None" EnableDefaultAppearance="false" Cursor="pointer" Width="32px" Height="32px" AutoPostBack="false">
+    <Image Url="~/Images/Menu/MenuBar_Delete.png"
+        UrlDisabled="~/Images/Menu/MenuBar_Delete_D.png"
+        UrlHottracked="~/Images/Menu/MenuBar_Delete.png" />
+</dxe:ASPxButton>
+
+<dxe:ASPxButton runat="server" ToolTip="Print" SkinID="toolbarPrintButton" Border-BorderStyle="None" EnableDefaultAppearance="false" Cursor="pointer" Width="32px" Height="32px" AutoPostBack="false">
+    <Image Url="~/Images/Menu/MenuBar_Print.png"
+        UrlDisabled="~/Images/Menu/MenuBar_Print_D.png"
+        UrlHottracked="~/Images/Menu/MenuBar_Print.png" />
+</dxe:ASPxButton>
+
+<dxe:ASPxButton runat="server" ToolTip="Refresh" SkinID="toolbarRefreshButton" Border-BorderStyle="None" EnableDefaultAppearance="false" Cursor="pointer" Width="32px" Height="32px" AutoPostBack="false">
+    <Image Url="~/Images/Menu/MenuBar_Refresh.png"
+        UrlDisabled="~/Images/Menu/MenuBar_Refresh.png"
+        UrlHottracked="~/Images/Menu/MenuBar_Refresh.png" />
+</dxe:ASPxButton>
+
+<dxe:ASPxButton runat="server" SkinID="toothImage">
+    <CheckedStyle BackColor="#faedb6" />
+</dxe:ASPxButton>

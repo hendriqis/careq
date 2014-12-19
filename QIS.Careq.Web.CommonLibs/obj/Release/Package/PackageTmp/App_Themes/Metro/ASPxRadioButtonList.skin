@@ -1,0 +1,21 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxe:ASPxRadioButtonList runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+	Font-Names="Calibri" Font-Size="8pt" Height="22px">
+    <Paddings Padding="0px" />
+</dxe:ASPxRadioButtonList>
+<dxe:ASPxRadioButtonList SkinID="RequiredField" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+	Font-Names="Calibri" Font-Size="8pt" Height="22px">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RequiredField IsRequired="True" ErrorText="Required Field"></RequiredField>
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>     
+    <Paddings Padding="0px" />
+</dxe:ASPxRadioButtonList>
+

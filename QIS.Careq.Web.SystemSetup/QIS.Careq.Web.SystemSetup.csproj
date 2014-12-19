@@ -1,0 +1,1184 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15CE4ECF-5566-464E-96DC-48C549ECA0DC}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QIS.Careq.Web.SystemSetup</RootNamespace>
+    <AssemblyName>QIS.Careq.Web.SystemSetup</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>"%24/CAREQ.root/CAREQ", KAAAAAAA</SccProjectName>
+    <SccLocalPath>..</SccLocalPath>
+    <SccAuxPath />
+    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>qisicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v11.1.Export, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\DevExpress 2011.1\Components\Sources\DevExpress.DLL\DevExpress.Web.v11.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Design, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Extensions, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Service, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Web, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Controls\ChangePasswordCtl.ascx">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Controls\GeneralCtl.ascx">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Controls\MatrixCtl.ascx">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Controls\MatrixWithParameterCtl.ascx">
+      <Link>SharedLibs\Controls\MatrixWithParameterCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\ErrorPage.aspx">
+      <Link>SharedLibs\ErrorPage.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Program\Main.aspx">
+      <Link>SharedLibs\Program\Main.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Program\RemoteLogon.aspx">
+      <Link>SharedLibs\Program\RemoteLogon.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Program\ReportViewer.aspx">
+      <Link>SharedLibs\Program\ReportViewer.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Service\MethodService.asmx">
+      <Link>SharedLibs\Service\MethodService.asmx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\CSToJSEntityToControl.aspx">
+      <Link>SharedLibs\Tools\CSToJSEntityToControl.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\DataLayerGenerator.aspx">
+      <Link>SharedLibs\Tools\DataLayerGenerator.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapEntry.aspx">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapList.aspx">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationEntry.aspx">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationList.aspx">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationTableLinkCtl.ascx">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationTableLinkCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Migration\DataMigration.aspx">
+      <Link>SharedLibs\Tools\DataMigration\Migration\DataMigration.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Migration\DataMigrationList.aspx">
+      <Link>SharedLibs\Tools\DataMigration\Migration\DataMigrationList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Migration\DataMigrationProcessedDataCtl.ascx">
+      <Link>SharedLibs\Tools\DataMigration\Migration\DataMigrationProcessedDataCtl.ascx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationEntry.aspx">
+      <Link>SharedLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationEntry.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationList.aspx">
+      <Link>SharedLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationList.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Restore\RestoreData.aspx">
+      <Link>SharedLibs\Tools\RestoreData\Restore\RestoreData.aspx</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Restore\RestoreDataList.aspx">
+      <Link>SharedLibs\Tools\RestoreData\Restore\RestoreDataList.aspx</Link>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="Program\Application\ApplicationEntry.aspx" />
+    <Content Include="Program\Application\ApplicationList.aspx" />
+    <Content Include="Program\ChangeLeadStatus\ChangeLeadStatusList.aspx" />
+    <Content Include="Program\ChangeLeadStatus\ChangeLeadStatusCtl.ascx" />
+    <Content Include="Program\CloseEvent\CloseEventList.aspx" />
+    <Content Include="Program\Company\CompanyContactPersonEntryCtl.ascx" />
+    <Content Include="Program\Company\CompanyEntry.aspx" />
+    <Content Include="Program\Company\CompanyList.aspx" />
+    <Content Include="Program\Employee\EmployeeEntry.aspx" />
+    <Content Include="Program\Employee\EmployeeList.aspx" />
+    <Content Include="Program\EventHistory\EventHistoryDtList.aspx" />
+    <Content Include="Program\EventHistory\EventHistoryList.aspx" />
+    <Content Include="Program\EventRegistration\EventConfirmationSendEmailCompanyCtl.ascx" />
+    <Content Include="Program\EventRegistration\EventConfirmationSendEmailCtl.ascx" />
+    <Content Include="Program\EventRegistration\EventRegistrationCompanyPICEntryCtl.ascx" />
+    <Content Include="Program\EventRegistration\EventRegistrationPrintNameTagCtl.ascx" />
+    <Content Include="Program\FilterParameter\FilterParameterEntry.aspx" />
+    <Content Include="Program\FilterParameter\FilterParameterList.aspx" />
+    <Content Include="Program\LeadsRegistration\LeadsRegistrationEntry.aspx" />
+    <Content Include="Program\LeadsRegistration\LeadsRegistrationList.aspx" />
+    <Content Include="Program\LeadsTrackingLog\LeadsTrackingLogEntry.aspx" />
+    <Content Include="Program\LeadsTrackingLog\LeadsTrackingLogList.aspx" />
+    <Content Include="Program\MailingLabel\MailingLabelList.aspx" />
+    <Content Include="Program\Member\MemberPastTrainingCtl.ascx" />
+    <Content Include="Program\ReportConfiguration\ReportParameterEntryCtl.ascx" />
+    <Content Include="Program\ReportConfiguration\ReportConfigurationEntry.aspx" />
+    <Content Include="Program\ReportConfiguration\ReportConfigurationList.aspx" />
+    <Content Include="Program\EventRegistration\EventRegistrationPrintCertificateListCtl.ascx" />
+    <Content Include="Program\ReportMember\LOBSearchCtl.ascx" />
+    <Content Include="Program\ReportMember\ReportMemberList.aspx" />
+    <Content Include="Program\UpdateRegistrationStatus\UpdateRegistrationStatusDtList.aspx" />
+    <Content Include="Program\UpdateRegistrationStatus\UpdateRegistrationStatusList.aspx" />
+    <Content Include="Program\Venue\VenueEntry.aspx" />
+    <Content Include="Program\Venue\VenueList.aspx" />
+    <Content Include="Program\EventInvitation\EventInvitationSendEmailCtl.ascx" />
+    <Content Include="Program\EventRegistration\EventRegistrationDtList.aspx" />
+    <Content Include="Program\EventRegistration\EventRegistrationInvitedMemberCtl.ascx" />
+    <Content Include="Program\EventRegistration\EventRegistrationList.aspx" />
+    <Content Include="Program\EventInvitationConfirmation\EventInvitationConfirmationDt.aspx" />
+    <Content Include="Program\EventInvitationConfirmation\EventInvitationConfirmationList.aspx" />
+    <Content Include="Program\EventInvitation\EventInvitationDt.aspx" />
+    <Content Include="Program\EventInvitation\EventInvitationInvitedMemberViewCtl.ascx" />
+    <Content Include="Program\EventInvitation\EventInvitationList.aspx" />
+    <Content Include="Program\CreateEvent\CreateEventEntry.aspx" />
+    <Content Include="Program\CreateEvent\CreateEventList.aspx" />
+    <Content Include="Program\EventRegistration\EventRegistrationDtEntry.aspx" />
+    <Content Include="Program\EventRegistration\MemberIdentityCtl.ascx" />
+    <Content Include="Program\LOBClassification\LOBClassEntry.aspx" />
+    <Content Include="Program\LOBClassification\LOBClassList.aspx" />
+    <Content Include="Program\Member\MemberEntry.aspx" />
+    <Content Include="Program\Member\MemberList.aspx" />
+    <Content Include="Program\Region\RegionEntry.aspx" />
+    <Content Include="Program\Region\RegionList.aspx" />
+    <Content Include="Program\Report\PivotReporting.aspx" />
+    <Content Include="Program\SettingParameter\SettingParameterEntry.aspx" />
+    <Content Include="Program\SettingParameter\SettingParameterList.aspx" />
+    <Content Include="Program\TemplateText\TemplateContentViewCtl.ascx" />
+    <Content Include="Program\TemplateText\TemplateTextEntry.aspx" />
+    <Content Include="Program\TemplateText\TemplateTextList.aspx" />
+    <Content Include="Program\Trainer\TrainerEntry.aspx" />
+    <Content Include="Program\Trainer\TrainerList.aspx" />
+    <Content Include="Program\Occupation\OccupationEntry.aspx" />
+    <Content Include="Program\Occupation\OccupationList.aspx" />
+    <Content Include="Program\Training\TrainingEntry.aspx" />
+    <Content Include="Program\Training\TrainingList.aspx" />
+    <Content Include="Program\StandardCode\StandardCodeEntry.aspx" />
+    <Content Include="Program\StandardCode\StandardCodeList.aspx" />
+    <Content Include="Program\TransferContact\TransferContactList.aspx" />
+    <Content Include="Program\UploadEventParticipant\UploadEventParticipantList.aspx" />
+    <Content Include="Program\UploadEventParticipant\UploadEventParticipantDt.aspx" />
+    <Content Include="Program\UploadEventParticipant\UploadEventParticipantDt2.aspx" />
+    <Content Include="Program\UserManagement\UserMenuAccessEntryCtl.ascx" />
+    <Content Include="Program\UserRoles\UserRolesMenuAccessEntryCtl.ascx" />
+    <Content Include="Program\UserManagement\UserManagementEntry.aspx" />
+    <Content Include="Program\UserManagement\UserManagementList.aspx" />
+    <Content Include="Program\UserRoles\UserRolesEntry.aspx" />
+    <Content Include="Program\UserRoles\UserRolesList.aspx" />
+    <Content Include="Program\Module\ModuleEntry.aspx" />
+    <Content Include="Program\Module\ModuleList.aspx" />
+    <Content Include="Program\Menu\MenuEntry.aspx" />
+    <Content Include="Program\Menu\MenuList.aspx" />
+    <Content Include="Program\ZipCodes\ZipCodesEntry.aspx" />
+    <Content Include="Program\ZipCodes\ZipCodesList.aspx" />
+    <Content Include="qisicon.ico" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\ChangePasswordCtl.ascx.cs">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx.cs</Link>
+      <DependentUpon>ChangePasswordCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\ChangePasswordCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\ChangePasswordCtl.ascx.designer.cs</Link>
+      <DependentUpon>ChangePasswordCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\GeneralCtl.ascx.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.cs</Link>
+      <DependentUpon>GeneralCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\GeneralCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\GeneralCtl.ascx.designer.cs</Link>
+      <DependentUpon>GeneralCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\MatrixCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx.cs</Link>
+      <DependentUpon>MatrixCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\MatrixCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MatrixCtl.ascx.designer.cs</Link>
+      <DependentUpon>MatrixCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\MatrixWithParameterCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MatrixWithParameterCtl.ascx.cs</Link>
+      <DependentUpon>MatrixWithParameterCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\MatrixWithParameterCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MatrixWithParameterCtl.ascx.designer.cs</Link>
+      <DependentUpon>MatrixWithParameterCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx.cs">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx.cs</Link>
+      <DependentUpon>MPEntryPopupCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Controls\MPEntryPopupCtl.ascx.designer.cs">
+      <Link>SharedLibs\Controls\MPEntryPopupCtl.ascx.designer.cs</Link>
+      <DependentUpon>MPEntryPopupCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\ErrorPage.aspx.cs">
+      <Link>SharedLibs\ErrorPage.aspx.cs</Link>
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\ErrorPage.aspx.designer.cs">
+      <Link>SharedLibs\ErrorPage.aspx.designer.cs</Link>
+      <DependentUpon>ErrorPage.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPBase.Master.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.cs</Link>
+      <DependentUpon>MPBase.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPBase.Master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPBase.Master.designer.cs</Link>
+      <DependentUpon>MPBase.Master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPEntry.master.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.cs</Link>
+      <DependentUpon>MPEntry.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPEntry.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPEntry.master.designer.cs</Link>
+      <DependentUpon>MPEntry.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPList.master.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.cs</Link>
+      <DependentUpon>MPList.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPList.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPList.master.designer.cs</Link>
+      <DependentUpon>MPList.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPMain.master.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.cs</Link>
+      <DependentUpon>MPMain.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPMain.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPMain.master.designer.cs</Link>
+      <DependentUpon>MPMain.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPTrx.master.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.cs</Link>
+      <DependentUpon>MPTrx.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPTrx.master.designer.cs">
+      <Link>SharedLibs\MasterPage\MPTrx.master.designer.cs</Link>
+      <DependentUpon>MPTrx.master.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Program\Main.aspx.cs">
+      <Link>SharedLibs\Program\Main.aspx.cs</Link>
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Program\Main.aspx.designer.cs">
+      <Link>SharedLibs\Program\Main.aspx.designer.cs</Link>
+      <DependentUpon>Main.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Program\RemoteLogon.aspx.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.cs</Link>
+      <DependentUpon>RemoteLogon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Program\RemoteLogon.aspx.designer.cs">
+      <Link>SharedLibs\Program\RemoteLogon.aspx.designer.cs</Link>
+      <DependentUpon>RemoteLogon.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Program\ReportViewer.aspx.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.cs</Link>
+      <DependentUpon>ReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Program\ReportViewer.aspx.designer.cs">
+      <Link>SharedLibs\Program\ReportViewer.aspx.designer.cs</Link>
+      <DependentUpon>ReportViewer.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Service\MethodService.asmx.cs">
+      <Link>SharedLibs\Service\MethodService.asmx.cs</Link>
+      <DependentUpon>MethodService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\CSToJSEntityToControl.aspx.cs">
+      <Link>SharedLibs\Tools\CSToJSEntityToControl.aspx.cs</Link>
+      <DependentUpon>CSToJSEntityToControl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\CSToJSEntityToControl.aspx.designer.cs">
+      <Link>SharedLibs\Tools\CSToJSEntityToControl.aspx.designer.cs</Link>
+      <DependentUpon>CSToJSEntityToControl.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataLayerGenerator.aspx.cs">
+      <Link>SharedLibs\Tools\DataLayerGenerator.aspx.cs</Link>
+      <DependentUpon>DataLayerGenerator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataLayerGenerator.aspx.designer.cs">
+      <Link>SharedLibs\Tools\DataLayerGenerator.aspx.designer.cs</Link>
+      <DependentUpon>DataLayerGenerator.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapEntry.aspx.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapEntry.aspx.cs</Link>
+      <DependentUpon>DataMigrationConfigurationColumnMapEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapEntry.aspx.designer.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapEntry.aspx.designer.cs</Link>
+      <DependentUpon>DataMigrationConfigurationColumnMapEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapList.aspx.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapList.aspx.cs</Link>
+      <DependentUpon>DataMigrationConfigurationColumnMapList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapList.aspx.designer.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationColumnMapList.aspx.designer.cs</Link>
+      <DependentUpon>DataMigrationConfigurationColumnMapList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationEntry.aspx.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationEntry.aspx.cs</Link>
+      <DependentUpon>DataMigrationConfigurationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationEntry.aspx.designer.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationEntry.aspx.designer.cs</Link>
+      <DependentUpon>DataMigrationConfigurationEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationList.aspx.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationList.aspx.cs</Link>
+      <DependentUpon>DataMigrationConfigurationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationList.aspx.designer.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationConfigurationList.aspx.designer.cs</Link>
+      <DependentUpon>DataMigrationConfigurationList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationTableLinkCtl.ascx.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationTableLinkCtl.ascx.cs</Link>
+      <DependentUpon>DataMigrationTableLinkCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Configuration\DataMigrationTableLinkCtl.ascx.designer.cs">
+      <Link>SharedLibs\Tools\DataMigration\Configuration\DataMigrationTableLinkCtl.ascx.designer.cs</Link>
+      <DependentUpon>DataMigrationTableLinkCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Migration\DataMigration.aspx.cs">
+      <Link>SharedLibs\Tools\DataMigration\Migration\DataMigration.aspx.cs</Link>
+      <DependentUpon>DataMigration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Migration\DataMigration.aspx.designer.cs">
+      <Link>SharedLibs\Tools\DataMigration\Migration\DataMigration.aspx.designer.cs</Link>
+      <DependentUpon>DataMigration.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Migration\DataMigrationList.aspx.cs">
+      <Link>SharedLibs\Tools\DataMigration\Migration\DataMigrationList.aspx.cs</Link>
+      <DependentUpon>DataMigrationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Migration\DataMigrationList.aspx.designer.cs">
+      <Link>SharedLibs\Tools\DataMigration\Migration\DataMigrationList.aspx.designer.cs</Link>
+      <DependentUpon>DataMigrationList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Migration\DataMigrationProcessedDataCtl.ascx.cs">
+      <Link>SharedLibs\Tools\DataMigration\Migration\DataMigrationProcessedDataCtl.ascx.cs</Link>
+      <DependentUpon>DataMigrationProcessedDataCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\DataMigration\Migration\DataMigrationProcessedDataCtl.ascx.designer.cs">
+      <Link>SharedLibs\Tools\DataMigration\Migration\DataMigrationProcessedDataCtl.ascx.designer.cs</Link>
+      <DependentUpon>DataMigrationProcessedDataCtl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationEntry.aspx.cs">
+      <Link>SharedLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationEntry.aspx.cs</Link>
+      <DependentUpon>RestoreDataConfigurationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationEntry.aspx.designer.cs">
+      <Link>SharedLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationEntry.aspx.designer.cs</Link>
+      <DependentUpon>RestoreDataConfigurationEntry.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationList.aspx.cs">
+      <Link>SharedLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationList.aspx.cs</Link>
+      <DependentUpon>RestoreDataConfigurationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationList.aspx.designer.cs">
+      <Link>SharedLibs\Tools\RestoreData\Configuration\RestoreDataConfigurationList.aspx.designer.cs</Link>
+      <DependentUpon>RestoreDataConfigurationList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Restore\RestoreData.aspx.cs">
+      <Link>SharedLibs\Tools\RestoreData\Restore\RestoreData.aspx.cs</Link>
+      <DependentUpon>RestoreData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Restore\RestoreData.aspx.designer.cs">
+      <Link>SharedLibs\Tools\RestoreData\Restore\RestoreData.aspx.designer.cs</Link>
+      <DependentUpon>RestoreData.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Restore\RestoreDataList.aspx.cs">
+      <Link>SharedLibs\Tools\RestoreData\Restore\RestoreDataList.aspx.cs</Link>
+      <DependentUpon>RestoreDataList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="..\QIS.Careq.Web.CommonLibs\Tools\RestoreData\Restore\RestoreDataList.aspx.designer.cs">
+      <Link>SharedLibs\Tools\RestoreData\Restore\RestoreDataList.aspx.designer.cs</Link>
+      <DependentUpon>RestoreDataList.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Application\ApplicationEntry.aspx.cs">
+      <DependentUpon>ApplicationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Application\ApplicationEntry.aspx.designer.cs">
+      <DependentUpon>ApplicationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Application\ApplicationList.aspx.cs">
+      <DependentUpon>ApplicationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Application\ApplicationList.aspx.designer.cs">
+      <DependentUpon>ApplicationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ChangeLeadStatus\ChangeLeadStatusList.aspx.cs">
+      <DependentUpon>ChangeLeadStatusList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ChangeLeadStatus\ChangeLeadStatusList.aspx.designer.cs">
+      <DependentUpon>ChangeLeadStatusList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ChangeLeadStatus\ChangeLeadStatusCtl.ascx.cs">
+      <DependentUpon>ChangeLeadStatusCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ChangeLeadStatus\ChangeLeadStatusCtl.ascx.designer.cs">
+      <DependentUpon>ChangeLeadStatusCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CloseEvent\CloseEventList.aspx.cs">
+      <DependentUpon>CloseEventList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CloseEvent\CloseEventList.aspx.designer.cs">
+      <DependentUpon>CloseEventList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Company\CompanyContactPersonEntryCtl.ascx.cs">
+      <DependentUpon>CompanyContactPersonEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Company\CompanyContactPersonEntryCtl.ascx.designer.cs">
+      <DependentUpon>CompanyContactPersonEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Company\CompanyEntry.aspx.cs">
+      <DependentUpon>CompanyEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Company\CompanyEntry.aspx.designer.cs">
+      <DependentUpon>CompanyEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Company\CompanyList.aspx.cs">
+      <DependentUpon>CompanyList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Company\CompanyList.aspx.designer.cs">
+      <DependentUpon>CompanyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Employee\EmployeeEntry.aspx.cs">
+      <DependentUpon>EmployeeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Employee\EmployeeEntry.aspx.designer.cs">
+      <DependentUpon>EmployeeEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Employee\EmployeeList.aspx.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Employee\EmployeeList.aspx.designer.cs">
+      <DependentUpon>EmployeeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventHistory\EventHistoryDtList.aspx.cs">
+      <DependentUpon>EventHistoryDtList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventHistory\EventHistoryDtList.aspx.designer.cs">
+      <DependentUpon>EventHistoryDtList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventHistory\EventHistoryList.aspx.cs">
+      <DependentUpon>EventHistoryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventHistory\EventHistoryList.aspx.designer.cs">
+      <DependentUpon>EventHistoryList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventConfirmationSendEmailCompanyCtl.ascx.cs">
+      <DependentUpon>EventConfirmationSendEmailCompanyCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventConfirmationSendEmailCompanyCtl.ascx.designer.cs">
+      <DependentUpon>EventConfirmationSendEmailCompanyCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventConfirmationSendEmailCtl.ascx.cs">
+      <DependentUpon>EventConfirmationSendEmailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventConfirmationSendEmailCtl.ascx.designer.cs">
+      <DependentUpon>EventConfirmationSendEmailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationCompanyPICEntryCtl.ascx.cs">
+      <DependentUpon>EventRegistrationCompanyPICEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationCompanyPICEntryCtl.ascx.designer.cs">
+      <DependentUpon>EventRegistrationCompanyPICEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationPrintNameTagCtl.ascx.cs">
+      <DependentUpon>EventRegistrationPrintNameTagCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationPrintNameTagCtl.ascx.designer.cs">
+      <DependentUpon>EventRegistrationPrintNameTagCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FilterParameter\FilterParameterEntry.aspx.cs">
+      <DependentUpon>FilterParameterEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FilterParameter\FilterParameterEntry.aspx.designer.cs">
+      <DependentUpon>FilterParameterEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\FilterParameter\FilterParameterList.aspx.cs">
+      <DependentUpon>FilterParameterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\FilterParameter\FilterParameterList.aspx.designer.cs">
+      <DependentUpon>FilterParameterList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\LeadsRegistration\LeadsRegistrationEntry.aspx.cs">
+      <DependentUpon>LeadsRegistrationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\LeadsRegistration\LeadsRegistrationEntry.aspx.designer.cs">
+      <DependentUpon>LeadsRegistrationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\LeadsRegistration\LeadsRegistrationList.aspx.cs">
+      <DependentUpon>LeadsRegistrationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\LeadsRegistration\LeadsRegistrationList.aspx.designer.cs">
+      <DependentUpon>LeadsRegistrationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\LeadsTrackingLog\LeadsTrackingLogEntry.aspx.cs">
+      <DependentUpon>LeadsTrackingLogEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\LeadsTrackingLog\LeadsTrackingLogEntry.aspx.designer.cs">
+      <DependentUpon>LeadsTrackingLogEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\LeadsTrackingLog\LeadsTrackingLogList.aspx.cs">
+      <DependentUpon>LeadsTrackingLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\LeadsTrackingLog\LeadsTrackingLogList.aspx.designer.cs">
+      <DependentUpon>LeadsTrackingLogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\MailingLabel\MailingLabelList.aspx.cs">
+      <DependentUpon>MailingLabelList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\MailingLabel\MailingLabelList.aspx.designer.cs">
+      <DependentUpon>MailingLabelList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Member\MemberPastTrainingCtl.ascx.cs">
+      <DependentUpon>MemberPastTrainingCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Member\MemberPastTrainingCtl.ascx.designer.cs">
+      <DependentUpon>MemberPastTrainingCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ReportConfiguration\ReportParameterEntryCtl.ascx.cs">
+      <DependentUpon>ReportParameterEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ReportConfiguration\ReportParameterEntryCtl.ascx.designer.cs">
+      <DependentUpon>ReportParameterEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ReportConfiguration\ReportConfigurationEntry.aspx.cs">
+      <DependentUpon>ReportConfigurationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ReportConfiguration\ReportConfigurationEntry.aspx.designer.cs">
+      <DependentUpon>ReportConfigurationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ReportConfiguration\ReportConfigurationList.aspx.cs">
+      <DependentUpon>ReportConfigurationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ReportConfiguration\ReportConfigurationList.aspx.designer.cs">
+      <DependentUpon>ReportConfigurationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationPrintCertificateListCtl.ascx.cs">
+      <DependentUpon>EventRegistrationPrintCertificateListCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationPrintCertificateListCtl.ascx.designer.cs">
+      <DependentUpon>EventRegistrationPrintCertificateListCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ReportMember\LOBSearchCtl.ascx.cs">
+      <DependentUpon>LOBSearchCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ReportMember\LOBSearchCtl.ascx.designer.cs">
+      <DependentUpon>LOBSearchCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ReportMember\ReportMemberList.aspx.cs">
+      <DependentUpon>ReportMemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ReportMember\ReportMemberList.aspx.designer.cs">
+      <DependentUpon>ReportMemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UpdateRegistrationStatus\UpdateRegistrationStatusDtList.aspx.cs">
+      <DependentUpon>UpdateRegistrationStatusDtList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UpdateRegistrationStatus\UpdateRegistrationStatusDtList.aspx.designer.cs">
+      <DependentUpon>UpdateRegistrationStatusDtList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UpdateRegistrationStatus\UpdateRegistrationStatusList.aspx.cs">
+      <DependentUpon>UpdateRegistrationStatusList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UpdateRegistrationStatus\UpdateRegistrationStatusList.aspx.designer.cs">
+      <DependentUpon>UpdateRegistrationStatusList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Venue\VenueEntry.aspx.cs">
+      <DependentUpon>VenueEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Venue\VenueEntry.aspx.designer.cs">
+      <DependentUpon>VenueEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Venue\VenueList.aspx.cs">
+      <DependentUpon>VenueList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Venue\VenueList.aspx.designer.cs">
+      <DependentUpon>VenueList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventInvitation\EventInvitationSendEmailCtl.ascx.cs">
+      <DependentUpon>EventInvitationSendEmailCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventInvitation\EventInvitationSendEmailCtl.ascx.designer.cs">
+      <DependentUpon>EventInvitationSendEmailCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationDtList.aspx.cs">
+      <DependentUpon>EventRegistrationDtList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationDtList.aspx.designer.cs">
+      <DependentUpon>EventRegistrationDtList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationInvitedMemberCtl.ascx.cs">
+      <DependentUpon>EventRegistrationInvitedMemberCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationInvitedMemberCtl.ascx.designer.cs">
+      <DependentUpon>EventRegistrationInvitedMemberCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationList.aspx.cs">
+      <DependentUpon>EventRegistrationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationList.aspx.designer.cs">
+      <DependentUpon>EventRegistrationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventInvitationConfirmation\EventInvitationConfirmationDt.aspx.cs">
+      <DependentUpon>EventInvitationConfirmationDt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventInvitationConfirmation\EventInvitationConfirmationDt.aspx.designer.cs">
+      <DependentUpon>EventInvitationConfirmationDt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventInvitationConfirmation\EventInvitationConfirmationList.aspx.cs">
+      <DependentUpon>EventInvitationConfirmationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventInvitationConfirmation\EventInvitationConfirmationList.aspx.designer.cs">
+      <DependentUpon>EventInvitationConfirmationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventInvitation\EventInvitationDt.aspx.cs">
+      <DependentUpon>EventInvitationDt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventInvitation\EventInvitationDt.aspx.designer.cs">
+      <DependentUpon>EventInvitationDt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventInvitation\EventInvitationInvitedMemberViewCtl.ascx.cs">
+      <DependentUpon>EventInvitationInvitedMemberViewCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventInvitation\EventInvitationInvitedMemberViewCtl.ascx.designer.cs">
+      <DependentUpon>EventInvitationInvitedMemberViewCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventInvitation\EventInvitationList.aspx.cs">
+      <DependentUpon>EventInvitationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventInvitation\EventInvitationList.aspx.designer.cs">
+      <DependentUpon>EventInvitationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CreateEvent\CreateEventEntry.aspx.cs">
+      <DependentUpon>CreateEventEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CreateEvent\CreateEventEntry.aspx.designer.cs">
+      <DependentUpon>CreateEventEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\CreateEvent\CreateEventList.aspx.cs">
+      <DependentUpon>CreateEventList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\CreateEvent\CreateEventList.aspx.designer.cs">
+      <DependentUpon>CreateEventList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationDtEntry.aspx.cs">
+      <DependentUpon>EventRegistrationDtEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\EventRegistrationDtEntry.aspx.designer.cs">
+      <DependentUpon>EventRegistrationDtEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\EventRegistration\MemberIdentityCtl.ascx.cs">
+      <DependentUpon>MemberIdentityCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\EventRegistration\MemberIdentityCtl.ascx.designer.cs">
+      <DependentUpon>MemberIdentityCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\LOBClassification\LOBClassEntry.aspx.cs">
+      <DependentUpon>LOBClassEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\LOBClassification\LOBClassEntry.aspx.designer.cs">
+      <DependentUpon>LOBClassEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\LOBClassification\LOBClassList.aspx.cs">
+      <DependentUpon>LOBClassList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\LOBClassification\LOBClassList.aspx.designer.cs">
+      <DependentUpon>LOBClassList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Member\MemberEntry.aspx.cs">
+      <DependentUpon>MemberEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Member\MemberEntry.aspx.designer.cs">
+      <DependentUpon>MemberEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Member\MemberList.aspx.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Member\MemberList.aspx.designer.cs">
+      <DependentUpon>MemberList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Region\RegionEntry.aspx.cs">
+      <DependentUpon>RegionEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Region\RegionEntry.aspx.designer.cs">
+      <DependentUpon>RegionEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Region\RegionList.aspx.cs">
+      <DependentUpon>RegionList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Region\RegionList.aspx.designer.cs">
+      <DependentUpon>RegionList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Report\PivotReporting.aspx.cs">
+      <DependentUpon>PivotReporting.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Report\PivotReporting.aspx.designer.cs">
+      <DependentUpon>PivotReporting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\SettingParameter\SettingParameterEntry.aspx.cs">
+      <DependentUpon>SettingParameterEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\SettingParameter\SettingParameterEntry.aspx.designer.cs">
+      <DependentUpon>SettingParameterEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\SettingParameter\SettingParameterList.aspx.cs">
+      <DependentUpon>SettingParameterList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\SettingParameter\SettingParameterList.aspx.designer.cs">
+      <DependentUpon>SettingParameterList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\TemplateText\TemplateContentViewCtl.ascx.cs">
+      <DependentUpon>TemplateContentViewCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\TemplateText\TemplateContentViewCtl.ascx.designer.cs">
+      <DependentUpon>TemplateContentViewCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\TemplateText\TemplateTextEntry.aspx.cs">
+      <DependentUpon>TemplateTextEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\TemplateText\TemplateTextEntry.aspx.designer.cs">
+      <DependentUpon>TemplateTextEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\TemplateText\TemplateTextList.aspx.cs">
+      <DependentUpon>TemplateTextList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\TemplateText\TemplateTextList.aspx.designer.cs">
+      <DependentUpon>TemplateTextList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Trainer\TrainerEntry.aspx.cs">
+      <DependentUpon>TrainerEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Trainer\TrainerEntry.aspx.designer.cs">
+      <DependentUpon>TrainerEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Trainer\TrainerList.aspx.cs">
+      <DependentUpon>TrainerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Trainer\TrainerList.aspx.designer.cs">
+      <DependentUpon>TrainerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Occupation\OccupationEntry.aspx.cs">
+      <DependentUpon>OccupationEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Occupation\OccupationEntry.aspx.designer.cs">
+      <DependentUpon>OccupationEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Occupation\OccupationList.aspx.cs">
+      <DependentUpon>OccupationList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Occupation\OccupationList.aspx.designer.cs">
+      <DependentUpon>OccupationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Training\TrainingEntry.aspx.cs">
+      <DependentUpon>TrainingEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Training\TrainingEntry.aspx.designer.cs">
+      <DependentUpon>TrainingEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Training\TrainingList.aspx.cs">
+      <DependentUpon>TrainingList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Training\TrainingList.aspx.designer.cs">
+      <DependentUpon>TrainingList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\StandardCode\StandardCodeEntry.aspx.cs">
+      <DependentUpon>StandardCodeEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\StandardCode\StandardCodeEntry.aspx.designer.cs">
+      <DependentUpon>StandardCodeEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\StandardCode\StandardCodeList.aspx.cs">
+      <DependentUpon>StandardCodeList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\StandardCode\StandardCodeList.aspx.designer.cs">
+      <DependentUpon>StandardCodeList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\TransferContact\TransferContactList.aspx.cs">
+      <DependentUpon>TransferContactList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\TransferContact\TransferContactList.aspx.designer.cs">
+      <DependentUpon>TransferContactList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UploadEventParticipant\UploadEventParticipantList.aspx.cs">
+      <DependentUpon>UploadEventParticipantList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UploadEventParticipant\UploadEventParticipantList.aspx.designer.cs">
+      <DependentUpon>UploadEventParticipantList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UploadEventParticipant\UploadEventParticipantDt.aspx.cs">
+      <DependentUpon>UploadEventParticipantDt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UploadEventParticipant\UploadEventParticipantDt.aspx.designer.cs">
+      <DependentUpon>UploadEventParticipantDt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UploadEventParticipant\UploadEventParticipantDt2.aspx.cs">
+      <DependentUpon>UploadEventParticipantDt2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UploadEventParticipant\UploadEventParticipantDt2.aspx.designer.cs">
+      <DependentUpon>UploadEventParticipantDt2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UserManagement\UserMenuAccessEntryCtl.ascx.cs">
+      <DependentUpon>UserMenuAccessEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UserManagement\UserMenuAccessEntryCtl.ascx.designer.cs">
+      <DependentUpon>UserMenuAccessEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UserRoles\UserRolesMenuAccessEntryCtl.ascx.cs">
+      <DependentUpon>UserRolesMenuAccessEntryCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UserRoles\UserRolesMenuAccessEntryCtl.ascx.designer.cs">
+      <DependentUpon>UserRolesMenuAccessEntryCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UserManagement\UserManagementEntry.aspx.cs">
+      <DependentUpon>UserManagementEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UserManagement\UserManagementEntry.aspx.designer.cs">
+      <DependentUpon>UserManagementEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UserManagement\UserManagementList.aspx.cs">
+      <DependentUpon>UserManagementList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UserManagement\UserManagementList.aspx.designer.cs">
+      <DependentUpon>UserManagementList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UserRoles\UserRolesEntry.aspx.cs">
+      <DependentUpon>UserRolesEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UserRoles\UserRolesEntry.aspx.designer.cs">
+      <DependentUpon>UserRolesEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\UserRoles\UserRolesList.aspx.cs">
+      <DependentUpon>UserRolesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\UserRoles\UserRolesList.aspx.designer.cs">
+      <DependentUpon>UserRolesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Module\ModuleEntry.aspx.cs">
+      <DependentUpon>ModuleEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Module\ModuleEntry.aspx.designer.cs">
+      <DependentUpon>ModuleEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Module\ModuleList.aspx.cs">
+      <DependentUpon>ModuleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Module\ModuleList.aspx.designer.cs">
+      <DependentUpon>ModuleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Menu\MenuEntry.aspx.cs">
+      <DependentUpon>MenuEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Menu\MenuEntry.aspx.designer.cs">
+      <DependentUpon>MenuEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Menu\MenuList.aspx.cs">
+      <DependentUpon>MenuList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Menu\MenuList.aspx.designer.cs">
+      <DependentUpon>MenuList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ZipCodes\ZipCodesEntry.aspx.cs">
+      <DependentUpon>ZipCodesEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ZipCodes\ZipCodesEntry.aspx.designer.cs">
+      <DependentUpon>ZipCodesEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ZipCodes\ZipCodesList.aspx.cs">
+      <DependentUpon>ZipCodesList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ZipCodes\ZipCodesList.aspx.designer.cs">
+      <DependentUpon>ZipCodesList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QIS.Careq.Web.Control\QIS.Careq.Web.CustomControl.csproj">
+      <Project>{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}</Project>
+      <Name>QIS.Careq.Web.CustomControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Data.Core\QIS.Data.Core.csproj">
+      <Project>{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}</Project>
+      <Name>QIS.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Careq.Data.Service\QIS.Careq.Data.Service.csproj">
+      <Project>{E8019F76-DE58-43A7-984C-A1272D62EA45}</Project>
+      <Name>QIS.Careq.Data.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Careq.Report\QIS.Careq.Report.csproj">
+      <Project>{20EE50BE-6D9E-48CE-B121-39ED665D8B16}</Project>
+      <Name>QIS.Careq.Report</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Careq.Web.Common\QIS.Careq.Web.Common.csproj">
+      <Project>{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}</Project>
+      <Name>QIS.Careq.Web.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\ConnectionString.config">
+      <Link>ConnectionString.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPBase.Master">
+      <Link>SharedLibs\MasterPage\MPBase.Master</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPEntry.master">
+      <Link>SharedLibs\MasterPage\MPEntry.master</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPList.master">
+      <Link>SharedLibs\MasterPage\MPList.master</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPMain.master">
+      <Link>SharedLibs\MasterPage\MPMain.master</Link>
+    </Content>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\MasterPage\MPTrx.master">
+      <Link>SharedLibs\MasterPage\MPTrx.master</Link>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\QIS.Careq.Web.CommonLibs\AppSetting.config">
+      <Link>AppSetting.config</Link>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>3504</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/careq/SystemSetup</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>COPY "$(TargetDir)*.config" "$(ProjectDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

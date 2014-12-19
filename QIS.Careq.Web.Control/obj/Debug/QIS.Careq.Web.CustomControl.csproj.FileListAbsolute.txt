@@ -1,0 +1,9 @@
+E:\Source\Development\CAREQ\QIS.Careq.Web.Control\bin\Debug\QIS.Careq.Web.CustomControl.dll
+E:\Source\Development\CAREQ\QIS.Careq.Web.Control\bin\Debug\QIS.Careq.Web.CustomControl.pdb
+E:\Source\Development\CAREQ\QIS.Careq.Web.Control\bin\Debug\QIS.Careq.Data.Service.dll
+E:\Source\Development\CAREQ\QIS.Careq.Web.Control\bin\Debug\QIS.Data.Core.dll
+E:\Source\Development\CAREQ\QIS.Careq.Web.Control\bin\Debug\QIS.Careq.Data.Service.pdb
+E:\Source\Development\CAREQ\QIS.Careq.Web.Control\bin\Debug\QIS.Data.Core.pdb
+E:\Source\Development\CAREQ\QIS.Careq.Web.Control\obj\Debug\QIS.Careq.Web.CustomControl.dll
+E:\Source\Development\CAREQ\QIS.Careq.Web.Control\obj\Debug\QIS.Careq.Web.CustomControl.pdb
+E:\Source\Development\CAREQ\QIS.Careq.Web.Control\obj\Debug\QIS.Careq.Web.CustomControl.csprojResolveAssemblyReference.cache

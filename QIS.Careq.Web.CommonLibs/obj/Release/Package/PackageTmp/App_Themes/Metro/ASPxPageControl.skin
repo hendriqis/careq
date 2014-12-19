@@ -1,0 +1,23 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxtc" Namespace="DevExpress.Web.ASPxTabControl" Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxtc:ASPxPageControl runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssPostfix="Metro" TabSpacing="0" Font-Names="Calibri" Font-Size="10pt">
+    <Paddings Padding="2" PaddingLeft="5" PaddingRight="5" />
+    <ContentStyle>
+        <Paddings Padding="12" />
+		<Border BorderColor="#859ebf" BorderStyle="Solid" BorderWidth="1" />
+	</ContentStyle>
+    <LoadingPanelStyle ImageSpacing="5" />
+	<LoadingPanelImage Url="~/App_Themes/Metro/Web/Loading.gif" />
+</dxtc:ASPxPageControl>
+
+<dxtc:ASPxPageControl runat="server" ActiveTabIndex="0"
+    Width="100%" Height="75px" EnableTabScrolling="true" SkinID="navigationPaneTab">
+    <ActiveTabStyle BackColor="#436E1E" ForeColor="#F6F6F6"/>
+    <ContentStyle CssClass="navigationPaneContent">
+        <Paddings PaddingBottom="0px" PaddingLeft="0px" PaddingRight="0px" PaddingTop="0px" />
+        <Border BorderWidth="0px" />
+    </ContentStyle>
+    <TabStyle BackColor="#8ABF26" ForeColor="#FCFEFF" HoverStyle-BackColor="#DB4B03" HoverStyle-ForeColor="#F6F6F6"/>       
+</dxtc:ASPxPageControl>
+

@@ -1,0 +1,25 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxe:ASPxLabel runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro" Font-Size="10pt" Font="Calibri" />
+
+<dxe:ASPxLabel runat="server" SkinID="moduleName" Font-Size="9pt" Font-Bold="true" Font="Calibri"  ForeColor="#d7f1fe" />
+<dxe:ASPxLabel runat="server" SkinID="menuName" Font-Size="9pt" Font-Bold="true" Font="Calibri" ForeColor="#2475A4" />
+<dxe:ASPxLabel runat="server" SkinID="menuPathName" Font-Size="8pt" Font="Calibri" ForeColor="#FF3300" />
+<dxe:ASPxLabel runat="server" SkinID="header" Font-Size="10pt" Font-Bold="true" Font="Calibri" ForeColor="#293955" />
+<dxe:ASPxLabel runat="server" SkinID="mandatory" Font-Size="8.5pt" Font-Bold="true" />
+<dxe:ASPxLabel runat="server" SkinID="fieldValue" ForeColor="#FF119EDA" />
+<dxe:ASPxLabel runat="server" SkinID="Important" Font-Size="9pt" Font-Bold="true" />
+<dxe:ASPxLabel runat="server" SkinID="SpecialText" Font-Size="10pt" Font-Bold="true" ForeColor="#FF3300" />
+<dxe:ASPxLabel runat="server" SkinID="PatientName" Font="Calibri" Font-Bold="true" ForeColor="#1BA1E2" />
+<dxe:ASPxLabel runat="server" SkinID="entryGroupTitle" Font-Size="8.5pt" Font-Bold="true" />
+<dxe:ASPxLabel runat="server" SkinID="Allergy" Font-Bold="true" ForeColor="red" Font-Italic="true"/>
+<dxe:ASPxLabel runat="server" SkinID="WarningMessage" Font-Bold="true" ForeColor="red"/>
+<dxe:ASPxLabel runat="server" SkinID="VitalSignTitle" Font-Size="8pt" ForeColor="White" BackColor="#696969" style="vertical-align:middle;text-align: center"/>
+<dxe:ASPxLabel runat="server" SkinID="PatientFullNameInGrid" Font-Size="8pt" ForeColor="#FF119EDA" Font-Bold="true"/>
+<dxe:ASPxLabel runat="server" SkinID="PatientLinkLabel" Font-Size="8pt" ForeColor="#FF119EDA" Font-Bold="true" Cursor="Pointer" Font-Underline="true"/>
+<dxe:ASPxLabel runat="server" SkinID="medicationLineLabel" Font-Size="8pt" ForeColor="#FF119EDA"/>
+<dxe:ASPxLabel runat="server" SkinID="highlightLabelInGrid" Font-Size="8pt" ForeColor="#2B88EE"/>
+<dxe:ASPxLabel runat="server" SkinID="LinkLabel" Font-Size="8.5pt" ForeColor="#FF3300" Font-Bold="true" Cursor="Pointer"/>
+<dxe:ASPxLabel runat="server" SkinID="email" Font-Size="8.5pt" Font-Bold="true" Font="Calibri" ForeColor="blue" />
+<dxe:ASPxLabel runat="server" SkinID="PersonName" Font-Size="9pt" Font-Bold="true"  ForeColor="#69a8d9" />

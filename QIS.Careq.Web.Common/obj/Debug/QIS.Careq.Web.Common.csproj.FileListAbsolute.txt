@@ -1,0 +1,10 @@
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\bin\Debug\App_Lib\Gurock.SmartInspect.dll
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\bin\Debug\QIS.Careq.Web.Common.dll
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\bin\Debug\QIS.Careq.Web.Common.pdb
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\bin\Debug\QIS.Careq.Data.Service.dll
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\bin\Debug\QIS.Data.Core.dll
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\bin\Debug\QIS.Data.Core.pdb
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\bin\Debug\QIS.Careq.Data.Service.pdb
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\obj\Debug\QIS.Careq.Web.Common.dll
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\obj\Debug\QIS.Careq.Web.Common.pdb
+E:\Source\Development\CAREQ\QIS.Careq.Web.Common\obj\Debug\QIS.Careq.Web.Common.csprojResolveAssemblyReference.cache

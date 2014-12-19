@@ -1,0 +1,275 @@
+.dxtlControl_Metro
+{
+	cursor: default;
+	font: 8pt Verdana;
+	color: Black;
+	border: 1px solid #8ba0bc;
+}
+.dxtlControl_Metro caption
+{
+	font-size: 8pt;
+	font-weight: normal;
+	color: #1e395b;
+	text-align: center;
+	padding: 3px 3px 5px;
+	text-align: center;
+	background: #bdd0e7 url('CssImages/TitleBack.png') repeat-x left top;
+	border: 1px solid #8ba0bc;
+	border-bottom: 0;
+}
+
+/* Indent cells */
+.dxtlIndent_Metro,
+.dxtlIndentWithButton_Metro
+{
+	background: white;
+	vertical-align: top;
+	background-position: center top;
+	background-repeat: no-repeat;
+}
+.dxtlIndent_Metro
+{
+	padding: 0 11px;
+}
+.dxtlIndentWithButton_Metro
+{
+	padding: 4px 5px;
+}
+.dxtlSelectionCell_Metro {
+	border-width: 0;
+}
+
+/* Tree-lines cells */
+.dxtlLineRoot_Metro,
+.dxtlLineFirst_Metro,
+.dxtlLineMiddle_Metro,
+.dxtlLineLast_Metro,
+.dxtlLineFirstRtl_Metro,
+.dxtlLineMiddleRtl_Metro,
+.dxtlLineLastRtl_Metro
+{
+    background-color: Transparent;
+}
+
+.dxtlIndent_Metro,
+.dxtlIndentWithButton_Metro
+{
+    background-color: White;
+}
+
+/* Headers */
+.dxtlHeader_Metro
+{
+	background: #e4eefa url('CssImages/HeaderBack.png') left top repeat-x;
+	border: 1px solid #8ba0bc;
+	padding: 5px 6px;
+	font-weight: normal;
+	color: #1e395b;
+}
+.dxtlHeader_Metro table.dxtl
+{
+	border-collapse: collapse;
+	width: 100%;
+}
+.dxtlHeader_Metro td.dxtl
+{
+	padding: 0;
+}
+.dxtlHeader_Metro,
+.dxtlHeader_Metro td.dxtl
+{	
+	font: 8pt Verdana;
+	white-space: nowrap;
+	text-align: left;
+}
+
+/* Nodes */
+.dxtlNode_Metro
+{
+	background: white;
+}
+.dxtlAltNode_Metro
+{
+	background: #f4f6f9;
+}
+.dxtlAltNode_Metro .dxtlIndent_Metro,
+.dxtlSelectedNode_Metro .dxtlIndent_Metro,
+.dxtlFocusedNode_Metro .dxtlIndent_Metro
+{
+    background: White;
+}
+.dxtlSelectedNode_Metro
+{
+	background: #faedb6;
+	color: Black;
+}
+.dxtlFocusedNode_Metro
+{
+	background: #fdf7d9;
+    color: Black;
+}
+.dxtlInlineEditNode_Metro
+{
+	background: white;
+}
+.dxtlEditFormDisplayNode_Metro,
+.dxtlEditFormDisplayNode_Metro td.dxtl
+{
+	background: #ecf2f9;
+}
+
+.dxtlNode_Metro td.dxtl,
+.dxtlAltNode_Metro  td.dxtl,
+.dxtlSelectedNode_Metro td.dxtl,
+.dxtlFocusedNode_Metro td.dxtl,
+.dxtlEditFormDisplayNode_Metro td.dxtl,
+.dxtlCommandCell_Metro
+{
+	padding: 4px 6px;
+	border-width: 0;
+	white-space: nowrap;
+	font-size: 8pt;
+	font-family: Verdana;
+}
+.dxtlEditFormDisplayNode_Metro td.dxtl,
+.dxtlEditFormDisplayNode_Metro td.dxtl__cc
+{
+    border-bottom: 1px solid #cfddee;
+}
+.dxtlInlineEditNode_Metro td.dxtl
+{
+	border-width: 0;
+	padding: 1px;
+}
+
+/* Preview */
+.dxtlPreview_Metro
+{
+	background: #e9edf3;
+	color: #777777;
+	padding: 14px;
+	border-width: 0;
+	font: 8pt Verdana;
+}
+
+/* Footers */
+.dxtlGroupFooter_Metro,
+.dxtlFooter_Metro
+{
+	background-color: #e2ebf6;
+}
+.dxtlGroupFooter_Metro td.dxtl,
+.dxtlFooter_Metro td.dxtl
+{
+	padding: 6px;
+	white-space: nowrap;
+	border: 1px solid #cfddee;
+	border-left-width: 0 !important;
+	font: 8pt Verdana;
+}
+
+/* Pagers */
+.dxtlPagerTopPanel_Metro,
+.dxtlPagerBottomPanel_Metro
+{
+    background: #e4effa;
+}
+.dxtlPagerTopPanel_Metro
+{
+	border-bottom: 1px solid #8ba0bc;
+	padding-bottom: 2px;
+}
+.dxtlPagerBottomPanel_Metro
+{
+	border-top: 1px solid #8ba0bc;
+	padding-bottom: 2px;
+}
+
+/* Editing */
+.dxtlEditForm_Metro
+{
+	background: #ecf2f9;
+	border-width: 0;
+	padding: 8px 10px 10px;
+}
+.dxtlEditFormCaption_Metro,
+.dxtlEditFormEditCell_Metro
+{
+	padding: 4px;
+}
+.dxtlEditFormCaption_Metro
+{
+	padding-left: 10px;
+	white-space: nowrap;
+}
+.dxtlError_Metro
+{
+	background: #cfddee;
+	color: #ba1717;
+	padding: 6px 10px;
+	border-width: 0;
+	font: 8pt Verdana;
+}
+.dxtlPopupEditForm_Metro
+{
+    padding: 12px;
+}
+
+/* Links */
+.dxtlControl_Metro a
+{
+	color: #1e395b;
+	text-decoration: none;
+}
+.dxtlControl_Metro a:hover
+{
+	text-decoration: underline;
+}
+.dxtlHeader_Metro a
+{
+    text-decoration: underline;
+}
+.dxtlSelectedNode_Metro a,
+.dxtlFocusedNode_Metro a
+{
+	color: #1e395b;
+	text-decoration: none;
+}
+.dxtlSelectedNode_Metro a:hover,
+.dxtlFocusedNode_Metro a:hover
+{
+	text-decoration: underline;
+}
+.dxtlCommandCell_Metro a
+{
+	margin-right: 3px;
+}
+
+/* Loading panel */
+.dxtlLoadingPanel_Metro
+{
+	font: 8pt Verdana;
+    color: #1e395b;
+    background: White;
+	border: 1px solid #859ebf;
+}
+.dxtlLoadingPanel_Metro td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 10px 14px;
+}
+.dxtlLoadingDiv_Metro
+{
+	background: white;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+
+/* Disabled */
+.dxtlDisabled_Metro,
+.dxtlDisabled_Metro .dxtl
+{
+	color: #b2b7bd;
+	cursor: default;
+}

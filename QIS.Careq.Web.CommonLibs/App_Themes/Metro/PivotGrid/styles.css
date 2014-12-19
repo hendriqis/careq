@@ -1,0 +1,536 @@
+.dxpgControl_Metro
+{
+	color: #1e395b;
+	font: 8pt Verdana;
+	border: 1px solid #8ba0bc;
+	background-color: white;
+}
+.dxpgContainerCell_Metro
+{
+	vertical-align: top;
+}
+.dxpgMainTable_Metro
+{
+	color: #0a0a0a;
+	font: 8pt Verdana;
+	border-width: 0;
+	border-collapse: separate;
+	width: 100%;
+	text-align: left;
+}
+.dxpgMainTable_Metro caption
+{
+	font-size: 8pt;
+	font-weight: normal;
+	padding: 3px 3px 5px;
+	text-align: center;
+	background: #bdd0e7 url('TitleBack.png') repeat-x left top;
+	color: #1e395b;
+	border-bottom: 1px solid #8ba0bc;
+}
+.dxpgHeader_Metro
+{
+	border-width: 0;
+	color: #1e395b;
+	background: #e4eefa url('HeaderBack.png') repeat-x left top;
+	cursor: pointer;
+	white-space: nowrap;
+	text-align: left;
+}
+.dxpgHeaderTable_Metro
+{
+	border-width: 1px;
+	width: 100%;
+}
+.dxpgHeaderGroupButton_Metro
+{
+	padding-left: 4px;
+	vertical-align: middle;
+}
+.dxpgHeaderText_Metro
+{
+	padding: 3px 6px;
+}
+.dxpgHeaderSort_Metro
+{
+	padding-left: 0px;
+	padding-right: 4px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	padding: 0 4px 0 0;
+	vertical-align: middle;
+}
+.dxpgHeaderFilter_Metro
+{
+	padding: 2px 2px 2px 0;
+	vertical-align: middle;
+}
+.dxpgHeaderHover_Metro
+{
+	background: #eef5fc url('HeaderHoverBack.png') repeat-x left top;
+}
+.dxpgArea_Metro, .dxpgArea_Metro table
+{
+	color: #1e395b;
+	font: 8pt Verdana;
+}
+.dxpgArea_Metro
+{
+	border-width: 1px;
+	border-color: #abbacf;
+	border-style: none;
+	background-color: White;
+}
+.dxpgColumnArea_Metro
+{
+	border-bottom-style: solid;
+}
+.dxpgRowArea_Metro
+{
+}
+.dxpgDataArea_Metro
+{
+}
+.dxpgFilterArea_Metro
+{
+	background-color: #cfddee;
+	color: #1e395b;
+	border-bottom-style: solid;
+}
+.dxpgEmptyArea_Metro
+{
+	cursor: default;
+	padding: 6px;
+}
+.dxpgColumnFieldValue_Metro
+{
+    color: #1e395b;
+	background: #e4eefa url('HeaderBack.png') repeat-x left top;
+	border: 1px solid #abbacf;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+	padding: 4px 6px;
+	font-weight: normal;
+	text-align: left;
+}
+.dxpgColumnTotalFieldValue_Metro
+{
+	background: #cfdbeb url('TotalBack.png') repeat-x left top;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+}
+.dxpgColumnGrandTotalFieldValue_Metro
+{
+	background: #c0d1e2 url('GrandTotalBack.png') repeat-x left top;
+	border-left-style: solid;
+	border-bottom-style: solid;
+	border-right-style: none;
+	border-top-style: none;
+}
+.dxpgRowFieldValue_Metro
+{
+    color: #1e395b;
+	background: #e4eefa url('HeaderBack.png') repeat-x left top;
+	border: 1px solid #abbacf;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+	padding: 3px 6px;
+	font-weight: normal;
+	text-align: left;
+}
+.dxpgRowTotalFieldValue_Metro
+{
+	background: #cfdbeb url('TotalBack.png') repeat-x left top;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+}
+.dxpgRowTreeFieldValue_Metro
+{	
+	padding: 0px;
+	font: 0pt;
+}
+.dxpgRowGrandTotalFieldValue_Metro
+{
+	background: #c0d1e2 url('GrandTotalBack.png') repeat-x left top;
+	border-left-style: none;
+	border-bottom-style: none;
+	border-right-style: solid;
+	border-top-style: solid;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.dxpgCollapsedButton_Metro
+{
+	vertical-align: -2px;
+	border: 0;
+	margin-right: 5px;
+}
+.dxpgSortByColumnImage_Metro
+{
+	vertical-align: -1px;
+	border: 0;
+	margin-left: 5px;
+}
+.dxpgCell_Metro
+{
+	text-align: right;
+	background-color: White;
+	border-color: #c4d9f6;
+	border-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-bottom-style: none;
+	border-right-style: none;
+	padding: 3px 4px;
+	white-space: nowrap;
+}
+.dxpgKPICell_Metro
+{
+	text-align: center;
+	vertical-align: middle;
+}
+.dxpgTotalCell_Metro
+{
+	background-color: #f4f6f9;
+}
+.dxpgGrandTotalCell_Metro
+{
+	background-color: #e4eaf1;
+}
+.dxpgFilterWindow_Metro
+{
+	color: Black;
+	font: 8pt Verdana;
+	border: 1px solid #8ba0bc;
+}
+.dxpgFilterItemsArea_Metro
+{
+	color: Black;
+	background-color: White;
+}
+.dxpgFilterItem_Metro
+{
+	font: 8pt Verdana;
+    white-space: nowrap;
+}
+.dxpgFilterButton_Metro
+{
+	font: 8pt Verdana;
+	padding: 2px 6px;
+}
+.dxpgFilterButtonPanel_Metro
+{
+	font: 8pt Verdana;
+	color: #1e395b;
+	background-color: #cfddee;
+	border-top: 1px solid #8ba0bc;
+}
+.dxpgLoadingDiv_Metro
+{
+	background-color: White;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+.dxpgTopPager_Metro,
+.dxpgBottomPager_Metro
+{
+    background: #e4effa;
+    border-color: #8ba0bc;
+    border-style: solid;
+}
+.dxpgTopPager_Metro
+{
+    border-width: 0 0 1px 0;
+}
+.dxpgBottomPager_Metro
+{
+	border-width: 1px 0 0 0;
+}
+.dxpgCustomizationFieldsHeader_Metro
+{
+	color: #1e395b;
+	font: 8pt Verdana;
+}
+.dxpgCustomizationFieldsContent_Metro
+{
+	padding: 0px !important;
+}
+.dxpgLoadingPanel_Metro
+{
+	font: 8pt Verdana;
+    color: #1e395b;
+    background: White;
+	border: 1px solid #859ebf;
+}
+.dxpgLoadingPanel_Metro td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 10px 14px;
+}
+.dxpgMenuItem_Metro 
+{
+	font: 8pt Verdana;
+}
+.dxpgDataHeadersImage_Metro
+{
+	margin-right: 5px;
+	vertical-align: -2px;
+}
+.dxpgPrefilterPanelContainer_Metro
+{
+	border-bottom-style: none;
+	border-left-style: none;
+	border-right-style: none;
+}
+.dxpgPrefilterPanel_Metro
+{
+	border: none;
+	background: #cfddee;
+}
+.dxpgPrefilterPanelLink_Metro
+{
+	color: #1e395b;
+	text-decoration: underline;
+}
+.dxpgPrefilterPanelCheckBoxCell_Metro
+{
+	padding: 0 3px;
+	padding-right: 7px;
+}
+.dxpgPrefilterPanelImageCell_Metro
+{
+	padding: 0 3px;
+	padding-right: 1px;
+	cursor: pointer;
+}
+.dxpgPrefilterPanelExpressionCell_Metro
+{
+	font-size: 8pt;
+	padding: 5px 5px 8px 0;
+	white-space: nowrap;
+}
+.dxpgPrefilterPanelClearButtonCell_Metro
+{
+	font-size: 8pt;
+	padding: 5px 6px 8px;
+}
+.dxpgFilterBuilderMainArea_Metro
+{
+	background: white;
+	padding: 6px 2px;
+} 
+.dxpgFilterBuilderButtonArea_Metro
+{
+	background: #cfddee;
+	border-top: 1px solid #aec0d5;
+	padding: 6px;
+}
+.dxpgGroupSeparator_Metro
+{
+	vertical-align: middle;
+}
+.dxpgCustFieldsFilterAreaHeaders_Metro,
+.dxpgCustFieldsRowAreaHeaders_Metro,
+.dxpgCustFieldsColumnAreaHeaders_Metro,
+.dxpgCustFieldsDataAreaHeaders_Metro,
+.BottomPanelOnly1by4 .dxpgFLFRDiv_Metro,
+.BottomPanelOnly1by4 .dxpgFLCDDiv_Metro
+{
+    width: 100%;
+    height: 50%;
+}
+.StackedDefault .dxpgCustFieldsFieldList_Metro
+{
+    height: 33%;
+}
+.StackedDefault .dxpgFLFRDiv_Metro
+{
+    width: 50%;
+    height: 66%;
+    float: left;
+}
+.StackedDefault .dxpgFLCDDiv_Metro
+{
+    width: 50%;
+    height: 66%;
+    float: right;
+}
+.StackedDefault .dxpgCustFieldsFilterAreaHeaders_Metro .dxpgFLTextDiv_Metro,
+.StackedDefault .dxpgCustFieldsColumnAreaHeaders_Metro .dxpgFLTextDiv_Metro
+{
+    height: 47px;
+}
+.TopPanelOnly .dxpgCustFieldsFieldList_Metro
+{
+    width: 100%;
+    height: 100%;
+}
+.TopPanelOnly .dxpgFLDefereDiv_Metro .dxeBase_Metro,
+.TopPanelOnly .dxpgFLDefereDiv_Metro .dxpgFLDefereDB_Metro,
+.BottomPanelOnly1by4 .dxpgCustFieldsFieldList_Metro,
+.TopPanelOnly .dxpgFLFRDiv_Metro,
+.TopPanelOnly .dxpgFLCDDiv_Metro,
+.BottomPanelOnly2by2 .dxpgCustFieldsFieldList_Metro,
+.TopPanelOnly .dxpgFLTextDiv_Metro div
+{
+    display: none;
+}
+.TopPanelOnly .dxpgFLTextDiv_Metro
+{
+    height: 10px;
+}
+.TopPanelOnly .dxpgFLDefereDiv_Metro
+{
+    height: 16px;
+}
+.BottomPanelOnly2by2 .dxpgFLFRDiv_Metro,
+.StackedSideBySide .dxpgCustFieldsFieldList_Metro
+{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.BottomPanelOnly2by2 .dxpgFLCDDiv_Metro
+{
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+.StackedSideBySide .dxpgFLFRDiv_Metro,
+.StackedSideBySide .dxpgFLCDDiv_Metro
+{
+    width: 50%;
+    height: 50%;
+    float: right;
+}
+.dxpgCustFields_Metro
+{
+    display: block;
+    position: relative;
+}
+.dxpgFLListDiv_Metro div
+{
+    border: 1px solid #8ba0bc;
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 1px;
+    background: White;
+    overflow: hidden;
+}
+.dxpgFLListDiv_Metro div div
+{
+    height: 100%;
+    padding: 0px;
+    border-color: #8ba0bc;
+    border-style: solid;
+    border-width: 0;
+    overflow-y: auto;
+}
+.DragOver .dxpgFLListDiv_Metro div
+{
+    background: #ffd324;
+}
+.DragOver .dxpgFLListDiv_Metro div div
+{
+    background: White;
+}
+.dxpgFLListDiv_Metro
+{
+    padding: 0px 3px;
+}
+.dxpgFLButtonDiv_Metro .dxbButton_Metro div.dxb
+{
+    padding: 2px 8px 1px;
+}
+.dxpgFLButtonDiv_Metro .dxbButton_Metro div.dxbf
+{
+	border: 1px dotted Black;
+	padding: 1px 7px 0px;
+}
+.dxpgFLTextDiv_Metro
+{
+    height: 28px;
+}
+.dxpgFLTextDiv_Metro div
+{
+   display: block;
+   float: left;
+   margin: -17px 0px 3px;
+   left: 6px;
+   top: 100%;
+   position: relative;
+}
+.dxpgFLButtonDiv_Metro
+{
+    float: right;
+    height: 28px;
+    position:relative;
+    z-index:1;
+}
+.dxpgFLDefereDiv_Metro
+{
+    height: 46px;
+}
+.dxpgCustFieldsDiv_Metro
+{
+     clear: both;
+     padding: 0px 9px;
+}
+.dxpgFLButton_Metro
+{
+     margin: 7px 12px 0px 0px;
+     width: 40px;
+     height: 23px;
+}
+.dxpgFLDefereDiv_Metro .dxeBase_Metro
+{
+     float: left;
+     display: block;
+     border-collapse: separate;
+     padding: 13px 0px 0px 0px;
+     margin-left: 8px;
+}
+.dxpgFLDefereDB_Metro
+{
+    float: right;
+    display: block;
+    padding: 0px 12px 0px 0px;
+    margin-top: 12px;
+}
+.dxpgFLDefereDiv_Metro .dxbButton_Metro div.dxb
+{
+    padding: 2px 14px;
+}
+.dxpgFLDefereDiv_Metro .dxbButton_Metro div.dxbf
+{
+    padding: 1px 13px;
+    border: 1px dotted Black;
+}
+.dxpgFLListDiv_Metro table 
+{
+ width:100%;
+ table-layout:fixed;  
+ overflow:visible;
+}
+.dxpgFLListDiv_Metro table table td
+{
+     overflow:hidden; 
+}
+div.dxpgFLTextImgDiv_Metro
+{
+    display:block;
+    height:16px;
+    width:16px;
+    margin:-18px 0px 3px 0px;
+    left:3px;
+}

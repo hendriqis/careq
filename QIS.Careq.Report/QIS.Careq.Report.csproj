@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{20EE50BE-6D9E-48CE-B121-39ED665D8B16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QIS.Careq.Report</RootNamespace>
+    <AssemblyName>QIS.Careq.Report</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseRpt\BaseRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseRpt\BaseRpt.Designer.cs">
+      <DependentUpon>BaseRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRpt\BaseLandscapeRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseRpt\BaseLandscapeRpt.Designer.cs">
+      <DependentUpon>BaseLandscapeRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRpt\BaseDailyLandscapeRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseRpt\BaseDailyLandscapeRpt.Designer.cs">
+      <DependentUpon>BaseDailyLandscapeRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseRpt\BaseDailyPortraitRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseRpt\BaseDailyPortraitRpt.Designer.cs">
+      <DependentUpon>BaseDailyPortraitRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MemberPerCompanyRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MemberPerCompanyRpt.Designer.cs">
+      <DependentUpon>MemberPerCompanyRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventPerCompanyRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventPerCompanyRpt.Designer.cs">
+      <DependentUpon>EventPerCompanyRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventRpt.Designer.cs">
+      <DependentUpon>EventRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\CompanyListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\CompanyListRpt.Designer.cs">
+      <DependentUpon>CompanyListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\EventListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\EventListRpt.Designer.cs">
+      <DependentUpon>EventListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\RegionListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\RegionListRpt.Designer.cs">
+      <DependentUpon>RegionListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\VenueListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\VenueListRpt.Designer.cs">
+      <DependentUpon>VenueListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\LOBListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\LOBListRpt.Designer.cs">
+      <DependentUpon>LOBListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\TrainingListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\TrainingListRpt.Designer.cs">
+      <DependentUpon>TrainingListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\MasterRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\MasterRpt.Designer.cs">
+      <DependentUpon>MasterRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\TrainerListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\TrainerListRpt.Designer.cs">
+      <DependentUpon>TrainerListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MasterReport\MemberListRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MasterReport\MemberListRpt.Designer.cs">
+      <DependentUpon>MemberListRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarHadirRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DaftarHadirRpt.Designer.cs">
+      <DependentUpon>DaftarHadirRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="NameTagRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NameTagRpt.Designer.cs">
+      <DependentUpon>NameTagRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EventCertificationRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="EventCertificationRpt.Designer.cs">
+      <DependentUpon>EventCertificationRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateRpt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TemplateRpt.Designer.cs">
+      <DependentUpon>TemplateRpt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseRpt\BaseRpt.resx">
+      <DependentUpon>BaseRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseRpt\BaseLandscapeRpt.resx">
+      <DependentUpon>BaseLandscapeRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseRpt\BaseDailyLandscapeRpt.resx">
+      <DependentUpon>BaseDailyLandscapeRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseRpt\BaseDailyPortraitRpt.resx">
+      <DependentUpon>BaseDailyPortraitRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MemberPerCompanyRpt.resx">
+      <DependentUpon>MemberPerCompanyRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventPerCompanyRpt.resx">
+      <DependentUpon>EventPerCompanyRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventRpt.resx">
+      <DependentUpon>EventRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\CompanyListRpt.resx">
+      <DependentUpon>CompanyListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\EventListRpt.resx">
+      <DependentUpon>EventListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\RegionListRpt.resx">
+      <DependentUpon>RegionListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\VenueListRpt.resx">
+      <DependentUpon>VenueListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\LOBListRpt.resx">
+      <DependentUpon>LOBListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\TrainingListRpt.resx">
+      <DependentUpon>TrainingListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\MasterRpt.resx">
+      <DependentUpon>MasterRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\TrainerListRpt.resx">
+      <DependentUpon>TrainerListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MasterReport\MemberListRpt.resx">
+      <DependentUpon>MemberListRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaftarHadirRpt.resx">
+      <DependentUpon>DaftarHadirRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NameTagRpt.resx">
+      <DependentUpon>NameTagRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EventCertificationRpt.resx">
+      <DependentUpon>EventCertificationRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemplateRpt.resx">
+      <DependentUpon>TemplateRpt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\QIS.Careq.Web.Common\QIS.Careq.Web.Common.csproj">
+      <Project>{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}</Project>
+      <Name>QIS.Careq.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Data.Core\QIS.Data.Core.csproj">
+      <Project>{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}</Project>
+      <Name>QIS.Data.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\QIS.Careq.Data.Service\QIS.Careq.Data.Service.csproj">
+      <Project>{E8019F76-DE58-43A7-984C-A1272D62EA45}</Project>
+      <Name>QIS.Careq.Data.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\DataSources\QIS.Careq.Data.Service.Region.datasource" />
+    <None Include="Properties\DataSources\QIS.Careq.Data.Service.vCompany.datasource" />
+    <None Include="Properties\DataSources\QIS.Careq.Data.Service.vEvent.datasource" />
+    <None Include="Properties\DataSources\QIS.Careq.Data.Service.vEventRegistration.datasource" />
+    <None Include="Properties\DataSources\QIS.Careq.Data.Service.vLOBClassification.datasource" />
+    <None Include="Properties\DataSources\QIS.Careq.Data.Service.vMember.datasource" />
+    <None Include="Properties\DataSources\QIS.Careq.Data.Service.vTrainer.datasource" />
+    <None Include="Properties\DataSources\QIS.Careq.Data.Service.vTraining.datasource" />
+    <None Include="Properties\DataSources\QIS.Careq.Data.Service.vVenue.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.NursingSubjective.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.RLReportColumn1.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vAppointment.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vItemProduct.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vMedicalFormReport.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vRLReportGridRowData1.datasource" />
+    <None Include="Properties\DataSources\QIS.Medinfras.Data.Service.vServiceUnitParamedic.datasource" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

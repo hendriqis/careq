@@ -1,0 +1,11 @@
+E:\Source\Development\CAREQ\QIS.Data.Core\bin\Release\App_Lib\Gurock.SmartInspect.dll
+E:\Source\Development\CAREQ\QIS.Data.Core\bin\Release\QIS.Data.Core.dll
+E:\Source\Development\CAREQ\QIS.Data.Core\bin\Release\QIS.Data.Core.pdb
+E:\Source\Development\CAREQ\QIS.Data.Core\obj\Release\QIS.Data.Core.dll
+E:\Source\Development\CAREQ\QIS.Data.Core\obj\Release\QIS.Data.Core.pdb
+D:\source\development\CAREQ\QIS.Data.Core\bin\Release\App_Lib\Gurock.SmartInspect.dll
+D:\source\development\CAREQ\QIS.Data.Core\bin\Release\QIS.Data.Core.dll
+D:\source\development\CAREQ\QIS.Data.Core\bin\Release\QIS.Data.Core.pdb
+D:\source\development\CAREQ\QIS.Data.Core\obj\Release\QIS.Data.Core.dll
+D:\source\development\CAREQ\QIS.Data.Core\obj\Release\QIS.Data.Core.pdb
+D:\source\development\CAREQ\QIS.Data.Core\obj\Release\QIS.Data.Core.csprojResolveAssemblyReference.cache

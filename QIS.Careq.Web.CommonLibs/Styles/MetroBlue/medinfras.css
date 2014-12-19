@@ -1,0 +1,99 @@
+﻿*                               {  }
+body                            { background-color: #E3F3F9; color: #777; }
+
+input                                                                   { color: #000; }
+input[type="text"], input[type="password"], textarea                    { border: 1px solid #BABABA;font-size: 1em; }
+input[type="text"].error, input[type="password"].error, textarea.error  { border: 1px solid red; }
+input[readonly="readonly"], input[disabled="disabled"], 
+textarea[readonly="readonly"], select[disabled="disabled"]              { color: Maroon; background-color: #EAEAEA; border: 1px solid #848484; border-right: 1px solid #FAFAFA; border-bottom: 1px solid #FAFAFA; }
+input[type="button"], input[type="submit"]                              { cursor: pointer; color: #FFF; background-color: #2585F3; border: 0px;  }
+
+hr                              { border: 1px solid #2585F3; }
+
+.containerUlTabPage             { background-color: #DFE9F5; border-bottom: 1px solid #C8D6E5; }
+.ulTabPage li:hover             { border: 1px solid #C8D6E5; border-bottom: 0px; }
+.ulTabPage li.selected          { background-color: White; border: 1px solid #C8D6E5; border-bottom: 0px; }
+
+.lblComponent                   { background-color: #2585F3; color: White; }
+
+/* #region Toolbar Area */      
+.toolbarArea                { background-color:#2585F3; }
+.toolbarArea ul li:hover    { background-color: #FAAC29; }
+/* #endregion */    
+
+/* #region Content Page */  
+.hospitalName               { color: #66666F; }
+.userlogininfo              { color: #2585F3; }
+   
+div.pageTitle               { background-color: #999999; color: #FFFFFF; }
+.tblContentArea             { background-color: #F5F5F5; }
+        
+h4                          { background-color: #00BCE2; color: White; }   
+        
+.lblLink                    { color: #5200FD; }
+.lblDisabled                { color: #A3A2B0; }
+.lblInfo                    { color: #A425D9; }
+/* #endregion */ 
+
+/* #region Grid */
+.grdView th                     { background-color: #2585F3; color: #FFF; }
+.grdView tr:nth-child(odd)      { background-color: #DDDDDD; }
+.grdView tr:nth-child(even)     { background-color: #EEEEEE; }
+.grdView tr:not(.trEmpty):hover { background-color: #F4921B; }
+.grdView tr.trEmpty             { cursor: default; height: 50px; vertical-align: middle; text-align: center; }
+.grdView tr td                  { border:1px solid #D7EEF7; color: #000; }
+.grdView tr:not(.trEmpty):hover td { color: #FFF; }
+
+.grdCollapsible th                     { background-color: #2585F3; color: #FFF; }
+.grdCollapsible tr:nth-child(4n-3),
+.grdCollapsible tr:nth-child(4n-4)     { background-color: #DDDDDD; }
+.grdCollapsible tr:nth-child(4n-1),
+.grdCollapsible tr:nth-child(4n-2)     { background-color: #EEEEEE; }
+.grdCollapsible tr.trEmpty             { cursor: default; height: 50px; vertical-align: middle; text-align: center; }
+.grdCollapsible tr td                  { border:1px solid #D7EEF7; color: #000; }
+.grdCollapsible:not(.notAllowSelect) tr:not(.trEmpty):not(.trDetail):hover { background-color: #F4921B; }
+.grdCollapsible:not(.notAllowSelect) tr:not(.trEmpty):not(.trDetail):hover td { color: #FFF; }
+
+.grdSelected th                     { background-color: #2585F3; color: #FFF; }
+.grdSelected > tbody > tr:nth-child(odd)      { background-color: #DDDDDD; }
+.grdSelected > tbody > tr:nth-child(even)     { background-color: #EEEEEE; }
+.grdSelected > tbody > tr.trEmpty             { cursor: default; height: 50px; vertical-align: middle; text-align: center; }
+.grdSelected > tbody > tr td                  { border:1px solid #D7EEF7; color: #000; }
+.grdSelected > tbody > tr.selected            { background-color: #F4921B; }
+.grdSelected > tbody > tr.selected td         { color: White; }
+
+.grdNormal th               { background-color: #2585F3; color: #FFF; }
+.grdNormal tr               { background-color: #FFFFFF; }
+.grdNormal tr td            { border:1px solid #D7EEF7; color: #000; }
+/* #endregion */
+
+/* #region Search Dialog */  
+.dxpcHeader                     { background-color: #EFF0F1; padding: 5px !important; color: #F00 !important; }
+.dxpcHeader td                  { color: #000 !important; }
+/* #endregion */ 
+
+/* #region Drop Down Menu */
+.sf-menu li.liHeader    { border-top:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC; }
+.sf-menu li.liHeader:first-child { border-left:1px solid #CCCCCC; }
+.sf-menu li.liHeader:last-child  { border-right:1px solid #CCCCCC; }
+.sf-menu li             { background: #EFF0F1; }
+.sf-menu li li          { background: #D4D7D9; }
+.sf-menu li li li       { background: #D4D7D9; }
+.sf-menu a, .sf-menu a:visited  { color: #828282; }
+.sf-menu li:hover, .sf-menu li.sfHover,
+.sf-menu a:focus, .sf-menu a:hover, .sf-menu a:active { background:	#D4D7D9; }
+.sf-menu a:hover, .sf-menu li:hover { color:#333333; }
+.sf-menu a              { border-left: 1px solid #CCCCCC; }
+/* #endregion */
+
+/* #region Right Panel */
+#divListRightPanel                                      { color: #FFF; background-color: #383839; }
+#divListRightPanel .rightPanelContent                   { border-bottom: 1px solid #FFF; }
+#divListRightPanel .rightPanelContent a                 { color: #FFF; background-color: #2585F3; }
+#divListRightPanel .rightPanelContent div.qmtitle       { color: #FFF !important; }
+#divListRightPanel .rightPanelContent div.qmdescription { color: #AAA; }
+/* #endregion */
+
+/* #region Login */
+.loginBg                    { background-color: #D7EEF7; }
+/* #endregion */

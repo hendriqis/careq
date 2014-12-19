@@ -1,0 +1,185 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxe" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxe:ASPxTextBox runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>      
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "TariffApprovalDetail" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+    Font-Names="Calibri" Font-Size="8pt" Height="24px">
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>  
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "ReadOnly" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" BackColor="#f5f5f5" ForeColor="#800000">
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "RequiredField" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RequiredField IsRequired="True" ErrorText="Required Field"></RequiredField>
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>                    
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "TimeEntry" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" HorizontalAlign="Center">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RequiredField IsRequired="True" ErrorText="Required Field"></RequiredField>
+        <RegularExpression ValidationExpression="([01]?[0-9]|2[0-3]):[0-5]\d"></RegularExpression>
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>   
+    <ClientSideEvents 
+        Validation="function(s,e){
+            if(!e.isValid){
+                s.SetText('HH:mm');
+                e.isValid = true;
+            }
+        }"
+    />                     
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "RequiredTimeEntry" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" HorizontalAlign="Center">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RequiredField IsRequired="True" ErrorText="Required Field" />
+        <RegularExpression ValidationExpression="([01]?[0-9]|2[0-3]):[0-5]\d"></RegularExpression>
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>    
+    <ClientSideEvents 
+        Validation="function(s,e){
+            if(!e.isValid)
+                s.SetText('HH:mm');
+        }"
+    />                         
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "RequiredQtyEntry" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" MaxLength="13" HorizontalAlign="Right" >
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RequiredField IsRequired="True" ErrorText="Required Field" />
+        <RegularExpression ValidationExpression="((([1-9](\d{1,7})?))(\.\d{1,2})?)|(0(\.\d{1,2})?)" />
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>                        
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "AmountEntry" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" HorizontalAlign="Right" MaxLength="21">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RegularExpression ValidationExpression="^([1-9]+\d*|[0])\.?(\d*)?$" />
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>                        
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "TestValueEntry" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" HorizontalAlign="Right" MaxLength="21">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RegularExpression ValidationExpression="(([1-9](\d{1,2})?)|0)(\.\d{1,2})?"></RegularExpression>
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>                        
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "RequiredAmountEntry" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" HorizontalAlign="Right" MaxLength="21">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RequiredField IsRequired="True" ErrorText="Required Field" />
+        <RegularExpression ValidationExpression="^([1-9]+\d*|[0])\.?(\d*)?$" />
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>                        
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "IntegerEntry" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" HorizontalAlign="Right" MaxLength="21">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RegularExpression ValidationExpression="^[1-9](\d+\d*)?$" />
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>                        
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "PhoneNumber" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" MaxLength="20">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RegularExpression ValidationExpression="(\d{3}-\d{1,15})|\d{1,19}" />
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>                        
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "Email" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" MaxLength="50">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RegularExpression ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" />
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>                        
+</dxe:ASPxTextBox>
+
+<dxe:ASPxTextBox SkinID = "MobilePhoneEntry" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" CssPostfix="Metro"
+ Font-Names="Calibri" Font-Size="9pt" Height="24px" HorizontalAlign="Left" MaxLength="21">
+    <ValidationSettings EnableCustomValidation="True" SetFocusOnError="True" ErrorText=" "
+        CausesValidation="True" ValidationGroup="entryGroup" ErrorDisplayMode="None">
+        <ErrorFrameStyle>
+            <Paddings Padding="0px"></Paddings>
+        </ErrorFrameStyle>
+        <RegularExpression ValidationExpression="^(\+)?\d{8,15}$" />
+    </ValidationSettings>
+    <DisabledStyle BackColor = "#f5f5f5" ForeColor="#800000" ></DisabledStyle>
+    <ReadOnlyStyle BackColor="#f5f5f5" ForeColor="#800000"></ReadOnlyStyle>                        
+</dxe:ASPxTextBox>

@@ -1,0 +1,201 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/Libs/MasterPage/MPMain.Master" AutoEventWireup="true" 
+    CodeBehind="MPList.master.cs" Inherits="QIS.Careq.Web.CommonLibs.MasterPage.MPList" %>
+
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxCallbackPanel" TagPrefix="dxcp" %>
+<%@ Register Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
+    Namespace="DevExpress.Web.ASPxPanel" TagPrefix="dx" %>
+<%@ Register Assembly="QIS.Careq.Web.CustomControl, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" 
+    Namespace="QIS.Careq.Web.CustomControl" TagPrefix="qis" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="plhMPMain" runat="server">
+    <div class="toolbarArea">
+        <table style="float:right;margin-top:20px;" id="tblFilter" runat="server">
+            <tr>
+                <td>
+                    <qis:QISIntellisenseTextBox runat="server" ClientInstanceName="txtSearchView" ID="txtSearchView" Width="300px" Watermark="Search">
+                        <ClientSideEvents SearchClick="function(s){ onTxtSearchViewSearchClick(s); }" />
+                    </qis:QISIntellisenseTextBox>
+                </td>
+            </tr>
+        </table>
+        <ul>
+            <li id="btnMPListAdd" runat="server"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbnew.png")%>' alt="" /><br style="clear:both"/> <div><%=GetLabel("Add")%></div></li>
+            <li id="btnMPListEdit" runat="server"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbedit.png")%>' alt="" /><br style="clear:both"/><div><%=GetLabel("Edit")%></div></li>
+            <li id="btnMPListDelete" runat="server"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbdelete.png")%>' alt="" /><br style="clear:both"/><div><%=GetLabel("Delete")%></div></li>
+            <li id="btnMPListPrint" runat="server"><img src='<%=ResolveUrl("~/Libs/Images/Icon/tbprint.png")%>' alt="" /><br style="clear:both"/><div><%=GetLabel("Print")%></div></li>
+            <asp:ContentPlaceHolder ID="plhCustomButtonToolbar" runat="server">                
+            </asp:ContentPlaceHolder>
+        </ul>
+    </div>
+    <div style="padding:12px;">  
+        <script type="text/javascript">
+            function getFilterExpressionMasterList() {
+                return txtSearchView.GenerateFilterExpression();
+            }
+
+            function isAllowEditRecord() {
+                return ($('#<%=btnMPListEdit.ClientID %>').is(":visible"));
+            }
+
+            function onCustomButtonClick(type) {
+                cbpMPListProcess.PerformCallback('customclick|' + type);
+            }
+
+            function onTxtSearchViewSearchClick(s) {
+                setTimeout(function () {
+                    s.SetBlur();
+                    var filterExpression = s.GenerateFilterExpression();
+                    if (typeof onRefreshControl == 'function')
+                        onRefreshControl(filterExpression);
+                    $('#<%=hdnFilterExpression.ClientID %>').val(filterExpression);
+                }, 0);
+            }
+
+            var isTextSearchMasterListExists;
+            $(function () {
+                $('#<%=btnMPListAdd.ClientID %>').click(function () {
+                    cbpMPListProcess.PerformCallback('add');
+                });
+                $('#<%=btnMPListEdit.ClientID %>').click(function (evt) {
+                    cbpMPListProcess.PerformCallback('edit');
+                });
+                $('#<%=btnMPListDelete.ClientID %>').click(function () {
+                    if (confirm('Are You Sure Want To Delete?'))
+                        cbpMPListProcess.PerformCallback('delete');
+                });
+                $('#<%=btnMPListPrint.ClientID %>').click(function () {
+                    var reportCode = '<%=OnGetReportCode() %>';
+                    if (reportCode != '') {
+                        var filterExpression = '';
+                        if (typeof onGetFilterExpression == 'function')
+                            filterExpression = onGetFilterExpression();
+                        else
+                            filterExpression = $('#<%=hdnFilterExpression.ClientID %>').val();
+                        openReportViewer(reportCode, filterExpression);
+                    }
+
+                });
+
+                var intellisenseHints = '<%=IntellisenseHints %>';
+                if (intellisenseHints != '') {
+                    isTextSearchMasterListExists = true;
+                    intellisenseHints = $.parseJSON('[' + intellisenseHints + ']');
+                    txtSearchViewHelper.setIntellisenseHints(intellisenseHints);
+                    txtSearchView.setIntellisenseHints(intellisenseHints);
+                }
+                else
+                    isTextSearchMasterListExists = false;
+            });
+
+            function setDocumentLocationToEntry(url) {
+                var mapForm = document.createElement("form");
+                mapForm.method = "POST";
+                mapForm.action = url;
+
+                if (typeof onGetCurrID == 'function') {
+                    var id = onGetCurrID();
+                    mapForm.appendChild(createInputHiddenPost("id", id));
+                }
+                if (typeof onGetFilterExpression == 'function') {
+                    var filterExpression = onGetFilterExpression();
+                    mapForm.appendChild(createInputHiddenPost("filterExpression", filterExpression));
+                }
+                if (isTextSearchMasterListExists)
+                    mapForm.appendChild(createInputHiddenPost("txtSearchView", txtSearchView.GetText()));
+                else
+                    mapForm.appendChild(createInputHiddenPost("txtSearchView", ""));
+
+                if (typeof onBeforeGoToEntryPage == 'function') {
+                    onBeforeGoToEntryPage(mapForm);
+                }
+
+                document.body.appendChild(mapForm);
+
+                mapForm.submit();
+
+                $(mapForm).remove();
+                //document.location = document.referrer;
+            }
+
+            function createInputHiddenPost(name, value) {
+                var mapInput = document.createElement("input");
+                mapInput.type = "hidden";
+                mapInput.name = name;
+                mapInput.value = value;
+                return mapInput;
+            }
+        </script>    
+        <div class="pageInformation" >
+            <div class="breadcrumbs">
+                <%=GetBreadcrumbs()%>
+            </div>
+            <%=GetMenuCaption() %>
+        </div>   
+        <asp:ContentPlaceHolder ID="plhList" runat="server">                
+        </asp:ContentPlaceHolder>
+        <input type="hidden" id="hdnFilterExpression" runat="server" value="" />
+        <div style="display:none;height:0px; overflow:hidden;">
+            <dxcp:ASPxCallbackPanel ID="cbpMPListProcess" runat="server" Width="100%" ClientInstanceName="cbpMPListProcess"
+                ShowLoadingPanel="false" OnCallback="cbpMPListProcess_Callback">
+                <ClientSideEvents BeginCallback="function(s,e){
+                    showLoadingPanel();
+                }" EndCallback="function(s,e){
+                    var result = s.cpResult.split('|');
+                    if(result[0] == 'delete'){
+                        if(result[1] == 'success'){
+                            alert('Delete Success');
+                            if (typeof onRefreshControl == 'function'){
+                                var filterExpression = '';
+                                if(isTextSearchMasterListExists)
+                                    filterExpression = txtSearchView.GenerateFilterExpression();
+                                onRefreshControl(filterExpression);
+                            }
+                        }
+                        else{
+                            if(result[2] != '')
+                                alert('Delete Failed\nError Message : ' + result[2]);
+                            else
+                                alert('Delete Failed');
+                        }
+                    }
+                    else if(result[0] == 'add'){
+                        if(result[1] == 'success'){
+                            setDocumentLocationToEntry(s.cpURL);
+                        }
+                        else{
+                            if(result[2] != '')
+                                alert('Add Failed\nError Message : ' + result[2]);
+                            else
+                                alert('Add Failed');
+                        }
+                    }
+                    else if(result[0] == 'edit'){
+                        if(result[1] == 'success'){
+                            setDocumentLocationToEntry(s.cpURL);
+                        }
+                        else{
+                            if(result[2] != '')
+                                alert('Edit Failed\nError Message : ' + result[2]);
+                            else
+                                alert('Edit Failed');
+                        }
+                    }
+                    else if(result[0] == 'customclick'){
+                        if(result[1] == 'success'){
+                            if (typeof onAfterCustomClickSuccess == 'function')
+                                onAfterCustomClickSuccess(s.cpType);
+                        }
+                        else{
+                            if(result[2] != '')
+                                alert('Failed\nError Message : ' + result[2]);
+                            else
+                                alert('Failed');
+                        }
+                    }
+                    hideLoadingPanel();
+                }" />
+            </dxcp:ASPxCallbackPanel>
+        </div>
+    </div>
+</asp:Content>

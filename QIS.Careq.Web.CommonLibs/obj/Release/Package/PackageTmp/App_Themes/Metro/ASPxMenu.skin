@@ -1,0 +1,57 @@
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dxm" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<dxm:ASPxMenu runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssPostfix="Metro"
+	ShowPopOutImages="True" AutoSeparators="RootOnly">
+	<ItemStyle PopOutImageSpacing="10" DropDownButtonSpacing="10" />
+	<SubMenuStyle GutterWidth="0" GutterImageSpacing="0" />
+	<ItemSubMenuOffset FirstItemX="2" LastItemX="2" X="2" />
+	<LoadingPanelStyle ImageSpacing="5" />
+    <LoadingPanelImage Url="~/App_Themes/Metro/Web/Loading.gif" />
+</dxm:ASPxMenu>
+<dxm:ASPxMenu SkinID="MainMenu" runat="server" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssPostfix="Metro"
+			  AutoSeparators="RootOnly">
+				<ItemImage Height="24px" Width="24px" />
+				<ItemStyle Wrap="True" HorizontalAlign="Left" VerticalAlign="Middle">
+					<Border BorderColor="Transparent" BorderStyle="None" BorderWidth="0px" />
+					<HoverStyle ForeColor="#293955" />					
+				</ItemStyle>
+				<LinkStyle>
+					<Font Underline="False"></Font>
+					<HoverFont Underline="False" />		
+				</LinkStyle>				
+				<Paddings PaddingBottom="0px" PaddingLeft="0px" PaddingRight="0px" PaddingTop="0px" />
+				<Border BorderWidth="0px" />
+</dxm:ASPxMenu>
+<dxm:ASPxMenu runat="server" SkinID="MenuToolBar" CssFilePath="~/App_Themes/Metro/{0}/styles.css"  ShowPopOutImages="True"
+    CssPostfix="Metro" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" SeparatorHeight="100%"
+    AutoSeparators="None" Width="100%" ItemAutoWidth="False">
+    <SubMenuStyle GutterWidth="0px" />
+    <RootItemSubMenuOffset FirstItemX="-1" X="-1" FirstItemY="-1" Y="-1"/>
+    <LoadingPanelStyle ImageSpacing="5" />
+    <LoadingPanelImage Url="~/App_Themes/Metro/Web/Loading.gif" />
+</dxm:ASPxMenu>
+<dxm:ASPxMenu runat="server" SkinID="MenuButtons" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" CssFilePath="~/App_Themes/Metro/{0}/styles.css" SeparatorColor="Transparent"
+    AutoSeparators="RootOnly" ItemSpacing="0px" ShowPopOutImages="True" CssPostfix="Metro" CssClass="menuButtons_Metro">
+    <Border BorderWidth="0px"/>
+    <RootItemSubMenuOffset X="-1" LastItemX="-1" FirstItemX="-1"></RootItemSubMenuOffset>
+    <SubMenuItemStyle Wrap="False" />
+    <LoadingPanelStyle ImageSpacing="5" />
+    <LoadingPanelImage Url="~/App_Themes/Metro/Web/Loading.gif" />
+</dxm:ASPxMenu>
+<dxm:ASPxMenu runat="server" SkinID="MenuLinks" CssFilePath="~/App_Themes/Metro/{0}/styles.css" ShowPopOutImages="True" 
+    CssPostfix="Metro" SpriteCssFilePath="~/App_Themes/Metro/{0}/sprite.css" SeparatorWidth="1px"  
+    EnableDefaultAppearance="False" CssClass="menuLinks_Metro">
+    <LoadingPanelStyle ImageSpacing="5" />
+    <LoadingPanelImage Url="~/App_Themes/Metro/Web/Loading.gif" />
+</dxm:ASPxMenu>
+<dxm:ASPxMenu SkinID="mnuEMR" runat="server" CssFilePath="~/App_Themes/Metro/{0}/styles.css" ItemImagePosition="Top" 
+			  AllowSelectItem="True" BorderBetweenItemAndSubMenu="HideAll" GutterWidth="5px"
+			  ItemSpacing="1px" SeparatorWidth="0px" AutoPostBack="False">
+	<ItemImage Height="48px" Width="48px" />
+	<ItemStyle Wrap="False" HorizontalAlign="Center" VerticalAlign="Middle">
+		<HoverStyle BackColor="#ffffff" ForeColor="#000033" />
+		<SelectedStyle BackColor="#ffffff" />
+	</ItemStyle>
+	<Paddings Padding="1px" />
+</dxm:ASPxMenu>

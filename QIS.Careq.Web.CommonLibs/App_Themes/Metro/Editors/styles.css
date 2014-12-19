@@ -1,0 +1,1155 @@
+﻿.dxeIRBFocused_Metro {
+	border: 1px dotted #dac11e;
+	margin: 0px!important;
+}
+.dxeIRadioButton_Metro {
+	margin: 1px;
+	display: inline-block;
+	vertical-align: middle;
+}
+.dxeLoadingDiv_Metro
+{
+	background: White;
+    opacity: 0.85;
+    filter: alpha(opacity=85);
+    cursor: wait;
+}
+.dxeLoadingDivWithContent_Metro
+{
+	background: White;
+    opacity: 0.01;
+    filter: alpha(opacity=1);
+}
+
+.dxeLoadingPanel_Metro
+{
+	font: 8pt Verdana;
+	color: #1e395b;
+}
+.dxeLoadingPanelWithContent_Metro
+{
+    font: 8pt Verdana;
+    color: #1e395b;
+    background: White;
+	border: 1px solid #859ebf;
+}
+
+.dxeLoadingPanel_Metro td.dx,
+.dxeLoadingPanelWithContent_Metro td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 10px 14px;
+}
+
+.dxeReadOnly_Metro
+{
+    
+}
+.dxeBase_Metro
+{
+    font-family: Calibri;
+    font-size: 10pt;
+}
+td.dxic
+{
+	font-size:0;
+}
+/* -- ErrorFrame -- */
+.dxeErrorCell_Metro,
+.dxeErrorCell_Metro td
+{
+    font-family: Verdana;
+    font-size: 8pt;
+	color: Red;
+}
+.dxeErrorCell_Metro
+{ 
+	padding-left: 4px;
+	padding-right: 5px;
+}
+.dxeErrorFrameWithoutError_Metro {
+    border: 1px solid Red;
+}
+.dxeErrorFrameWithoutError_Metro .dxeControlsCell_Metro {
+    padding: 2px;
+}
+
+.dxeEditArea_Metro 
+{
+	font-family: Verdana;
+	font-size: 8pt;
+	border: 1px solid #9B9B9B;
+}
+.dxeMemoEditArea_Metro,
+input.dxeEditArea_Metro
+{
+    outline: none;
+}
+
+/* -- Buttons -- */
+.dxeButtonEditButton_Metro,
+.dxeCalendarButton_Metro,
+.dxeButtonEditButton_Metro td.dx,
+.dxeCalendarButton_Metro td.dx,
+.dxeSpinIncButton_Metro,
+.dxeSpinDecButton_Metro,
+.dxeSpinLargeIncButton_Metro,
+.dxeSpinLargeDecButton_Metro,
+.dxeSpinIncButton_Metro td.dx,
+.dxeSpinDecButton_Metro td.dx,
+.dxeSpinLargeIncButton_Metro td.dx,
+.dxeSpinLargeDecButton_Metro td.dx
+{	
+    font-family: Verdana;
+    font-size: 8pt;
+    font-weight: normal;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.dxeButtonEditButton_Metro,
+.dxeCalendarButton_Metro,
+.dxeSpinIncButton_Metro,
+.dxeSpinDecButton_Metro,
+.dxeSpinLargeIncButton_Metro,
+.dxeSpinLargeDecButton_Metro
+{	
+	vertical-align: middle;
+	cursor: pointer;
+}
+.dxeButtonEdit_Metro .dxeSBC,
+.dxeCalendarButton_Metro,
+.dxeButtonEditButton_Metro
+{
+    border-style: solid;
+	border-color: #9B9B9B;
+}
+.dxeCalendarButton_Metro
+{
+    border-width: 1px;
+}
+.dxeButtonEditButton_Metro,
+.dxeButtonEdit_Metro .dxeSBC
+{
+    border-width: 0 0 0 1px;
+}
+.dxeButtonEdit_Metro .dxeButtonLeft,
+.dxeButtonEdit_Metro .dxeSBC.dxeButtonLeft
+{
+    border-width: 0 1px 0 0;
+}
+.dxeSpinIncButton_Metro,
+.dxeSpinDecButton_Metro,
+.dxeSpinLargeIncButton_Metro,
+.dxeSpinLargeDecButton_Metro
+{
+    border-width: 0;
+}
+
+.dxeButtonEditButton_Metro,
+.dxeSpinLargeIncButton_Metro,
+.dxeSpinLargeDecButton_Metro
+{
+    background: #c6d7e8 url('edtDropDownBtnBack.png') repeat-x left top;
+}
+.dxeSpinIncButton_Metro
+{
+    background: #d6e4f1 url('edtSpinIncBtnBack.png') repeat-x left top;
+}
+.dxeSpinDecButton_Metro
+{
+    background: #c5d6e7 url('edtSpinDecBtnBack.png') repeat-x left top;
+}
+
+.dxeButtonEditButton_Metro table.dxbebt
+{
+    padding: 3px 2px 3px 3px;
+}
+.dxeSpinIncButton_Metro table.dxbebt,
+.dxeSpinDecButton_Metro table.dxbebt,
+.dxeSpinLargeIncButton_Metro table.dxbebt,
+.dxeSpinLargeDecButton_Metro table.dxbebt
+{
+    padding: 0;
+}
+
+.dxeSpinIncButton_Metro
+{
+    padding: 1px 0 2px;
+}
+.dxeSpinDecButton_Metro
+{
+   padding: 3px 0 2px;
+}
+.dxeSpinLargeIncButton_Metro,
+.dxeSpinLargeDecButton_Metro
+{
+    padding: 6px 0;
+}
+
+.dxeButtonEditButton_Metro table.dxbebt,
+.dxeSpinLargeIncButton_Metro table.dxbebt,
+.dxeSpinLargeDecButton_Metro table.dxbebt
+{
+	width: 9px;
+}
+.dxeSpinIncButton_Metro table.dxbebt,
+.dxeSpinDecButton_Metro table.dxbebt
+{
+    width: 15px;
+}
+.dxeCalendarButton_Metro
+{
+	font-size: 8pt;
+	background: #d1dfee url('edtBtnBack.png') repeat-x left top;
+	padding: 4px 11px;
+	padding-top: 3px;
+	width: 32px;
+}
+.dxeCalendarButton_Metro td.dx
+{
+	font-size: 8pt;    
+	text-align: center;
+	white-space: nowrap;
+}
+.dxeCalendarButton_Metro table.dxbebt 
+{
+	width: 100%;
+}
+
+/* -- Pressed -- */
+.dxeCalendarButtonPressed_Metro
+{
+	border-color: #c2762b;
+}
+.dxeCalendarButtonPressed_Metro
+{
+    background: #fee287 url('edtBtnPBack.png') repeat-x left top;
+}
+.dxeButtonEditButtonPressed_Metro,
+.dxeSpinIncButtonPressed_Metro,
+.dxeSpinDecButtonPressed_Metro,
+.dxeSpinLargeIncButtonPressed_Metro, 
+.dxeSpinLargeDecButtonPressed_Metro
+{
+    background: #f3d984 url('edtDropDownBtnPBack.png') repeat-x left top;
+}
+/* -- Hover -- */
+.dxeCalendarButtonHover_Metro
+{
+	border-color: #eecc53;
+}
+.dxeCalendarButtonHover_Metro
+{
+    background: #fcf8e5 url('edtBtnHBack.png') repeat-x left top;
+}
+.dxeButtonEditButtonHover_Metro,
+.dxeSpinLargeIncButtonHover_Metro,
+.dxeSpinLargeDecButtonHover_Metro
+{
+    background: #f8e9ac url('edtDropDownBtnHBack.png') repeat-x left top;
+}
+.dxeSpinIncButtonHover_Metro,
+.dxeSpinDecButtonHover_Metro
+{
+    background: #f8e18a url('edtSpinIncDecBtnHBack.png') repeat-x left top;
+}
+
+.dxeButtonEdit_Metro
+{
+    background-color: white;
+    border: 1px solid #9B9B9B;
+    width: 170px;
+}
+.dxeButtonEdit_Metro .dxeEditArea_Metro {
+    background-color: white;
+}
+.dxeButtonEdit_Metro .dxeEditArea_Metro,
+.dxeButtonEdit_Metro td.dxic
+{
+	width: 100%;
+}
+.dxeButtonEdit_Metro td.dxic
+{
+    padding: 0px 2px 0px 1px;
+}
+.dxeButtonEdit_Metro .dxeIIC,
+.dxeButtonEdit_Metro .dxeIICR
+{
+    padding: 1px;
+}
+.dxeButtonEdit_Metro .dxeIIC img {
+    padding-left: 3px;
+}
+.dxeButtonEdit_Metro .dxeIICR img {
+    padding-right: 3px;
+}
+
+.dxeTextBox_Metro,
+.dxeMemo_Metro
+{
+	background-color: white;
+	border: 1px #9B9B9B solid;
+}
+.dxeTextBox_Metro td.dxic
+{
+	padding: 2px 3px 1px 2px;
+	width: 100%;
+}
+.dxeTextBox_Metro .dxeEditArea_Metro
+{
+    background-color: white;
+}
+.dxeRadioButtonList_Metro
+{
+    border: 1px solid #9B9B9B;
+}
+.dxeRadioButtonList_Metro,
+.dxeRadioButtonList_Metro table
+{
+    font-family: Verdana;
+    font-size: 8pt;
+}
+.dxeRadioButtonList_Metro td.dxe
+{
+    padding: 7px 25px 6px 11px;
+}
+.dxeRadioButtonList_Metro label
+{
+	margin-right: 6px;
+}
+/* Disabled */
+.dxeDisabled_Metro .dxeButtonEditButton_Metro,
+.dxeDisabled_Metro .dxeSpinLargeIncButton_Metro,
+.dxeDisabled_Metro .dxeSpinLargeDecButton_Metro
+{
+    background: #ecf2f7 url('edtDropDownBtnDisabledBack.png') repeat-x left top;
+}
+.dxeDisabled_Metro .dxeSpinIncButton_Metro
+{
+    background: #f2f7fb url('edtSpinIncBtnDisabledBack.png') repeat-x left top;
+}
+.dxeDisabled_Metro .dxeSpinDecButton_Metro
+{
+    background: #ecf2f7 url('edtSpinDecBtnDisabledBack.png') repeat-x left top;
+}
+
+/* -- Memo -- */
+.dxeMemo_Metro
+{
+
+}
+.dxeMemoEditArea_Metro 
+{
+	background-color: white;
+	font-family: Verdana;
+	font-size: 8pt;
+}
+.dxeMemo_Metro td
+{
+	padding: 0 0 0 1px;
+	width: 100%;
+}
+
+/* -- Hyperlink -- */
+.dxeHyperlink_Metro
+{
+    font-family: Verdana;
+    font-size: 8pt;
+    font-weight: normal;
+    color: #1e395b;
+    text-decoration: none;
+}
+a.dxeHyperlink_Metro:hover
+{
+    text-decoration: underline;
+}
+a.dxeHyperlink_Metro:visited
+{
+    color: #8467b2;
+}
+
+/* -- ListBox -- */
+.dxeListBox_Metro
+{
+    font-family: Verdana;
+    font-size: 8pt;
+	background-color: white;
+	border: 1px solid #9B9B9B;
+    width: 70px;
+    height: 109px;
+}
+.dxeListBox_Metro div.dxlbd
+{
+    padding-top: 1px;
+    height: 108px;
+}
+.dxeListBoxItemRow_Metro
+{
+    cursor: default;
+}
+.dxeListBoxItem_Metro
+{
+    font-family: Verdana;
+    font-weight: normal;
+    font-size: 8pt;
+    color: Black;
+    padding: 2px 5px;
+    white-space: nowrap;
+    text-align: left;
+    border-style: solid;
+    border-color: White;
+    border-width: 0 1px 1px 1px;
+}
+.dxeListBoxItem_Metro em 
+{
+    background: none repeat scroll 0 0 #d5e8ff;
+    color: Black;
+    font-weight:bold;
+    font-style:normal;
+}
+
+.dxeListBox_Metro td.dxeI,
+.dxeListBox_Metro td.dxeIM,
+.dxeListBox_Metro .dxeHIC, 
+.dxeListBox_Metro td.dxeFTM,
+.dxeListBox_Metro td.dxeTM,
+.dxeListBox_Metro td.dxeC,
+.dxeListBox_Metro td.dxeCM,
+.dxeListBox_Metro td.dxeHCC,
+.dxeListBox_Metro td.dxeMI,
+.dxeListBox_Metro td.dxeMIM
+{
+    border-right: 0!important;
+}
+
+.dxeListBox_Metro td.dxeIR,
+.dxeListBox_Metro td.dxeIMR,
+.dxeListBox_Metro .dxeHICR, 
+.dxeListBox_Metro td.dxeFTMR,
+.dxeListBox_Metro td.dxeTMR,
+.dxeListBox_Metro td.dxeCR,
+.dxeListBox_Metro td.dxeCMR,
+.dxeListBox_Metro td.dxeHCCR,
+.dxeListBox_Metro td.dxeMIR,
+.dxeListBox_Metro td.dxeMIMR
+{
+    border-left: 0!important;
+}
+
+.dxeListBox_Metro td.dxeCM,
+.dxeListBox_Metro td.dxeHCC,
+.dxeListBox_Metro td.dxeCMR,
+.dxeListBox_Metro td.dxeHCCR
+{
+    width: 25px;
+}
+
+.dxeListBox_Metro td.dxeIM,
+.dxeListBox_Metro td.dxeIMR
+{
+    width: 0;
+}
+
+.dxeListBox_Metro td.dxeT
+{
+    width: 100%;
+    padding-left: 0!important;
+}
+
+.dxeListBox_Metro td.dxeTR
+{
+    width: 100%;
+    padding-right: 0!important;
+}
+
+
+.dxeListBox_Metro td.dxeT,
+.dxeListBox_Metro td.dxeMI
+{
+    border-left: 0!important;
+}
+
+.dxeListBox_Metro td.dxeTR,
+.dxeListBox_Metro td.dxeMIR
+{
+    border-right: 0!important;
+}
+
+
+.dxeListBox_Metro td.dxeFTM,
+.dxeListBox_Metro td.dxeTM,
+.dxeListBox_Metro td.dxeLTM,
+.dxeListBox_Metro .dxeHFC,
+.dxeListBox_Metro .dxeHC,
+.dxeListBox_Metro .dxeHLC,
+.dxeListBox_Metro td.dxeFTMR,
+.dxeListBox_Metro td.dxeTMR,
+.dxeListBox_Metro td.dxeLTMR,
+.dxeListBox_Metro .dxeHFCR,
+.dxeListBox_Metro .dxeHCR,
+.dxeListBox_Metro .dxeHLCR
+{
+    overflow: hidden;
+}
+
+.dxeListBox_Metro td.dxeFTM,
+.dxeListBox_Metro td.dxeTM,
+.dxeListBox_Metro .dxeHFC,
+.dxeListBox_Metro .dxeHC
+{
+    padding-right: 6px!important;
+}
+
+.dxeListBox_Metro td.dxeFTMR,
+.dxeListBox_Metro td.dxeTMR,
+.dxeListBox_Metro .dxeHFCR,
+.dxeListBox_Metro .dxeHCR
+{
+    padding-left: 6px!important;
+}
+
+
+.dxeListBox_Metro td.dxeLTM,
+.dxeListBox_Metro td.dxeTM,
+.dxeListBox_Metro .dxeHC,
+.dxeListBox_Metro .dxeHLC
+{
+    padding-left: 6px!important;
+}
+
+.dxeListBox_Metro td.dxeLTMR,
+.dxeListBox_Metro td.dxeTMR,
+.dxeListBox_Metro .dxeHCR,
+.dxeListBox_Metro .dxeHLCR
+{
+    padding-right: 6px!important;
+}
+
+.dxeListBox_Metro .dxeFTM,
+.dxeListBox_Metro .dxeTM,
+.dxeListBox_Metro .dxeHFC,
+.dxeListBox_Metro .dxeHC,
+.dxeListBox_Metro .dxeLTM,
+.dxeListBox_Metro .dxeTM,
+.dxeListBox_Metro .dxeHC,
+.dxeListBox_Metro .dxeHLC,
+.dxeListBox_Metro td.dxeIM,
+.dxeListBox_Metro td.dxeFTM,
+.dxeListBox_Metro td.dxeTM,
+.dxeListBox_Metro td.dxeCM,
+.dxeListBox_Metro td.dxeMIM,
+.dxeListBox_Metro .dxeFTMR,
+.dxeListBox_Metro .dxeTMR,
+.dxeListBox_Metro .dxeHFCR,
+.dxeListBox_Metro .dxeHCR,
+.dxeListBox_Metro .dxeLTMR,
+.dxeListBox_Metro .dxeTMR,
+.dxeListBox_Metro .dxeHCR,
+.dxeListBox_Metro .dxeHLCR,
+.dxeListBox_Metro td.dxeIMR,
+.dxeListBox_Metro td.dxeFTMR,
+.dxeListBox_Metro td.dxeTMR,
+.dxeListBox_Metro td.dxeCMR,
+.dxeListBox_Metro td.dxeMIMR
+{
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+/*Grid lines*/
+
+.dxeListBox_Metro td.dxeLTM,
+.dxeListBox_Metro td.dxeTM,
+.dxeListBox_Metro td.dxeMIM
+{
+    border-left: 1px solid #cfddee !important;
+}
+
+.dxeListBox_Metro td.dxeLTMR,
+.dxeListBox_Metro td.dxeTMR,
+.dxeListBox_Metro td.dxeMIMR
+{
+    border-right: 1px solid #cfddee !important;
+}
+
+.dxeListBox_Metro td.dxeIM,
+.dxeListBox_Metro td.dxeFTM,
+.dxeListBox_Metro td.dxeTM,
+.dxeListBox_Metro td.dxeLTM,
+.dxeListBox_Metro td.dxeCM,
+.dxeListBox_Metro td.dxeMIM,
+.dxeListBox_Metro td.dxeIMR,
+.dxeListBox_Metro td.dxeFTMR,
+.dxeListBox_Metro td.dxeTMR,
+.dxeListBox_Metro td.dxeLTMR,
+.dxeListBox_Metro td.dxeCMR,
+.dxeListBox_Metro td.dxeMIMR
+{
+    border-bottom: solid 1px #cfddee;
+}
+
+.dxeListBoxItemSelected_Metro     /* inherits dxeListBoxItem */
+{    
+    color: Black;
+    background: #e2ecf7;
+}
+.dxeListBoxItemHover_Metro        /* inherits dxeListBoxItem */
+{
+    color: Black;
+    background: #d5e8ff;
+}
+.dxeListBoxItemHover_Metro em,
+.dxeListBoxItemSelected_Metro em
+{
+    background: none;
+}
+
+/*Header*/
+
+.dxeListBox_Metro .dxeHD
+{
+    background: #e4effb url('lbHeaderBack.png') repeat-x left top;
+    border-bottom: 1px solid #9B9B9B;
+}
+.dxeHD .dxeListBoxItem_Metro
+{
+    color: #1e395b;
+    border-width: 0 1px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.dxeListBox_Metro .dxeHC,
+.dxeListBox_Metro .dxeHLC,
+.dxeListBox_Metro td.dxeHMIC
+{
+    border-left: 1px solid #9B9B9B;
+}
+
+.dxeListBox_Metro .dxeHCR,
+.dxeListBox_Metro .dxeHLCR,
+.dxeListBox_Metro td.dxeHMICR
+{
+    border-right: 1px solid #9B9B9B;
+    text-align: right;
+}
+
+.dxeListBox_Metro .dxeHIC,
+.dxeListBox_Metro .dxeHFC,
+.dxeListBox_Metro .dxeHCC
+{
+    border-left: 1px solid #e8f0fb;
+}
+
+.dxeListBox_Metro .dxeHICR,
+.dxeListBox_Metro .dxeHFCR,
+.dxeListBox_Metro .dxeHCCR
+{
+    border-right: 1px solid #e8f0fb;
+    text-align: right;
+}
+
+.dxeListBox_Metro .dxeHFC,
+.dxeListBox_Metro .dxeHC,
+.dxeListBox_Metro .dxeHMIC
+{
+    border-right: 0;
+}
+
+.dxeListBox_Metro .dxeHFCR,
+.dxeListBox_Metro .dxeHCR,
+.dxeListBox_Metro .dxeHMICR
+{
+    border-left: 0;
+    text-align: right;
+}
+
+.dxeListBox_Metro .dxeHLC
+{
+    border-right: 1px solid #cfddee;
+}
+
+.dxeListBox_Metro .dxeHLCR
+{
+    border-left: 1px solid #cfddee;
+    text-align: right;
+}
+
+/* -- Calendar -- */
+.dxeCalendar_Metro
+{ 
+    font-weight: normal;
+    color: #1e395b;
+    border: 1px solid #9B9B9B;
+    background-color: #cfddee;
+    cursor: default;
+}
+.dxeCalendar_Metro td.dxMonthGrid
+{
+    padding: 1px 8px;
+}
+.dxeCalendar_Metro td.dxMonthGridWithWeekNumbers
+{
+    padding: 1px 20px 6px 8px;
+}
+.dxeCalendar_Metro td.dxMonthGridWithWeekNumbersRtl
+{
+    padding: 1px 8px 1px 20px;
+}
+.dxeCalendarDayHeader_Metro
+{
+    font-family: Verdana;
+    font-size: 8pt;
+    padding: 2px 4px 6px;
+    border-bottom: 1px solid #b7c8dd;
+}
+.dxeCalendarWeekNumber_Metro
+{    
+    font-family: Verdana;
+    font-size: 7pt;
+    text-align: right;
+    padding: 3px 8px 2px 4px;
+    color: #abb7c6;
+}
+.dxeCalendarDay_Metro
+{    
+    font-family: Verdana;
+    font-size: 8pt;
+    padding: 2px 5px 3px;
+    text-align: center;
+}
+.dxeCalendarWeekend_Metro        /* inherits dxeCalendarDay */
+{
+    color: #C00000;
+}
+.dxeCalendarOtherMonth_Metro     /* inherits dxeCalendarDay */
+{
+    color: #b6c3d2;
+}
+.dxeCalendarOutOfRange_Metro     /* inherits dxeCalendarDay */
+{
+    color: #b6c3d2;
+}
+.dxeCalendarSelected_Metro       /* inherits dxeCalendarDay */
+{
+    color: #1e395b;
+    background-color: #a9c1de;
+    border-width: 0;
+    padding: 2px 5px 3px;
+}
+.dxeCalendarToday_Metro         /* inherits dxeCalendarDay */
+{
+    padding: 1px 4px 2px;
+    border: 1px solid #c95c05;
+}
+.dxeCalendarHeader_Metro
+{
+    border-style: none;
+    padding: 4px;
+}
+.dxeCalendarHeader_Metro td.dxe
+{
+    font-family: Verdana;
+    font-size: 8pt;
+    text-align: center;
+	cursor: pointer;
+}
+.dxeCalendarFooter_Metro
+{
+    background-color: #cfddee;
+    padding: 10px 0;
+    border-top: 1px solid #b7c8dd;
+}
+.dxeCalendarFastNav_Metro
+{
+    color: #1e395b;
+    background: #cfddee;
+    border: 1px solid #9B9B9B;
+    border-bottom-width: 0;
+    padding: 5px 8px;
+    cursor: default;
+}
+.dxeCalendarFastNavMonthArea_Metro
+{
+    padding: 0px 9px;
+}
+.dxeCalendarFastNavYearArea_Metro
+{    
+}
+.dxeCalendarFastNavFooter_Metro
+{
+    color: #1e395b;
+    background: #cfddee;
+    padding: 8px 0 17px 0;
+    border: 1px solid #9B9B9B;
+    border-top-width: 0;
+}
+.dxeCalendarFastNavMonth_Metro,
+.dxeCalendarFastNavYear_Metro
+{
+    font: normal 8pt Verdana;
+    color: #1e395b;
+    padding: 3px 5px;
+    text-align: center;
+	cursor: pointer;
+}
+.dxeCalendarFastNavYear_Metro
+{
+    padding: 3px 5px;
+}
+.dxeCalendarFastNavMonth_Metro
+{
+	padding: 6px;
+}
+
+.dxeCalendarFastNavMonthHover_Metro,
+.dxeCalendarFastNavYearHover_Metro
+{        
+    color: #1e395b;
+    padding: 2px 4px;
+    border: 1px solid #c95c05
+}
+.dxeCalendarFastNavMonthHover_Metro
+{
+	padding: 5px;
+}
+
+.dxeCalendarFastNavMonthSelected_Metro,
+.dxeCalendarFastNavYearSelected_Metro
+{
+    color: #1e395b;
+    background-color: #a9c1de;
+    border-width: 0;
+}
+.dxeCalendarFastNavYearSelected_Metro
+{
+    padding: 3px 5px;
+}
+.dxeCalendarFastNavMonthSelected_Metro
+{
+    padding: 6px;
+}
+/* Disabled */
+.dxeDisabled_Metro,
+.dxeDisabled_Metro td.dxe
+{
+	color: #b2b7bd;
+	cursor: default;
+}
+a.dxeDisabled_Metro:hover
+{
+    color: #b2b7bd;
+}
+.dxeButtonDisabled_Metro,
+.dxeButtonDisabled_Metro td.dxe
+{
+	border-color: #bdcbdf;
+	color: #b2b7bd;
+	cursor: default;
+}
+/* -- Button -- */
+.dxbButton_Metro
+{
+	color: #FFFFFF;
+	font-weight: normal;
+	font-size: 10pt;
+	font-family: Calibri;
+	vertical-align: middle;
+	border: 1px solid #abbad0;
+	background: #666666;
+	padding: 1px;
+	cursor: pointer;
+}
+.dxbButtonHover_Metro
+{
+	color: #FFFFFF;
+	background: #E9520E;
+	border: solid 1px #eecc53;
+}
+.dxbButtonChecked_Metro
+{
+    color: #1e395b;
+	background: #fee287 url('edtBtnPBack.png') repeat-x left top;
+	border: solid 1px #c2762b;
+}
+.dxbButtonPressed_Metro
+{
+	color: #FFFFFF;
+	background: #0B8E36;
+	border: solid 1px #0B8E36;
+}
+.dxbButton_Metro div.dxb
+{    
+    padding: 3px 15px;
+	border: 0px;
+}
+.dxbButton_Metro div.dxbf
+{     
+    padding: 2px 14px;
+	border: dotted 1px black;
+}
+.dxbButton_Metro div.dxb table
+{    
+  	color: #FFFFFF;
+	font-size: 10pt;
+	font-family: Calibri;
+}
+.dxbButton_Metro div.dxb td.dxb
+{    
+    background-color: transparent!important;
+    background-image: url('')!important;
+    border-width: 0px!important;
+    padding: 0px!important;
+}
+/* Disabled */
+.dxbDisabled_Metro
+{
+    border-color: #bdcbdf;
+	color: #87929f;
+	background-image: none;
+	background-color: #dae0e6;
+	cursor: default;
+}
+.dxbDisabled_Metro td.dxb
+{
+	color: #87929f;
+}
+/* -- FilterControl -- */
+.dxfcTable_Metro
+{	
+	border-collapse: separate!important;
+}
+.dxfcTable_Metro td.dxfc
+{
+	padding: 0px 0px 0px 3px;
+	vertical-align: middle;
+	font: 8pt Verdana;
+	color: Black;
+}
+a.dxfcPropertyName_Metro
+{
+	white-space: nowrap!important;
+	color: Blue!important;
+}
+a.dxfcGroupType_Metro
+{
+	white-space: nowrap!important;
+	padding: 0px 3px 0px 3px!important;
+	color: Red!important;
+}
+a.dxfcOperation_Metro
+{
+	white-space: nowrap!important;
+	color: Green!important;
+}
+a.dxfcValue_Metro
+{
+	white-space: nowrap!important;
+	color: Gray!important;
+}
+
+.dxfcLoadingDiv_Metro
+{
+	background: white;
+	opacity: 0.01;
+	filter: alpha(opacity=1);
+}
+.dxfcLoadingPanel_Metro
+{
+	font: 8pt Verdana;
+    color: #1e395b;
+    background: White;
+	border: 1px solid #859ebf;
+}
+.dxfcLoadingPanel_Metro td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 10px 14px;
+}
+
+.dxeMaskHint_Metro 
+{
+    font: 8pt Verdana;
+    color: #1e395b;
+	background: #ffffe1;
+	border: 1px solid Black;
+	padding: 2px 5px 3px;
+}
+
+/* -- ProgressBar -- */
+.dxeProgressBar_Metro
+{
+    background: #f9f9fa url('edtProgressBack.png') repeat-x left top;
+    border: 1px solid #a5acb5;
+}
+.dxeProgressBar_Metro,
+.dxeProgressBar_Metro td.dxe
+{
+    font-family: Verdana;
+    font-size: 8pt;
+   	color: #1e395b;
+}
+.dxeProgressBar_Metro .dxePBMainCell_Metro,
+.dxeProgressBar_Metro td.dxe
+{
+    padding: 0;
+}
+.dxeProgressBarIndicator_Metro 
+{
+    background: #dfe6ed url('edtProgressIndicatorBack.png') repeat-x left top;
+}
+
+/* -- DropDownWindow -- */
+.dxeDropDownWindow_Metro
+{
+    background-color: white;
+    border: 1px solid #9B9B9B;
+}
+
+/*----------------- ColorTable -----------------*/
+.dxeColorIndicator_Metro
+{
+    border: 1px solid #9B9B9B;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.dxeColorTable_Metro 
+{
+    background-color: White;
+    border: 1px solid #9B9B9B;
+}
+.dxeItemPicker_Metro 
+{
+    background-color: White;
+	border: 1px solid #a7abb0;
+}
+.dxeColorTable_Metro td.dx,
+.dxeItemPicker_Metro td.dx 
+{
+    padding: 4px;
+}
+.dxeColorTableCell_Metro,
+.dxeItemPickerCell_Metro 
+{
+    padding: 3px;
+    cursor: pointer;
+}
+.dxeColorTableCellDiv_Metro 
+{
+    border: 1px solid #808080;
+    width: 12px;
+    height: 12px;
+    font-size: 0px;
+}
+.dxeColorTableCellSelected_Metro 
+{
+    padding: 2px!important;
+    background: #fddc7f url('Web/mItemSBack.png') repeat-x left top;
+	border: 1px solid #c2762b;
+}
+.dxeColorTableCellHover_Metro,
+.dxeItemPickerCellHover_Metro 
+{
+    padding: 2px!important;
+    background: #fcf9df url('Web/mSubItemHBack.png') repeat-x left top;
+	border: 1px solid #f2ca58;
+}
+
+/* -- Invalid Style -- */
+.dxeInvalid_Metro
+{
+
+}
+.dxeInvalid_Metro .dxeEditArea_Metro,
+.dxeInvalid_Metro .dxeMemoEditArea_Metro {
+
+}
+
+/* -- Focused Style -- */
+.dxeFocused_Metro
+{
+	border: 1px solid #6c86ad;
+}
+
+/* -- Null Text Style -- */
+.dxeNullText_Metro .dxeEditArea_Metro,
+.dxeNullText_Metro .dxeMemoEditArea_Metro
+{
+	color: #b2b7bd;
+}
+
+/* -- Captcha -- */
+.dxcaRefreshButton_Metro
+{
+	font-family: Verdana;
+	text-decoration: none;
+	font-size: 8pt;
+	color: #1e395b;
+}
+
+.dxcaDisabledRefreshButton_Metro
+{
+	color: #b2b7bd;
+}
+
+.dxcaRefreshButtonCell_Metro
+{
+	padding-left: 4px;
+}
+
+.dxcaRefreshButtonText_Metro
+{
+}
+
+.dxcaDisabledRefreshButtonText_Metro
+{
+}
+
+.dxcaTextBoxCell_Metro
+{
+	font-family: Verdana;
+	font-size: 8pt;
+}
+
+.dxcaTextBoxCell_Metro,
+.dxcaTextBoxCellNoIndent_Metro
+{
+	font-family: Verdana;
+	font-size: 8pt;
+}
+
+.dxcaTextBoxCell_Metro .dxeErrorCell_Metro
+{
+}
+
+.dxcaTextBoxCellNoIndent_Metro .dxeErrorCell_Metro
+{
+	padding-left: 0px;
+	padding-top: 4px;
+	color: Red;
+}
+
+.dxcaTextBoxLabel_Metro
+{
+	padding-bottom: 4px;
+	display: block;
+}
+
+.dxcaLoadingPanel_Metro
+{
+	font: 8pt Verdana;
+    color: #1e395b;
+    background: White;
+	border: 1px solid #859ebf;
+}
+
+.dxcaLoadingPanel_Metro td.dx
+{
+	white-space: nowrap;
+	text-align: center;
+	padding: 10px 14px;
+}

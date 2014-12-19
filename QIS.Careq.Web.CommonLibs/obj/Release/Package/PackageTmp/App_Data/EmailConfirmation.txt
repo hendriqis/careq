@@ -1,0 +1,17 @@
+﻿Bapak/Ibu <%MemberName%> yth,
+
+Semoga Bapak/Ibu selalu dalam keadaan sehat, dengan ini, kami bermaksud memberitahukan bahwa kehadiran anda telah dikonfirmasi pada acara:
+
+Venue Name : <%VenueName%>
+Room Name  : <%RoomName%>
+Start      : <%StartDate%> <%StartTime%>
+End        : <%EndDate%> <%EndTime%>
+Lokasi     : <%Location%>
+Trainer    : <%TrainerName%>
+
+
+Kami mengharapkan kehadiran bapak/ibu 30 menit sebelumnya untuk melakukan registrasi ulang, jika Bapak/ Ibu berhalangan hadir pada saat yang telah ditentukan, mohon menginformasikannya kembali kepada kami untuk re-schedule.
+
+Atas perhatian dan kerjasamanya, kami ucapkan terimakasih. 
+  
+Terimakasih 

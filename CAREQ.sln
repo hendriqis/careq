@@ -1,0 +1,98 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QIS.Data.Core", "QIS.Data.Core\QIS.Data.Core.csproj", "{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{D4F985EB-EB12-4630-BE76-AF9EA19408FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QIS.Careq.Data.Service", "QIS.Careq.Data.Service\QIS.Careq.Data.Service.csproj", "{E8019F76-DE58-43A7-984C-A1272D62EA45}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "QIS.Medinfras.AppModel", "QIS.Careq.AppModel\QIS.Medinfras.AppModel.modelproj", "{37F5BB6C-3A58-420C-BCD4-48499E959AD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QIS.Careq.Report", "QIS.Careq.Report\QIS.Careq.Report.csproj", "{20EE50BE-6D9E-48CE-B121-39ED665D8B16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QIS.Careq.Web.Common", "QIS.Careq.Web.Common\QIS.Careq.Web.Common.csproj", "{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QIS.Careq.Web.CommonLibs", "QIS.Careq.Web.CommonLibs\QIS.Careq.Web.CommonLibs.csproj", "{55D82CB3-5508-45BD-B661-E723F8D78473}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QIS.Careq.Web.CustomControl", "QIS.Careq.Web.Control\QIS.Careq.Web.CustomControl.csproj", "{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QIS.Careq.Web.SystemSetup", "QIS.Careq.Web.SystemSetup\QIS.Careq.Web.SystemSetup.csproj", "{15CE4ECF-5566-464E-96DC-48C549ECA0DC}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 9
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = QIS.Careq.AppModel\\QIS.Medinfras.AppModel.modelproj
+		SccProjectTopLevelParentUniqueName1 = CAREQ.sln
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = QIS.Careq.AppModel\\
+		SccProjectUniqueName2 = QIS.Careq.Data.Service\\QIS.Careq.Data.Service.csproj
+		SccLocalPath2 = .
+		SccProjectFilePathRelativizedFromConnection2 = QIS.Careq.Data.Service\\
+		SccProjectUniqueName3 = QIS.Careq.Report\\QIS.Careq.Report.csproj
+		SccLocalPath3 = .
+		SccProjectFilePathRelativizedFromConnection3 = QIS.Careq.Report\\
+		SccProjectUniqueName4 = QIS.Careq.Web.Common\\QIS.Careq.Web.Common.csproj
+		SccLocalPath4 = .
+		SccProjectFilePathRelativizedFromConnection4 = QIS.Careq.Web.Common\\
+		SccProjectUniqueName5 = QIS.Careq.Web.CommonLibs\\QIS.Careq.Web.CommonLibs.csproj
+		SccLocalPath5 = .
+		SccProjectFilePathRelativizedFromConnection5 = QIS.Careq.Web.CommonLibs\\
+		SccProjectUniqueName6 = QIS.Careq.Web.Control\\QIS.Careq.Web.CustomControl.csproj
+		SccLocalPath6 = .
+		SccProjectFilePathRelativizedFromConnection6 = QIS.Careq.Web.Control\\
+		SccProjectUniqueName7 = QIS.Careq.Web.SystemSetup\\QIS.Careq.Web.SystemSetup.csproj
+		SccLocalPath7 = .
+		SccProjectFilePathRelativizedFromConnection7 = QIS.Careq.Web.SystemSetup\\
+		SccProjectUniqueName8 = QIS.Data.Core\\QIS.Data.Core.csproj
+		SccProjectTopLevelParentUniqueName8 = CAREQ.sln
+		SccLocalPath8 = .
+		SccProjectFilePathRelativizedFromConnection8 = QIS.Data.Core\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAC7A3D3-E6BB-4C97-B728-B87D395EB688}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8019F76-DE58-43A7-984C-A1272D62EA45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8019F76-DE58-43A7-984C-A1272D62EA45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8019F76-DE58-43A7-984C-A1272D62EA45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8019F76-DE58-43A7-984C-A1272D62EA45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37F5BB6C-3A58-420C-BCD4-48499E959AD3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37F5BB6C-3A58-420C-BCD4-48499E959AD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37F5BB6C-3A58-420C-BCD4-48499E959AD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37F5BB6C-3A58-420C-BCD4-48499E959AD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20EE50BE-6D9E-48CE-B121-39ED665D8B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20EE50BE-6D9E-48CE-B121-39ED665D8B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20EE50BE-6D9E-48CE-B121-39ED665D8B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20EE50BE-6D9E-48CE-B121-39ED665D8B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12E5AAFD-04A7-4D8F-8840-C8CB4E0B23DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55D82CB3-5508-45BD-B661-E723F8D78473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55D82CB3-5508-45BD-B661-E723F8D78473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55D82CB3-5508-45BD-B661-E723F8D78473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55D82CB3-5508-45BD-B661-E723F8D78473}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A61E72CD-A2CE-42EF-BBD5-9657CC3C8E9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15CE4ECF-5566-464E-96DC-48C549ECA0DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15CE4ECF-5566-464E-96DC-48C549ECA0DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15CE4ECF-5566-464E-96DC-48C549ECA0DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15CE4ECF-5566-464E-96DC-48C549ECA0DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CAC7A3D3-E6BB-4C97-B728-B87D395EB688} = {D4F985EB-EB12-4630-BE76-AF9EA19408FD}
+		{37F5BB6C-3A58-420C-BCD4-48499E959AD3} = {D4F985EB-EB12-4630-BE76-AF9EA19408FD}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <page menucode="PQ1101">
+    <prints>
+      <print code="laporanevent" title="Laporan Event Per Company" url="" />
+      <print code="laporanmember" title="Laporan Member Per Company" url="" />
+    </prints>
+  </page>
+  <page menucode="PQ2100">
+    <prints>
+      <print code="laporanevent" title="Laporan Event" url="" />
+    </prints>
+  </page>
+  <page menucode="PQ2400DT">
+    <prints>
+      <print code="cerificate" title="Certificate" url="~/Program/EventRegistration/EventRegistrationPrintCertificateListCtl.ascx" width="700" height="500" />
+      <print code="nametag" title="Name Tag" url="~/Program/EventRegistration/EventRegistrationPrintNameTagCtl.ascx" width="640" height="500" />
+      <print code="daftarhadir" title="Daftar Hadir" url="" />
+    </prints>
+  </page>
+  <page menucode="PQ2500DT">
+    <prints>
+      <print code="laporanevent" title="Laporan Event" url="" />
+    </prints>
+  </page>
+</root>

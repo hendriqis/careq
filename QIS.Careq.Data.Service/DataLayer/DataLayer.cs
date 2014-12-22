@@ -1566,6 +1566,203 @@ namespace QIS.Careq.Data.Service
         }
     }
     #endregion
+    #region Inquiry
+    [Serializable]
+    [Table(Name = "Inquiry")]
+    public class Inquiry : DbDataModel
+    {
+        private Int32 _InquiryID;
+        private String _InquiryNo;
+        private DateTime _InquiryDate;
+        private Int32? _LeadID;
+        private Int32 _CompanyID;
+        private Int32 _MemberID;
+        private Int32 _PIC_CRO;
+        private Int32? _PIC_TrainerID;
+        private String _Subject;
+        private String _Remarks;
+        private String _GCItemType;
+        private Int32? _ItemID;
+        private String _GCInquiryStatus;
+        private String _GCInquiryProcessType;
+        private String _OtherInquiryProcessType;
+        private String _GCCloseReason;
+        private String _OtherCloseReasonText;
+        private Int32 _CreatedBy;
+        private DateTime _CreatedDate;
+        private Int32? _LastUpdatedBy;
+        private DateTime _LastUpdatedDate;
+
+        [Column(Name = "InquiryID", DataType = "Int32", IsPrimaryKey = true, IsIdentity = true)]
+        public Int32 InquiryID
+        {
+            get { return _InquiryID; }
+            set { _InquiryID = value; }
+        }
+        [Column(Name = "InquiryNo", DataType = "String")]
+        public String InquiryNo
+        {
+            get { return _InquiryNo; }
+            set { _InquiryNo = value; }
+        }
+        [Column(Name = "InquiryDate", DataType = "DateTime")]
+        public DateTime InquiryDate
+        {
+            get { return _InquiryDate; }
+            set { _InquiryDate = value; }
+        }
+        [Column(Name = "LeadID", DataType = "Int32", IsNullable = true)]
+        public Int32? LeadID
+        {
+            get { return _LeadID; }
+            set { _LeadID = value; }
+        }
+        [Column(Name = "CompanyID", DataType = "Int32")]
+        public Int32 CompanyID
+        {
+            get { return _CompanyID; }
+            set { _CompanyID = value; }
+        }
+        [Column(Name = "MemberID", DataType = "Int32")]
+        public Int32 MemberID
+        {
+            get { return _MemberID; }
+            set { _MemberID = value; }
+        }
+        [Column(Name = "PIC_CRO", DataType = "Int32")]
+        public Int32 PIC_CRO
+        {
+            get { return _PIC_CRO; }
+            set { _PIC_CRO = value; }
+        }
+        [Column(Name = "PIC_TrainerID", DataType = "Int32", IsNullable = true)]
+        public Int32? PIC_TrainerID
+        {
+            get { return _PIC_TrainerID; }
+            set { _PIC_TrainerID = value; }
+        }
+        [Column(Name = "Subject", DataType = "String")]
+        public String Subject
+        {
+            get { return _Subject; }
+            set { _Subject = value; }
+        }
+        [Column(Name = "Remarks", DataType = "String", IsNullable = true)]
+        public String Remarks
+        {
+            get { return _Remarks; }
+            set { _Remarks = value; }
+        }
+        [Column(Name = "GCItemType", DataType = "String", IsNullable = true)]
+        public String GCItemType
+        {
+            get { return _GCItemType; }
+            set { _GCItemType = value; }
+        }
+        [Column(Name = "ItemID", DataType = "Int32", IsNullable = true)]
+        public Int32? ItemID
+        {
+            get { return _ItemID; }
+            set { _ItemID = value; }
+        }
+        [Column(Name = "GCInquiryStatus", DataType = "String")]
+        public String GCInquiryStatus
+        {
+            get { return _GCInquiryStatus; }
+            set { _GCInquiryStatus = value; }
+        }
+        [Column(Name = "GCInquiryProcessType", DataType = "String", IsNullable = true)]
+        public String GCInquiryProcessType
+        {
+            get { return _GCInquiryProcessType; }
+            set { _GCInquiryProcessType = value; }
+        }
+        [Column(Name = "OtherInquiryProcessType", DataType = "String", IsNullable = true)]
+        public String OtherInquiryProcessType
+        {
+            get { return _OtherInquiryProcessType; }
+            set { _OtherInquiryProcessType = value; }
+        }
+        [Column(Name = "GCCloseReason", DataType = "String", IsNullable = true)]
+        public String GCCloseReason
+        {
+            get { return _GCCloseReason; }
+            set { _GCCloseReason = value; }
+        }
+        [Column(Name = "OtherCloseReasonText", DataType = "String", IsNullable = true)]
+        public String OtherCloseReasonText
+        {
+            get { return _OtherCloseReasonText; }
+            set { _OtherCloseReasonText = value; }
+        }
+        [Column(Name = "CreatedBy", DataType = "Int32")]
+        public Int32 CreatedBy
+        {
+            get { return _CreatedBy; }
+            set { _CreatedBy = value; }
+        }
+        [Column(Name = "CreatedDate", DataType = "DateTime")]
+        public DateTime CreatedDate
+        {
+            get { return _CreatedDate; }
+            set { _CreatedDate = value; }
+        }
+        [Column(Name = "LastUpdatedBy", DataType = "Int32", IsNullable = true)]
+        public Int32? LastUpdatedBy
+        {
+            get { return _LastUpdatedBy; }
+            set { _LastUpdatedBy = value; }
+        }
+        [Column(Name = "LastUpdatedDate", DataType = "DateTime", IsNullable = true)]
+        public DateTime LastUpdatedDate
+        {
+            get { return _LastUpdatedDate; }
+            set { _LastUpdatedDate = value; }
+        }
+    }
+
+    public class InquiryDao
+    {
+        private readonly IDbContext _ctx = DbFactory.Configure();
+        private readonly DbHelper _helper = new DbHelper(typeof(Inquiry));
+        private bool _isAuditLog = false;
+        private const string p_InquiryID = "@p_InquiryID";
+        public InquiryDao() { }
+        public InquiryDao(IDbContext ctx)
+        {
+            _ctx = ctx;
+        }
+        public Inquiry Get(Int32 InquiryID)
+        {
+            _ctx.CommandText = _helper.GetRecord();
+            _ctx.Add(p_InquiryID, InquiryID);
+            DataRow row = DaoBase.GetDataRow(_ctx);
+            return (row == null) ? null : (Inquiry)_helper.DataRowToObject(row, new Inquiry());
+        }
+        public int Insert(Inquiry record)
+        {
+            record.CreatedDate = DateTime.Now;
+            _helper.Insert(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx);
+        }
+        public int Update(Inquiry record)
+        {
+            record.LastUpdatedDate = DateTime.Now;
+            _helper.Update(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx, true);
+        }
+        public int Delete(Int32 InquiryID)
+        {
+            Inquiry record;
+            if (_ctx.Transaction == null)
+                record = new InquiryDao().Get(InquiryID);
+            else
+                record = Get(InquiryID);
+            _helper.Delete(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx);
+        }
+    }
+    #endregion
     #region Lead
     [Serializable]
     [Table(Name = "Lead")]
@@ -1774,6 +1971,7 @@ namespace QIS.Careq.Data.Service
         private String _LogTime;
         private String _GCActivityType;
         private String _Remarks;
+        private Boolean _IsDeleted;
         private Int32 _CreatedBy;
         private DateTime _CreatedDate;
         private Int32? _LastUpdatedBy;
@@ -1814,6 +2012,12 @@ namespace QIS.Careq.Data.Service
         {
             get { return _Remarks; }
             set { _Remarks = value; }
+        }
+        [Column(Name = "IsDeleted", DataType = "Boolean")]
+        public Boolean IsDeleted
+        {
+            get { return _IsDeleted; }
+            set { _IsDeleted = value; }
         }
         [Column(Name = "CreatedBy", DataType = "Int32")]
         public Int32 CreatedBy

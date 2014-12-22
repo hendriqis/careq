@@ -13,10 +13,13 @@
     <RootNamespace>QIS.Careq.Web.SystemSetup</RootNamespace>
     <AssemblyName>QIS.Careq.Web.SystemSetup</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <SccProjectName>"%24/CAREQ.root/CAREQ", KAAAAAAA</SccProjectName>
-    <SccLocalPath>..</SccLocalPath>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
     <SccAuxPath />
-    <SccProvider>MSSCCI:Microsoft Visual SourceSafe</SccProvider>
+    <SccProvider>
+    </SccProvider>
     <UseIISExpress>false</UseIISExpress>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -159,6 +162,8 @@
     <Content Include="Program\Company\CompanyContactPersonEntryCtl.ascx" />
     <Content Include="Program\Company\CompanyEntry.aspx" />
     <Content Include="Program\Company\CompanyList.aspx" />
+    <Content Include="Program\Inquiry\InquiryEntry.aspx" />
+    <Content Include="Program\Inquiry\InquiryList.aspx" />
     <Content Include="Program\Employee\EmployeeEntry.aspx" />
     <Content Include="Program\Employee\EmployeeList.aspx" />
     <Content Include="Program\EventHistory\EventHistoryDtList.aspx" />
@@ -566,6 +571,20 @@
     </Compile>
     <Compile Include="Program\Company\CompanyList.aspx.designer.cs">
       <DependentUpon>CompanyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Inquiry\InquiryEntry.aspx.cs">
+      <DependentUpon>InquiryEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Inquiry\InquiryEntry.aspx.designer.cs">
+      <DependentUpon>InquiryEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Inquiry\InquiryList.aspx.cs">
+      <DependentUpon>InquiryList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Inquiry\InquiryList.aspx.designer.cs">
+      <DependentUpon>InquiryList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Program\Employee\EmployeeEntry.aspx.cs">
       <DependentUpon>EmployeeEntry.aspx</DependentUpon>

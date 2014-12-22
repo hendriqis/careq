@@ -9,6 +9,7 @@ using QIS.Careq.Data.Service;
 using DevExpress.Web.ASPxCallbackPanel;
 using QIS.Careq.Web.Common;
 using QIS.Data.Core.Dal;
+using System.Data;
 
 namespace QIS.Careq.Web.SystemSetup.Program
 {
@@ -36,6 +37,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
             bool result = true;
             IDbContext ctx = DbFactory.Configure(true);
             LeadDao entityLeadDao = new LeadDao(ctx);
+            InquiryDao entityInquiryDao = new InquiryDao(ctx);
             try
             {
                 Lead entityLead = entityLeadDao.Get(Convert.ToInt32(hdnLeadID.Value));
@@ -50,6 +52,21 @@ namespace QIS.Careq.Web.SystemSetup.Program
 
                 if (entityLead.GCLeadProcessType == Constant.LeadProcessType.PROJECT)
                 {
+                    Inquiry entityInquiry = new Inquiry();
+                    entityInquiry.InquiryNo = BusinessLayer.GenerateInquiryCode(DateTime.Now.ToString("yy"), ctx);
+                    ctx.CommandType = CommandType.Text;
+                    ctx.Command.Parameters.Clear();
+                    
+                    entityInquiry.LeadID = entityLead.LeadID;
+                    entityInquiry.InquiryDate = DateTime.Now;
+                    entityInquiry.CompanyID = entityLead.CompanyID;
+                    entityInquiry.PIC_CRO = entityLead.PIC_CRO;
+                    entityInquiry.MemberID = entityLead.MemberID;
+                    entityInquiry.Subject = entityLead.Subject;
+                    entityInquiry.Remarks = entityLead.Remarks;
+                    entityInquiry.GCInquiryStatus = Constant.LeadStatus.OPENED;
+                    entityInquiry.CreatedBy = AppSession.UserLogin.UserID;
+                    entityInquiryDao.Insert(entityInquiry);
                 }
 
                 ctx.CommitTransaction();

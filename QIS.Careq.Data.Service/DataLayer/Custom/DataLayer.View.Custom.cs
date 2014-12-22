@@ -484,6 +484,54 @@ namespace QIS.Careq.Data.Service
         }
     }
     #endregion
+    #region vInquiry
+    public partial class vInquiry
+    {
+        public String PIC_CROName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _LastName).
+                    Replace("MiddleName", _MiddleName).
+                    Replace("FirstName", _FirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+        public string InquiryDateInString
+        {
+            get { return _InquiryDate.ToString(Constant.FormatString.DATE_FORMAT); }
+        }
+        public String MemberName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _LastName).
+                    Replace("MiddleName", _MiddleName).
+                    Replace("FirstName", _FirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+        public String TrainerName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _TrainerLastName).
+                    Replace("MiddleName", _TrainerMiddleName).
+                    Replace("FirstName", _TrainerFirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+    }
+    #endregion
     #region vLead
     public partial class vLead
     {

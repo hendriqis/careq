@@ -85,21 +85,21 @@ namespace QIS.Careq.Web.CommonLibs {
         protected global::System.Web.UI.WebControls.Button btnGenerateView;
         
         /// <summary>
-        /// divResult control.
+        /// txtResult control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divResult;
+        protected global::System.Web.UI.WebControls.TextBox txtResult;
         
         /// <summary>
-        /// divBusinessLayer control.
+        /// txtBusinessLayer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl divBusinessLayer;
+        protected global::System.Web.UI.WebControls.TextBox txtBusinessLayer;
     }
 }

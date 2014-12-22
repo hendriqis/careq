@@ -138,22 +138,24 @@ namespace QIS.Careq.Web.Common
             public const string LEADS_TRACKING_LOG_ENTRY = "PQ3200";
             public const string CHANGE_LEAD_STATUS = "PQ3300";
 
-            public const string APPLICATION = "PQ4101";
-            public const string MODULE = "PQ4102";
-            public const string MENU = "PQ4103";
-            public const string STANDARD_CODE = "PQ4104";
-            public const string SETTING_PARAMETER = "PQ4105";
-            public const string FILTER_PARAMETER = "PQ4106";
-            public const string REPORT_CONFIGURATION = "PQ4107";
+            public const string INQUIRY_REGISTRATION = "PQ4100";
 
-            public const string USER_ROLES = "PQ4201";
-            public const string USER_ACCOUNTS = "PQ4202";
+            public const string APPLICATION = "PQ7101";
+            public const string MODULE = "PQ7102";
+            public const string MENU = "PQ7103";
+            public const string STANDARD_CODE = "PQ7104";
+            public const string SETTING_PARAMETER = "PQ7105";
+            public const string FILTER_PARAMETER = "PQ7106";
+            public const string REPORT_CONFIGURATION = "PQ7107";
 
-            public const string DATA_MIGRATION_CONFIGURATION = "PQ4301";
-            public const string DATA_MIGRATION = "PQ4302";
+            public const string USER_ROLES = "PQ7201";
+            public const string USER_ACCOUNTS = "PQ7202";
 
-            public const string RESTORE_DATA_CONFIGURATION = "PQ4401";
-            public const string RESTORE_DATA = "PQ4400";
+            public const string DATA_MIGRATION_CONFIGURATION = "PQ7301";
+            public const string DATA_MIGRATION = "PQ7302";
+
+            public const string RESTORE_DATA_CONFIGURATION = "PQ7401";
+            public const string RESTORE_DATA = "PQ7400";
 
             public const string TRANSFER_CONTACT_INFORMATION_TO_OUTLOOK_CONTACTS = "PQ8100";
             public const string UPLOAD_EVENT_PARTICIPANT_FROM_EXCEL = "PQ8200";

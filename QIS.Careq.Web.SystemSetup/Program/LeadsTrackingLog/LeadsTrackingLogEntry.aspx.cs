@@ -100,7 +100,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
         {
             string filterExpression = "1 = 0";
             if (hdnID.Value != "")
-                filterExpression = String.Format("LeadID = {0}",hdnID.Value);
+                filterExpression = String.Format("LeadID = {0} AND IsDeleted = 0",hdnID.Value);
             
             List<vLeadActivityLog> lstEntity = BusinessLayer.GetvLeadActivityLogList(filterExpression);
             grdView.DataSource = lstEntity;
@@ -178,14 +178,26 @@ namespace QIS.Careq.Web.SystemSetup.Program
         private bool OnDeleteEntityDt(ref String errMessage) 
         {
             bool result = true;
+            IDbContext ctx = DbFactory.Configure(true);
+            LeadActivityLogDao leadActivityLogDao = new LeadActivityLogDao(ctx);
             try
             {
-                BusinessLayer.DeleteLeadActivityLog(Convert.ToInt32(hdnEntryID.Value));
+                LeadActivityLog entity = new LeadActivityLog();
+                entity.IsDeleted = true;
+                entity.LastUpdatedBy = AppSession.UserLogin.UserID;
+                entity.LastUpdatedDate = DateTime.Now;
+                leadActivityLogDao.Insert(entity);
+                ctx.CommitTransaction();
             }
             catch (Exception ex)
             {
+                ctx.RollBackTransaction();
                 errMessage = ex.Message;
                 result = false;
+            }
+            finally
+            {
+                ctx.Close();
             }
             return result;
         }

@@ -518,6 +518,46 @@ namespace QIS.Careq.Data.Service
             return result;
         }
         #endregion
+        #region Inquiry
+        public static Inquiry GetInquiry(Int32 InquiryID)
+        {
+            return new InquiryDao().Get(InquiryID);
+        }
+        public static int InsertInquiry(Inquiry record)
+        {
+            return new InquiryDao().Insert(record);
+        }
+        public static int UpdateInquiry(Inquiry record)
+        {
+            return new InquiryDao().Update(record);
+        }
+        public static int DeleteInquiry(Int32 InquiryID)
+        {
+            return new InquiryDao().Delete(InquiryID);
+        }
+        public static List<Inquiry> GetInquiryList(string filterExpression)
+        {
+            List<Inquiry> result = new List<Inquiry>();
+            IDbContext ctx = DbFactory.Configure();
+            try
+            {
+                DbHelper helper = new DbHelper(typeof(Inquiry));
+                ctx.CommandText = helper.Select(filterExpression);
+                using (IDataReader reader = DaoBase.GetDataReader(ctx))
+                    while (reader.Read())
+                        result.Add((Inquiry)helper.IDataReaderToObject(reader, new Inquiry()));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        #endregion
         #region Lead
         public static Lead GetLead(Int32 LeadID)
         {

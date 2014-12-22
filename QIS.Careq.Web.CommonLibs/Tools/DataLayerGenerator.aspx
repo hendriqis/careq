@@ -54,8 +54,8 @@
                 <col style="width:50%" />
             </colgroup>
             <tr>
-                <td style="vertical-align:top"><div id="divResult" runat="server"></div></td>
-                <td style="vertical-align:top"><div id="divBusinessLayer" runat="server"></div></td>
+                <td style="vertical-align:top"><asp:TextBox id="txtResult" runat="server" ReadOnly="true" TextMode="MultiLine" Rows="25" Width="100%" /></td>
+                <td style="vertical-align:top"><asp:TextBox id="txtBusinessLayer" runat="server" ReadOnly="true" TextMode="MultiLine" Rows="25" Width="100%" /></td>
             </tr>
         </table>
         

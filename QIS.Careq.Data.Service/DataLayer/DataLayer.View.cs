@@ -1846,6 +1846,280 @@ namespace QIS.Careq.Data.Service
         }
     }
     #endregion
+    #region vInquiry
+    [Serializable]
+    [Table(Name = "vInquiry")]
+    public partial class vInquiry
+    {
+        private Int32 _InquiryID;
+        private String _InquiryNo;
+        private DateTime _InquiryDate;
+        private Int32 _LeadID;
+        private String _LeadNo;
+        private Int32 _CompanyID;
+        private String _CompanyCode;
+        private String _CompanyName;
+        private Int32 _PIC_CRO;
+        private String _PIC_CROCode;
+        private String _EmployeeSalutation;
+        private String _EmployeeTitle;
+        private String _EmplyoeeFirstName;
+        private String _EmployeeMiddleName;
+        private String _EmployeeLastName;
+        private String _EmployeeSuffix;
+        private Int32 _MemberID;
+        private String _MemberCode;
+        private String _FirstName;
+        private String _MiddleName;
+        private String _LastName;
+        private Int32 _PIC_TrainerID;
+        private String _TrainerCode;
+        private String _TrainerSalutation;
+        private String _TrainerTitle;
+        private String _TrainerFirstName;
+        private String _TrainerMiddleName;
+        private String _TrainerLastName;
+        private String _TrainerSuffix;
+        private String _Subject;
+        private String _Remarks;
+        private String _GCItemType;
+        private Int32 _ItemID;
+        private String _GCInquiryStatus;
+        private String _GCInquiryProcessType;
+        private String _OtherInquiryProcessType;
+        private String _GCCloseReason;
+        private String _OtherCloseReasonText;
+
+        [Column(Name = "InquiryID", DataType = "Int32")]
+        public Int32 InquiryID
+        {
+            get { return _InquiryID; }
+            set { _InquiryID = value; }
+        }
+        [Column(Name = "InquiryNo", DataType = "String")]
+        public String InquiryNo
+        {
+            get { return _InquiryNo; }
+            set { _InquiryNo = value; }
+        }
+        [Column(Name = "InquiryDate", DataType = "DateTime")]
+        public DateTime InquiryDate
+        {
+            get { return _InquiryDate; }
+            set { _InquiryDate = value; }
+        }
+        [Column(Name = "LeadID", DataType = "Int32")]
+        public Int32 LeadID
+        {
+            get { return _LeadID; }
+            set { _LeadID = value; }
+        }
+        [Column(Name = "LeadNo", DataType = "String")]
+        public String LeadNo
+        {
+            get { return _LeadNo; }
+            set { _LeadNo = value; }
+        }
+        [Column(Name = "CompanyID", DataType = "Int32")]
+        public Int32 CompanyID
+        {
+            get { return _CompanyID; }
+            set { _CompanyID = value; }
+        }
+        [Column(Name = "CompanyCode", DataType = "String")]
+        public String CompanyCode
+        {
+            get { return _CompanyCode; }
+            set { _CompanyCode = value; }
+        }
+        [Column(Name = "CompanyName", DataType = "String")]
+        public String CompanyName
+        {
+            get { return _CompanyName; }
+            set { _CompanyName = value; }
+        }
+        [Column(Name = "PIC_CRO", DataType = "Int32")]
+        public Int32 PIC_CRO
+        {
+            get { return _PIC_CRO; }
+            set { _PIC_CRO = value; }
+        }
+        [Column(Name = "PIC_CROCode", DataType = "String")]
+        public String PIC_CROCode
+        {
+            get { return _PIC_CROCode; }
+            set { _PIC_CROCode = value; }
+        }
+        [Column(Name = "EmployeeSalutation", DataType = "String")]
+        public String EmployeeSalutation
+        {
+            get { return _EmployeeSalutation; }
+            set { _EmployeeSalutation = value; }
+        }
+        [Column(Name = "EmployeeTitle", DataType = "String")]
+        public String EmployeeTitle
+        {
+            get { return _EmployeeTitle; }
+            set { _EmployeeTitle = value; }
+        }
+        [Column(Name = "EmplyoeeFirstName", DataType = "String")]
+        public String EmplyoeeFirstName
+        {
+            get { return _EmplyoeeFirstName; }
+            set { _EmplyoeeFirstName = value; }
+        }
+        [Column(Name = "EmployeeMiddleName", DataType = "String")]
+        public String EmployeeMiddleName
+        {
+            get { return _EmployeeMiddleName; }
+            set { _EmployeeMiddleName = value; }
+        }
+        [Column(Name = "EmployeeLastName", DataType = "String")]
+        public String EmployeeLastName
+        {
+            get { return _EmployeeLastName; }
+            set { _EmployeeLastName = value; }
+        }
+        [Column(Name = "EmployeeSuffix", DataType = "String")]
+        public String EmployeeSuffix
+        {
+            get { return _EmployeeSuffix; }
+            set { _EmployeeSuffix = value; }
+        }
+        [Column(Name = "MemberID", DataType = "Int32")]
+        public Int32 MemberID
+        {
+            get { return _MemberID; }
+            set { _MemberID = value; }
+        }
+        [Column(Name = "MemberCode", DataType = "String")]
+        public String MemberCode
+        {
+            get { return _MemberCode; }
+            set { _MemberCode = value; }
+        }
+        [Column(Name = "FirstName", DataType = "String")]
+        public String FirstName
+        {
+            get { return _FirstName; }
+            set { _FirstName = value; }
+        }
+        [Column(Name = "MiddleName", DataType = "String")]
+        public String MiddleName
+        {
+            get { return _MiddleName; }
+            set { _MiddleName = value; }
+        }
+        [Column(Name = "LastName", DataType = "String")]
+        public String LastName
+        {
+            get { return _LastName; }
+            set { _LastName = value; }
+        }
+        [Column(Name = "PIC_TrainerID", DataType = "Int32")]
+        public Int32 PIC_TrainerID
+        {
+            get { return _PIC_TrainerID; }
+            set { _PIC_TrainerID = value; }
+        }
+        [Column(Name = "TrainerCode", DataType = "String")]
+        public String TrainerCode
+        {
+            get { return _TrainerCode; }
+            set { _TrainerCode = value; }
+        }
+        [Column(Name = "TrainerSalutation", DataType = "String")]
+        public String TrainerSalutation
+        {
+            get { return _TrainerSalutation; }
+            set { _TrainerSalutation = value; }
+        }
+        [Column(Name = "TrainerTitle", DataType = "String")]
+        public String TrainerTitle
+        {
+            get { return _TrainerTitle; }
+            set { _TrainerTitle = value; }
+        }
+        [Column(Name = "TrainerFirstName", DataType = "String")]
+        public String TrainerFirstName
+        {
+            get { return _TrainerFirstName; }
+            set { _TrainerFirstName = value; }
+        }
+        [Column(Name = "TrainerMiddleName", DataType = "String")]
+        public String TrainerMiddleName
+        {
+            get { return _TrainerMiddleName; }
+            set { _TrainerMiddleName = value; }
+        }
+        [Column(Name = "TrainerLastName", DataType = "String")]
+        public String TrainerLastName
+        {
+            get { return _TrainerLastName; }
+            set { _TrainerLastName = value; }
+        }
+        [Column(Name = "TrainerSuffix", DataType = "String")]
+        public String TrainerSuffix
+        {
+            get { return _TrainerSuffix; }
+            set { _TrainerSuffix = value; }
+        }
+        [Column(Name = "Subject", DataType = "String")]
+        public String Subject
+        {
+            get { return _Subject; }
+            set { _Subject = value; }
+        }
+        [Column(Name = "Remarks", DataType = "String")]
+        public String Remarks
+        {
+            get { return _Remarks; }
+            set { _Remarks = value; }
+        }
+        [Column(Name = "GCItemType", DataType = "String")]
+        public String GCItemType
+        {
+            get { return _GCItemType; }
+            set { _GCItemType = value; }
+        }
+        [Column(Name = "ItemID", DataType = "Int32")]
+        public Int32 ItemID
+        {
+            get { return _ItemID; }
+            set { _ItemID = value; }
+        }
+        [Column(Name = "GCInquiryStatus", DataType = "String")]
+        public String GCInquiryStatus
+        {
+            get { return _GCInquiryStatus; }
+            set { _GCInquiryStatus = value; }
+        }
+        [Column(Name = "GCInquiryProcessType", DataType = "String")]
+        public String GCInquiryProcessType
+        {
+            get { return _GCInquiryProcessType; }
+            set { _GCInquiryProcessType = value; }
+        }
+        [Column(Name = "OtherInquiryProcessType", DataType = "String")]
+        public String OtherInquiryProcessType
+        {
+            get { return _OtherInquiryProcessType; }
+            set { _OtherInquiryProcessType = value; }
+        }
+        [Column(Name = "GCCloseReason", DataType = "String")]
+        public String GCCloseReason
+        {
+            get { return _GCCloseReason; }
+            set { _GCCloseReason = value; }
+        }
+        [Column(Name = "OtherCloseReasonText", DataType = "String")]
+        public String OtherCloseReasonText
+        {
+            get { return _OtherCloseReasonText; }
+            set { _OtherCloseReasonText = value; }
+        }
+    }
+    #endregion
     #region vLead
     [Serializable]
     [Table(Name = "vLead")]
@@ -2071,6 +2345,7 @@ namespace QIS.Careq.Data.Service
         private String _GCActivityType;
         private String _ActivityType;
         private String _Remarks;
+        private Boolean _IsDeleted;
 
         [Column(Name = "ID", DataType = "Int32")]
         public Int32 ID
@@ -2125,6 +2400,12 @@ namespace QIS.Careq.Data.Service
         {
             get { return _Remarks; }
             set { _Remarks = value; }
+        }
+        [Column(Name = "IsDeleted", DataType = "Boolean")]
+        public Boolean IsDeleted
+        {
+            get { return _IsDeleted; }
+            set { _IsDeleted = value; }
         }
     }
     #endregion

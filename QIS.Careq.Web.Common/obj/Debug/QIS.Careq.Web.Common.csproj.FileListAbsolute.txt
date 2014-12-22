@@ -8,3 +8,13 @@ E:\Source\Development\CAREQ\QIS.Careq.Web.Common\bin\Debug\QIS.Careq.Data.Servic
 E:\Source\Development\CAREQ\QIS.Careq.Web.Common\obj\Debug\QIS.Careq.Web.Common.dll
 E:\Source\Development\CAREQ\QIS.Careq.Web.Common\obj\Debug\QIS.Careq.Web.Common.pdb
 E:\Source\Development\CAREQ\QIS.Careq.Web.Common\obj\Debug\QIS.Careq.Web.Common.csprojResolveAssemblyReference.cache
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\bin\Debug\App_Lib\Gurock.SmartInspect.dll
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\bin\Debug\QIS.Careq.Web.Common.dll
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\bin\Debug\QIS.Careq.Web.Common.pdb
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\bin\Debug\QIS.Careq.Data.Service.dll
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\bin\Debug\QIS.Data.Core.dll
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\bin\Debug\QIS.Data.Core.pdb
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\bin\Debug\QIS.Careq.Data.Service.pdb
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\obj\Debug\QIS.Careq.Web.Common.csprojResolveAssemblyReference.cache
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\obj\Debug\QIS.Careq.Web.Common.dll
+D:\Project\Source\Git\careq\QIS.Careq.Web.Common\obj\Debug\QIS.Careq.Web.Common.pdb

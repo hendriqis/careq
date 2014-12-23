@@ -492,9 +492,9 @@ namespace QIS.Careq.Data.Service
             get
             {
                 StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
-                result = result.Replace("LastName", _LastName).
-                    Replace("MiddleName", _MiddleName).
-                    Replace("FirstName", _FirstName).
+                result = result.Replace("LastName", _EmployeeLastName).
+                    Replace("MiddleName", _EmployeeMiddleName).
+                    Replace("FirstName", _EmployeeFirstName).
                     Replace(",  ", "").
                     Replace("  ", " ");
                 return result.ToString();
@@ -532,6 +532,46 @@ namespace QIS.Careq.Data.Service
         }
     }
     #endregion
+    #region vInquiryActivityLog
+    public partial class vInquiryActivityLog
+    {
+        public String CROName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _CROLastName).
+                    Replace("MiddleName", _CROMiddleName).
+                    Replace("FirstName", _CROFirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+        public String TrainerName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _TrainerLastName).
+                    Replace("MiddleName", _TrainerMiddleName).
+                    Replace("FirstName", _TrainerFirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+        public string LogDateInString
+        {
+            get { return _LogDate.ToString(Constant.FormatString.DATE_FORMAT); }
+        }
+
+        public string LogDateInDatePicker
+        {
+            get { return _LogDate.ToString(Constant.FormatString.DATE_PICKER_FORMAT); }
+        }
+    }
+    #endregion
     #region vLead
     public partial class vLead
     {
@@ -540,9 +580,9 @@ namespace QIS.Careq.Data.Service
             get
             {
                 StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
-                result = result.Replace("LastName", _LastName).
-                    Replace("MiddleName", _MiddleName).
-                    Replace("FirstName", _FirstName).
+                result = result.Replace("LastName", _EmployeeLastName).
+                    Replace("MiddleName", _EmployeeMiddleName).
+                    Replace("FirstName", _EmployeeFirstName).
                     Replace(",  ", "").
                     Replace("  ", " ");
                 return result.ToString();
@@ -568,14 +608,27 @@ namespace QIS.Careq.Data.Service
     }
     #endregion
     #region vLeadActivityLog
-    public partial class vLeadActivityLog 
+    public partial class vLeadActivityLog
     {
-        public string LogDateInString 
+        public String CROName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _CROLastName).
+                    Replace("MiddleName", _CROMiddleName).
+                    Replace("FirstName", _CROFirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+        public string LogDateInString
         {
             get { return _LogDate.ToString(Constant.FormatString.DATE_FORMAT); }
         }
 
-        public string LogDateInDatePicker 
+        public string LogDateInDatePicker
         {
             get { return _LogDate.ToString(Constant.FormatString.DATE_PICKER_FORMAT); }
         }

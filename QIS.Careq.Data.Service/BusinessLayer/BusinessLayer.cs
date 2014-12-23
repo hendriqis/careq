@@ -558,6 +558,46 @@ namespace QIS.Careq.Data.Service
             return result;
         }
         #endregion
+        #region InquiryActivityLog
+        public static InquiryActivityLog GetInquiryActivityLog(Int32 ID)
+        {
+            return new InquiryActivityLogDao().Get(ID);
+        }
+        public static int InsertInquiryActivityLog(InquiryActivityLog record)
+        {
+            return new InquiryActivityLogDao().Insert(record);
+        }
+        public static int UpdateInquiryActivityLog(InquiryActivityLog record)
+        {
+            return new InquiryActivityLogDao().Update(record);
+        }
+        public static int DeleteInquiryActivityLog(Int32 ID)
+        {
+            return new InquiryActivityLogDao().Delete(ID);
+        }
+        public static List<InquiryActivityLog> GetInquiryActivityLogList(string filterExpression)
+        {
+            List<InquiryActivityLog> result = new List<InquiryActivityLog>();
+            IDbContext ctx = DbFactory.Configure();
+            try
+            {
+                DbHelper helper = new DbHelper(typeof(InquiryActivityLog));
+                ctx.CommandText = helper.Select(filterExpression);
+                using (IDataReader reader = DaoBase.GetDataReader(ctx))
+                    while (reader.Read())
+                        result.Add((InquiryActivityLog)helper.IDataReaderToObject(reader, new InquiryActivityLog()));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        #endregion
         #region Lead
         public static Lead GetLead(Int32 LeadID)
         {

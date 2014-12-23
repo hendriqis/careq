@@ -12,20 +12,20 @@ using QIS.Data.Core.Dal;
 
 namespace QIS.Careq.Web.SystemSetup.Program
 {
-    public partial class LeadsTrackingLogEntry : BasePageList
+    public partial class InquiryTrackingLogEntry : BasePageList
     {
         protected bool IsEditable = true;
 
         public override string OnGetMenuCode()
         {
-            return Constant.MenuCode.LEADS_TRACKING_LOG_ENTRY;
+            return Constant.MenuCode.INQUIRY_TRACKING_LOG_ENTRY;
         }
 
         protected override void InitializeDataControl(string filterExpression, string keyValue)
         {
             String ID = Request.QueryString["id"];
             hdnID.Value = ID;
-            vLead entity = BusinessLayer.GetvLeadList(String.Format("LeadID = {0}", ID))[0];
+            vInquiry entity = BusinessLayer.GetvInquiryList(String.Format("InquiryID = {0}", ID))[0];
             EntityToControl(entity);
             SetControlProperties();
             BindGridView();
@@ -42,19 +42,19 @@ namespace QIS.Careq.Web.SystemSetup.Program
             txtLogTime.Text = DateTime.Now.ToString("HH:mm");
         }
 
-        private void EntityToControl(vLead entity)
+        private void EntityToControl(vInquiry entity)
         {
             hdnDefaultEmployeeID.Value = entity.PIC_CRO.ToString();
             hdnDefaultEmployeeCode.Value = entity.PIC_CROCode;
             hdnDefaultEmployeeName.Value = entity.PIC_CROName;
 
-            txtLeadNo.Text = entity.LeadNo;
-            txtLeadDate.Text = entity.LeadDate.ToString(Constant.FormatString.DATE_PICKER_FORMAT);
+            txtInquiryNo.Text = entity.InquiryNo;
+            txtInquiryDate.Text = entity.InquiryDate.ToString(Constant.FormatString.DATE_PICKER_FORMAT);
             txtSubject.Text = entity.Subject;
             txtRemarks.Text = entity.Remarks;
         }
 
-        private void EntityToControlDt(vLeadActivityLog entity) 
+        private void EntityToControlDt(vInquiryActivityLog entity) 
         {
             txtLogDate.Text = entity.LogDate.ToString(Constant.FormatString.DATE_PICKER_FORMAT);
             txtLogTime.Text = entity.LogTime;
@@ -62,21 +62,22 @@ namespace QIS.Careq.Web.SystemSetup.Program
             txtRemarks.Text = entity.Remarks;
         }
 
-        private void ControlToEntity(Lead entity)
+        private void ControlToEntity(Inquiry entity)
         {
-            entity.LeadNo = txtLeadNo.Text;
-            entity.LeadDate = Helper.GetDatePickerValue(txtLeadDate.Text);
+            entity.InquiryNo = txtInquiryNo.Text;
+            entity.InquiryDate = Helper.GetDatePickerValue(txtInquiryDate.Text);
             entity.Subject = txtSubject.Text;
             entity.Remarks = txtRemarks.Text;
         }
 
-        private void ControlToEntityDt(LeadActivityLog entity) 
+        private void ControlToEntityDt(InquiryActivityLog entity) 
         {
             entity.LogDate = Helper.GetDatePickerValue(txtLogDate.Text);
             entity.LogTime = txtLogTime.Text;
-            entity.LeadID = Convert.ToInt32(hdnID.Value);
+            entity.InquiryID = Convert.ToInt32(hdnID.Value);
             entity.GCActivityType = cboActivityType.Value.ToString();
             entity.CRO = Convert.ToInt32(hdnEmployeeID.Value);
+            entity.TrainerID = Convert.ToInt32(hdnTrainerID.Value);
             entity.Remarks = txtRemarks.Text;
         }
 
@@ -97,9 +98,9 @@ namespace QIS.Careq.Web.SystemSetup.Program
         {
             string filterExpression = "1 = 0";
             if (hdnID.Value != "")
-                filterExpression = String.Format("LeadID = {0} AND IsDeleted = 0",hdnID.Value);
+                filterExpression = String.Format("InquiryID = {0} AND IsDeleted = 0",hdnID.Value);
             
-            List<vLeadActivityLog> lstEntity = BusinessLayer.GetvLeadActivityLogList(filterExpression);
+            List<vInquiryActivityLog> lstEntity = BusinessLayer.GetvInquiryActivityLogList(filterExpression);
             grdView.DataSource = lstEntity;
             grdView.DataBind();
         }
@@ -108,21 +109,14 @@ namespace QIS.Careq.Web.SystemSetup.Program
         {
             bool result = true;
             IDbContext ctx = DbFactory.Configure(true);
-            LeadDao leadDao = new LeadDao(ctx);
-            LeadActivityLogDao leadActivityLogDao = new LeadActivityLogDao(ctx);
+            InquiryActivityLogDao leadActivityLogDao = new InquiryActivityLogDao(ctx);
             try
             {
-                LeadActivityLog entity = leadActivityLogDao.Get(Convert.ToInt32(hdnEntryID.Value));
-                Lead entityLead = leadDao.Get(Convert.ToInt32(hdnID.Value));
+                InquiryActivityLog entity = leadActivityLogDao.Get(Convert.ToInt32(hdnEntryID.Value));
                 ControlToEntityDt(entity);
                 entity.LastUpdatedBy = AppSession.UserLogin.UserID;
                 entity.LastUpdatedDate = DateTime.Now;
-                entityLead.ResponseDate = DateTime.Now;
-                entityLead.ResponseTime = DateTime.Now.ToString("HH:mm");
-                entityLead.LastUpdatedBy = AppSession.UserLogin.UserID;
-                entityLead.LastUpdatedDate = DateTime.Now;
                 leadActivityLogDao.Update(entity);
-                leadDao.Update(entityLead);
                 ctx.CommitTransaction();
             }
             catch (Exception ex)
@@ -142,20 +136,13 @@ namespace QIS.Careq.Web.SystemSetup.Program
         {
             bool result = true;
             IDbContext ctx = DbFactory.Configure(true);
-            LeadDao leadDao = new LeadDao(ctx);
-            LeadActivityLogDao leadActivityLogDao = new LeadActivityLogDao(ctx);
+            InquiryActivityLogDao leadActivityLogDao = new InquiryActivityLogDao(ctx);
             try
             {
-                Lead entityLead = leadDao.Get(Convert.ToInt32(hdnID.Value));
-                LeadActivityLog entity = new LeadActivityLog();
+                InquiryActivityLog entity = new InquiryActivityLog();
                 ControlToEntityDt(entity);
                 entity.CreatedBy = AppSession.UserLogin.UserID;
                 entity.CreatedDate = DateTime.Now;
-                entityLead.ResponseDate = DateTime.Now;
-                entityLead.ResponseTime = DateTime.Now.ToString("HH:mm");
-                entityLead.LastUpdatedBy = AppSession.UserLogin.UserID;
-                entityLead.LastUpdatedDate = DateTime.Now;
-                leadDao.Update(entityLead);
                 leadActivityLogDao.Insert(entity);
                 ctx.CommitTransaction();
             }
@@ -176,10 +163,10 @@ namespace QIS.Careq.Web.SystemSetup.Program
         {
             bool result = true;
             IDbContext ctx = DbFactory.Configure(true);
-            LeadActivityLogDao leadActivityLogDao = new LeadActivityLogDao(ctx);
+            InquiryActivityLogDao leadActivityLogDao = new InquiryActivityLogDao(ctx);
             try
             {
-                LeadActivityLog entity = new LeadActivityLog();
+                InquiryActivityLog entity = new InquiryActivityLog();
                 entity.IsDeleted = true;
                 entity.LastUpdatedBy = AppSession.UserLogin.UserID;
                 entity.LastUpdatedDate = DateTime.Now;

@@ -1763,6 +1763,147 @@ namespace QIS.Careq.Data.Service
         }
     }
     #endregion
+    #region InquiryActivityLog
+    [Serializable]
+    [Table(Name = "InquiryActivityLog")]
+    public class InquiryActivityLog : DbDataModel
+    {
+        private Int32 _ID;
+        private Int32 _InquiryID;
+        private DateTime _LogDate;
+        private String _LogTime;
+        private Int32? _CRO;
+        private Int32? _TrainerID;
+        private String _GCActivityType;
+        private String _Remarks;
+        private Boolean _IsDeleted;
+        private Int32 _CreatedBy;
+        private DateTime _CreatedDate;
+        private Int32? _LastUpdatedBy;
+        private DateTime _LastUpdatedDate;
+
+        [Column(Name = "ID", DataType = "Int32", IsPrimaryKey = true, IsIdentity = true)]
+        public Int32 ID
+        {
+            get { return _ID; }
+            set { _ID = value; }
+        }
+        [Column(Name = "InquiryID", DataType = "Int32")]
+        public Int32 InquiryID
+        {
+            get { return _InquiryID; }
+            set { _InquiryID = value; }
+        }
+        [Column(Name = "LogDate", DataType = "DateTime")]
+        public DateTime LogDate
+        {
+            get { return _LogDate; }
+            set { _LogDate = value; }
+        }
+        [Column(Name = "LogTime", DataType = "String")]
+        public String LogTime
+        {
+            get { return _LogTime; }
+            set { _LogTime = value; }
+        }
+        [Column(Name = "CRO", DataType = "Int32", IsNullable = true)]
+        public Int32? CRO
+        {
+            get { return _CRO; }
+            set { _CRO = value; }
+        }
+        [Column(Name = "TrainerID", DataType = "Int32", IsNullable = true)]
+        public Int32? TrainerID
+        {
+            get { return _TrainerID; }
+            set { _TrainerID = value; }
+        }
+        [Column(Name = "GCActivityType", DataType = "String")]
+        public String GCActivityType
+        {
+            get { return _GCActivityType; }
+            set { _GCActivityType = value; }
+        }
+        [Column(Name = "Remarks", DataType = "String", IsNullable = true)]
+        public String Remarks
+        {
+            get { return _Remarks; }
+            set { _Remarks = value; }
+        }
+        [Column(Name = "IsDeleted", DataType = "Boolean")]
+        public Boolean IsDeleted
+        {
+            get { return _IsDeleted; }
+            set { _IsDeleted = value; }
+        }
+        [Column(Name = "CreatedBy", DataType = "Int32")]
+        public Int32 CreatedBy
+        {
+            get { return _CreatedBy; }
+            set { _CreatedBy = value; }
+        }
+        [Column(Name = "CreatedDate", DataType = "DateTime")]
+        public DateTime CreatedDate
+        {
+            get { return _CreatedDate; }
+            set { _CreatedDate = value; }
+        }
+        [Column(Name = "LastUpdatedBy", DataType = "Int32", IsNullable = true)]
+        public Int32? LastUpdatedBy
+        {
+            get { return _LastUpdatedBy; }
+            set { _LastUpdatedBy = value; }
+        }
+        [Column(Name = "LastUpdatedDate", DataType = "DateTime", IsNullable = true)]
+        public DateTime LastUpdatedDate
+        {
+            get { return _LastUpdatedDate; }
+            set { _LastUpdatedDate = value; }
+        }
+    }
+
+    public class InquiryActivityLogDao
+    {
+        private readonly IDbContext _ctx = DbFactory.Configure();
+        private readonly DbHelper _helper = new DbHelper(typeof(InquiryActivityLog));
+        private bool _isAuditLog = false;
+        private const string p_ID = "@p_ID";
+        public InquiryActivityLogDao() { }
+        public InquiryActivityLogDao(IDbContext ctx)
+        {
+            _ctx = ctx;
+        }
+        public InquiryActivityLog Get(Int32 ID)
+        {
+            _ctx.CommandText = _helper.GetRecord();
+            _ctx.Add(p_ID, ID);
+            DataRow row = DaoBase.GetDataRow(_ctx);
+            return (row == null) ? null : (InquiryActivityLog)_helper.DataRowToObject(row, new InquiryActivityLog());
+        }
+        public int Insert(InquiryActivityLog record)
+        {
+            record.CreatedDate = DateTime.Now;
+            _helper.Insert(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx);
+        }
+        public int Update(InquiryActivityLog record)
+        {
+            record.LastUpdatedDate = DateTime.Now;
+            _helper.Update(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx, true);
+        }
+        public int Delete(Int32 ID)
+        {
+            InquiryActivityLog record;
+            if (_ctx.Transaction == null)
+                record = new InquiryActivityLogDao().Get(ID);
+            else
+                record = Get(ID);
+            _helper.Delete(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx);
+        }
+    }
+    #endregion
     #region Lead
     [Serializable]
     [Table(Name = "Lead")]
@@ -1969,6 +2110,7 @@ namespace QIS.Careq.Data.Service
         private Int32 _LeadID;
         private DateTime _LogDate;
         private String _LogTime;
+        private Int32 _CRO;
         private String _GCActivityType;
         private String _Remarks;
         private Boolean _IsDeleted;
@@ -2000,6 +2142,12 @@ namespace QIS.Careq.Data.Service
         {
             get { return _LogTime; }
             set { _LogTime = value; }
+        }
+        [Column(Name = "CRO", DataType = "Int32")]
+        public Int32 CRO
+        {
+            get { return _CRO; }
+            set { _CRO = value; }
         }
         [Column(Name = "GCActivityType", DataType = "String")]
         public String GCActivityType
@@ -2065,11 +2213,13 @@ namespace QIS.Careq.Data.Service
         }
         public int Insert(LeadActivityLog record)
         {
+            record.CreatedDate = DateTime.Now;
             _helper.Insert(_ctx, record, _isAuditLog);
             return DaoBase.ExecuteNonQuery(_ctx);
         }
         public int Update(LeadActivityLog record)
         {
+            record.LastUpdatedDate = DateTime.Now;
             _helper.Update(_ctx, record, _isAuditLog);
             return DaoBase.ExecuteNonQuery(_ctx, true);
         }

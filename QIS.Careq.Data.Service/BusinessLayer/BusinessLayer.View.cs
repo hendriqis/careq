@@ -705,6 +705,30 @@ namespace QIS.Careq.Data.Service
             return result;
         }
         #endregion
+        #region vInquiryActivityLog
+        public static List<vInquiryActivityLog> GetvInquiryActivityLogList(string filterExpression)
+        {
+            List<vInquiryActivityLog> result = new List<vInquiryActivityLog>();
+            IDbContext ctx = DbFactory.Configure();
+            try
+            {
+                DbHelper helper = new DbHelper(typeof(vInquiryActivityLog));
+                ctx.CommandText = helper.Select(filterExpression);
+                using (IDataReader reader = DaoBase.GetDataReader(ctx))
+                    while (reader.Read())
+                        result.Add((vInquiryActivityLog)helper.IDataReaderToObject(reader, new vInquiryActivityLog()));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        #endregion
         #region vLead
         public static List<vLead> GetvLeadList(string filterExpression)
         {

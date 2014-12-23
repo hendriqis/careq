@@ -11,12 +11,12 @@ using DevExpress.Web.ASPxCallbackPanel;
 
 namespace QIS.Careq.Web.SystemSetup.Program
 {
-    public partial class InquiryList : BasePageList
+    public partial class InquiryTrackingLogList : BasePageList
     {
         protected int PageCount = 1;
         public override string OnGetMenuCode()
         {
-            return Constant.MenuCode.INQUIRY_REGISTRATION;
+            return Constant.MenuCode.INQUIRY_TRACKING_LOG_ENTRY;
         }
 
         protected override void InitializeDataControl(string filterExpression, string keyValue)
@@ -74,7 +74,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
 
         protected override bool OnAddRecord(ref string url, ref string errMessage)
         {
-            url = ResolveUrl("~/Program/Inquiry/InquiryEntry.aspx");
+            url = ResolveUrl("~/Program/InquiryRegistration/InquiryRegistrationEntry.aspx");
             return true;
         }
 
@@ -82,7 +82,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
         {
             if (hdnID.Value.ToString() != "")
             {
-                url = ResolveUrl(string.Format("~/Program/Inquiry/InquiryEntry.aspx?id={0}", hdnID.Value));
+                url = ResolveUrl(string.Format("~/Program/InquiryRegistration/InquiryRegistrationEntry.aspx?id={0}", hdnID.Value));
                 return true;
             }
             return false;

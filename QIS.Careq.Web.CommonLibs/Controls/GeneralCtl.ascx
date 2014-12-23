@@ -629,6 +629,15 @@
         else
             $item.attr('disabled', 'disabled');
     }
+
+    function rowToObject($row) {
+        var selectedObj = {};
+        $row.find('input[type=hidden]').each(function () {
+            if ($(this).attr('bindingfield') != null)
+                selectedObj[$(this).attr('bindingfield')] = $(this).val();
+        });
+        return selectedObj;
+    }
     //#endregion
 </script>
 <style type="text/css">

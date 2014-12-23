@@ -162,6 +162,8 @@
     <Content Include="Program\Company\CompanyContactPersonEntryCtl.ascx" />
     <Content Include="Program\Company\CompanyEntry.aspx" />
     <Content Include="Program\Company\CompanyList.aspx" />
+    <Content Include="Program\InquiryTrackingLog\InquiryTrackingLogEntry.aspx" />
+    <Content Include="Program\InquiryTrackingLog\InquiryTrackingLogList.aspx" />
     <Content Include="Program\Inquiry\InquiryEntry.aspx" />
     <Content Include="Program\Inquiry\InquiryList.aspx" />
     <Content Include="Program\Employee\EmployeeEntry.aspx" />
@@ -571,6 +573,20 @@
     </Compile>
     <Compile Include="Program\Company\CompanyList.aspx.designer.cs">
       <DependentUpon>CompanyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\InquiryTrackingLog\InquiryTrackingLogEntry.aspx.cs">
+      <DependentUpon>InquiryTrackingLogEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\InquiryTrackingLog\InquiryTrackingLogEntry.aspx.designer.cs">
+      <DependentUpon>InquiryTrackingLogEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\InquiryTrackingLog\InquiryTrackingLogList.aspx.cs">
+      <DependentUpon>InquiryTrackingLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\InquiryTrackingLog\InquiryTrackingLogList.aspx.designer.cs">
+      <DependentUpon>InquiryTrackingLogList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Program\Inquiry\InquiryEntry.aspx.cs">
       <DependentUpon>InquiryEntry.aspx</DependentUpon>

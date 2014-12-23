@@ -1863,7 +1863,7 @@ namespace QIS.Careq.Data.Service
         private String _PIC_CROCode;
         private String _EmployeeSalutation;
         private String _EmployeeTitle;
-        private String _EmplyoeeFirstName;
+        private String _EmployeeFirstName;
         private String _EmployeeMiddleName;
         private String _EmployeeLastName;
         private String _EmployeeSuffix;
@@ -1962,11 +1962,11 @@ namespace QIS.Careq.Data.Service
             get { return _EmployeeTitle; }
             set { _EmployeeTitle = value; }
         }
-        [Column(Name = "EmplyoeeFirstName", DataType = "String")]
-        public String EmplyoeeFirstName
+        [Column(Name = "EmployeeFirstName", DataType = "String")]
+        public String EmployeeFirstName
         {
-            get { return _EmplyoeeFirstName; }
-            set { _EmplyoeeFirstName = value; }
+            get { return _EmployeeFirstName; }
+            set { _EmployeeFirstName = value; }
         }
         [Column(Name = "EmployeeMiddleName", DataType = "String")]
         public String EmployeeMiddleName
@@ -2120,6 +2120,196 @@ namespace QIS.Careq.Data.Service
         }
     }
     #endregion
+    #region vInquiryActivityLog
+    [Serializable]
+    [Table(Name = "vInquiryActivityLog")]
+    public partial class vInquiryActivityLog
+    {
+        private Int32 _ID;
+        private Int32 _InquiryID;
+        private String _InquiryNo;
+        private DateTime _InquiryDate;
+        private DateTime _LogDate;
+        private String _LogTime;
+        private Int32 _CRO;
+        private String _CROCode;
+        private String _CROSalutation;
+        private String _CROTitle;
+        private String _CROFirstName;
+        private String _CROMiddleName;
+        private String _CROLastName;
+        private String _CROSuffix;
+        private Int32 _TrainerID;
+        private String _TrainerCode;
+        private String _TrainerSalutation;
+        private String _TrainerTitle;
+        private String _TrainerFirstName;
+        private String _TrainerMiddleName;
+        private String _TrainerLastName;
+        private String _TrainerSuffix;
+        private String _GCActivityType;
+        private String _ActivityType;
+        private String _Remarks;
+        private Boolean _IsDeleted;
+
+        [Column(Name = "ID", DataType = "Int32")]
+        public Int32 ID
+        {
+            get { return _ID; }
+            set { _ID = value; }
+        }
+        [Column(Name = "InquiryID", DataType = "Int32")]
+        public Int32 InquiryID
+        {
+            get { return _InquiryID; }
+            set { _InquiryID = value; }
+        }
+        [Column(Name = "InquiryNo", DataType = "String")]
+        public String InquiryNo
+        {
+            get { return _InquiryNo; }
+            set { _InquiryNo = value; }
+        }
+        [Column(Name = "InquiryDate", DataType = "DateTime")]
+        public DateTime InquiryDate
+        {
+            get { return _InquiryDate; }
+            set { _InquiryDate = value; }
+        }
+        [Column(Name = "LogDate", DataType = "DateTime")]
+        public DateTime LogDate
+        {
+            get { return _LogDate; }
+            set { _LogDate = value; }
+        }
+        [Column(Name = "LogTime", DataType = "String")]
+        public String LogTime
+        {
+            get { return _LogTime; }
+            set { _LogTime = value; }
+        }
+        [Column(Name = "CRO", DataType = "Int32")]
+        public Int32 CRO
+        {
+            get { return _CRO; }
+            set { _CRO = value; }
+        }
+        [Column(Name = "CROCode", DataType = "String")]
+        public String CROCode
+        {
+            get { return _CROCode; }
+            set { _CROCode = value; }
+        }
+        [Column(Name = "CROSalutation", DataType = "String")]
+        public String CROSalutation
+        {
+            get { return _CROSalutation; }
+            set { _CROSalutation = value; }
+        }
+        [Column(Name = "CROTitle", DataType = "String")]
+        public String CROTitle
+        {
+            get { return _CROTitle; }
+            set { _CROTitle = value; }
+        }
+        [Column(Name = "CROFirstName", DataType = "String")]
+        public String CROFirstName
+        {
+            get { return _CROFirstName; }
+            set { _CROFirstName = value; }
+        }
+        [Column(Name = "CROMiddleName", DataType = "String")]
+        public String CROMiddleName
+        {
+            get { return _CROMiddleName; }
+            set { _CROMiddleName = value; }
+        }
+        [Column(Name = "CROLastName", DataType = "String")]
+        public String CROLastName
+        {
+            get { return _CROLastName; }
+            set { _CROLastName = value; }
+        }
+        [Column(Name = "CROSuffix", DataType = "String")]
+        public String CROSuffix
+        {
+            get { return _CROSuffix; }
+            set { _CROSuffix = value; }
+        }
+        [Column(Name = "TrainerID", DataType = "Int32")]
+        public Int32 TrainerID
+        {
+            get { return _TrainerID; }
+            set { _TrainerID = value; }
+        }
+        [Column(Name = "TrainerCode", DataType = "String")]
+        public String TrainerCode
+        {
+            get { return _TrainerCode; }
+            set { _TrainerCode = value; }
+        }
+        [Column(Name = "TrainerSalutation", DataType = "String")]
+        public String TrainerSalutation
+        {
+            get { return _TrainerSalutation; }
+            set { _TrainerSalutation = value; }
+        }
+        [Column(Name = "TrainerTitle", DataType = "String")]
+        public String TrainerTitle
+        {
+            get { return _TrainerTitle; }
+            set { _TrainerTitle = value; }
+        }
+        [Column(Name = "TrainerFirstName", DataType = "String")]
+        public String TrainerFirstName
+        {
+            get { return _TrainerFirstName; }
+            set { _TrainerFirstName = value; }
+        }
+        [Column(Name = "TrainerMiddleName", DataType = "String")]
+        public String TrainerMiddleName
+        {
+            get { return _TrainerMiddleName; }
+            set { _TrainerMiddleName = value; }
+        }
+        [Column(Name = "TrainerLastName", DataType = "String")]
+        public String TrainerLastName
+        {
+            get { return _TrainerLastName; }
+            set { _TrainerLastName = value; }
+        }
+        [Column(Name = "TrainerSuffix", DataType = "String")]
+        public String TrainerSuffix
+        {
+            get { return _TrainerSuffix; }
+            set { _TrainerSuffix = value; }
+        }
+        [Column(Name = "GCActivityType", DataType = "String")]
+        public String GCActivityType
+        {
+            get { return _GCActivityType; }
+            set { _GCActivityType = value; }
+        }
+        [Column(Name = "ActivityType", DataType = "String")]
+        public String ActivityType
+        {
+            get { return _ActivityType; }
+            set { _ActivityType = value; }
+        }
+        [Column(Name = "Remarks", DataType = "String")]
+        public String Remarks
+        {
+            get { return _Remarks; }
+            set { _Remarks = value; }
+        }
+        [Column(Name = "IsDeleted", DataType = "Boolean")]
+        public Boolean IsDeleted
+        {
+            get { return _IsDeleted; }
+            set { _IsDeleted = value; }
+        }
+    }
+    #endregion
     #region vLead
     [Serializable]
     [Table(Name = "vLead")]
@@ -2138,7 +2328,7 @@ namespace QIS.Careq.Data.Service
         private String _PIC_CROCode;
         private String _EmployeeSalutation;
         private String _EmployeeTitle;
-        private String _EmplyoeeFirstName;
+        private String _EmployeeFirstName;
         private String _EmployeeMiddleName;
         private String _EmployeeLastName;
         private String _EmployeeSuffix;
@@ -2233,11 +2423,11 @@ namespace QIS.Careq.Data.Service
             get { return _EmployeeTitle; }
             set { _EmployeeTitle = value; }
         }
-        [Column(Name = "EmplyoeeFirstName", DataType = "String")]
-        public String EmplyoeeFirstName
+        [Column(Name = "EmployeeFirstName", DataType = "String")]
+        public String EmployeeFirstName
         {
-            get { return _EmplyoeeFirstName; }
-            set { _EmplyoeeFirstName = value; }
+            get { return _EmployeeFirstName; }
+            set { _EmployeeFirstName = value; }
         }
         [Column(Name = "EmployeeMiddleName", DataType = "String")]
         public String EmployeeMiddleName
@@ -2342,6 +2532,14 @@ namespace QIS.Careq.Data.Service
         private DateTime _LeadDate;
         private DateTime _LogDate;
         private String _LogTime;
+        private Int32 _CRO;
+        private String _CROCode;
+        private String _CROSalutation;
+        private String _CROTitle;
+        private String _CROFirstName;
+        private String _CROMiddleName;
+        private String _CROLastName;
+        private String _CROSuffix;
         private String _GCActivityType;
         private String _ActivityType;
         private String _Remarks;
@@ -2382,6 +2580,54 @@ namespace QIS.Careq.Data.Service
         {
             get { return _LogTime; }
             set { _LogTime = value; }
+        }
+        [Column(Name = "CRO", DataType = "Int32")]
+        public Int32 CRO
+        {
+            get { return _CRO; }
+            set { _CRO = value; }
+        }
+        [Column(Name = "CROCode", DataType = "String")]
+        public String CROCode
+        {
+            get { return _CROCode; }
+            set { _CROCode = value; }
+        }
+        [Column(Name = "CROSalutation", DataType = "String")]
+        public String CROSalutation
+        {
+            get { return _CROSalutation; }
+            set { _CROSalutation = value; }
+        }
+        [Column(Name = "CROTitle", DataType = "String")]
+        public String CROTitle
+        {
+            get { return _CROTitle; }
+            set { _CROTitle = value; }
+        }
+        [Column(Name = "CROFirstName", DataType = "String")]
+        public String CROFirstName
+        {
+            get { return _CROFirstName; }
+            set { _CROFirstName = value; }
+        }
+        [Column(Name = "CROMiddleName", DataType = "String")]
+        public String CROMiddleName
+        {
+            get { return _CROMiddleName; }
+            set { _CROMiddleName = value; }
+        }
+        [Column(Name = "CROLastName", DataType = "String")]
+        public String CROLastName
+        {
+            get { return _CROLastName; }
+            set { _CROLastName = value; }
+        }
+        [Column(Name = "CROSuffix", DataType = "String")]
+        public String CROSuffix
+        {
+            get { return _CROSuffix; }
+            set { _CROSuffix = value; }
         }
         [Column(Name = "GCActivityType", DataType = "String")]
         public String GCActivityType

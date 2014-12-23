@@ -103,6 +103,34 @@ CodeBehind="InquiryEntry.aspx.cs" Inherits="QIS.Careq.Web.SystemSetup.Program.In
                 });
             }
             //#endregion
+
+            //#region Trainer
+            $('#lblTrainer.lblLink').click(function () {
+                openSearchDialog('trainer', 'IsDeleted = 0', function (value) {
+                    $('#<%=txtTrainerCode.ClientID %>').val(value);
+                    onTxtTrainerCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtTrainerCode.ClientID %>').change(function () {
+                onTxtTrainerCodeChanged($(this).val());
+            });
+
+            function onTxtTrainerCodeChanged(value) {
+                var filterExpression = "TrainerCode = '" + value + "' AND IsDeleted = 0";
+                Methods.getObject('GetvTrainerList', filterExpression, function (result) {
+                    if (result != null) {
+                        $('#<%=hdnTrainerID.ClientID %>').val(result.TrainerID);
+                        $('#<%=txtTrainerName.ClientID %>').val(result.TrainerName);
+                    }
+                    else {
+                        $('#<%=hdnTrainerID.ClientID %>').val('');
+                        $('#<%=txtTrainerCode.ClientID %>').val('');
+                        $('#<%=txtTrainerName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
         }
     </script>
     <input type="hidden" id="hdnID" runat="server" value="" />
@@ -176,6 +204,24 @@ CodeBehind="InquiryEntry.aspx.cs" Inherits="QIS.Careq.Web.SystemSetup.Program.In
                                     <td><asp:TextBox ID="txtMemberCode" Width="100%" runat="server"/></td>
                                     <td>&nbsp;</td>
                                     <td><asp:TextBox ID="txtMemberName" Width="200px" runat="server" ReadOnly="true" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="tdLabel"><label class="lblLink" id="lblTrainer"><%=GetLabel("Trainer")%></label></td>
+                        <td>
+                            <input type="hidden" id="hdnTrainerID" value="" runat="server" />
+                            <table cellpadding="0" cellspacing="0">
+                                <colgroup>
+                                    <col style="width:97px"/>
+                                    <col style="width:3px"/>
+                                    <col/>
+                                </colgroup>
+                                <tr>
+                                    <td><asp:TextBox ID="txtTrainerCode" Width="100%" runat="server" /></td>
+                                    <td>&nbsp;</td>
+                                    <td><asp:TextBox ID="txtTrainerName" Width="200px" runat="server" /></td>
                                 </tr>
                             </table>
                         </td>

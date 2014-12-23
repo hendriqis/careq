@@ -1,5 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/libs/MasterPage/MPList.master" AutoEventWireup="true" 
-CodeBehind="LeadsTrackingLogEntry.aspx.cs" Inherits="QIS.Careq.Web.SystemSetup.Program.LeadsTrackingLogEntry" %>
+CodeBehind="InquiryTrackingLogEntry.aspx.cs" Inherits="QIS.Careq.Web.SystemSetup.Program.InquiryTrackingLogEntry" %>
 
 <%@ Register Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"
     Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dxe" %>
@@ -19,23 +19,13 @@ CodeBehind="LeadsTrackingLogEntry.aspx.cs" Inherits="QIS.Careq.Web.SystemSetup.P
                     var time = new Date();
                     $('#<%=txtLogTime.ClientID %>').val(time.getHours() + ':' + time.getMinutes());
                     $('#<%=txtRemarks.ClientID %>').val('');
-                    $('#containerEntry').show();
 
                     $('#<%=hdnEmployeeID.ClientID %>').val($('#<%=hdnDefaultEmployeeID.ClientID %>').val());
                     $('#<%=txtEmployeeCode.ClientID %>').val($('#<%=hdnDefaultEmployeeCode.ClientID %>').val());
                     $('#<%=txtEmployeeName.ClientID %>').val($('#<%=hdnDefaultEmployeeName.ClientID %>').val());
+                    $('#containerEntry').show();
                 }
             });
-                        
-            $('#btnCancel').click(function () {
-                $('#containerEntry').hide();
-            });
-
-            $('#btnSave').click(function (evt) {
-                if (IsValid(evt, 'fsTrx', 'mpTrx'))
-                    cbpProcess.PerformCallback('save');
-            });
-
             //#region Employee
             $('#lblEmployee.lblLink').click(function () {
                 openSearchDialog('employee', 'IsDeleted = 0', function (value) {
@@ -63,7 +53,45 @@ CodeBehind="LeadsTrackingLogEntry.aspx.cs" Inherits="QIS.Careq.Web.SystemSetup.P
                 });
             }
             //#endregion
+
+            //#region Trainer
+            $('#lblTrainer').click(function (evt) {
+                openSearchDialog('trainer', 'IsDeleted = 0', function (value) {
+                    $('#<%=txtTrainerCode.ClientID %>').val(value);
+                    onTxtTrainerCodeChanged(value);
+                });
+            });
+
+            $('#<%=txtTrainerCode.ClientID %>').change(function () {
+                onTxtTrainerCodeChanged($(this).val());
+            });
+
+            function onTxtTrainerCodeChanged(value) {
+                var filterExpression = "TrainerCode = '" + value + "' AND IsDeleted = 0";
+                Methods.getObject('GetvTrainerList', filterExpression, function (result) {
+                    if (result != null) {
+                        $('#<%=hdnTrainerID.ClientID %>').val(result.TrainerID);
+                        $('#<%=txtTrainerName.ClientID %>').val(result.TrainerName);
+                    }
+                    else {
+                        $('#<%=hdnTrainerID.ClientID %>').val('');
+                        $('#<%=txtTrainerCode.ClientID %>').val('');
+                        $('#<%=txtTrainerName.ClientID %>').val('');
+                    }
+                });
+            }
+            //#endregion
+            
+            $('#btnCancel').click(function () {
+                $('#containerEntry').hide();
+            });
+
+            $('#btnSave').click(function (evt) {
+                if (IsValid(evt, 'fsTrx', 'mpTrx'))
+                    cbpProcess.PerformCallback('save');
+            });
         });
+        
 
         function onCbpProcesEndCallback(s) {
             hideLoadingPanel();
@@ -123,12 +151,12 @@ CodeBehind="LeadsTrackingLogEntry.aspx.cs" Inherits="QIS.Careq.Web.SystemSetup.P
                         <col style="width:150px"/>
                     </colgroup>
                     <tr>
-                        <td class="tdLabel"><label class="lblMandatory"><%=GetLabel("Lead No.")%></label></td>
-                        <td><asp:TextBox ID="txtLeadNo" Width="200px" ReadOnly="true" runat="server" /></td>
+                        <td class="tdLabel"><label class="lblMandatory"><%=GetLabel("Inquiry No.")%></label></td>
+                        <td><asp:TextBox ID="txtInquiryNo" Width="200px" ReadOnly="true" runat="server" /></td>
                     </tr>
                     <tr>
-                        <td class="tdLabel"><label class="lblMandatory"><%=GetLabel("Lead Date")%></label></td>
-                        <td><asp:TextBox ID="txtLeadDate" CssClass="datepicker" Width="120px" runat="server" ReadOnly="true" /></td>
+                        <td class="tdLabel"><label class="lblMandatory"><%=GetLabel("Inquiry Date")%></label></td>
+                        <td><asp:TextBox ID="txtInquiryDate" CssClass="datepicker" Width="120px" runat="server" ReadOnly="true" /></td>
                     </tr>
                     <tr>
                         <td class="tdLabel"><label class="lblMandatory"><%=GetLabel("Subject")%></label></td>
@@ -177,6 +205,24 @@ CodeBehind="LeadsTrackingLogEntry.aspx.cs" Inherits="QIS.Careq.Web.SystemSetup.P
                                                         <td><asp:TextBox ID="txtEmployeeCode" Width="100%" runat="server" /></td>
                                                         <td>&nbsp;</td>
                                                         <td><asp:TextBox ID="txtEmployeeName" Width="200px" runat="server" ReadOnly="true" /></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="tdLabel"><label class="lblLink" id="lblTrainer"><%=GetLabel("Trainer")%></label></td>
+                                            <td>
+                                                <input type="hidden" id="hdnTrainerID" value="" runat="server" />
+                                                <table cellpadding="0" cellspacing="0">
+                                                    <colgroup>
+                                                        <col style="width:97px"/>
+                                                        <col style="width:3px"/>
+                                                        <col/>
+                                                    </colgroup>
+                                                    <tr>
+                                                        <td><asp:TextBox ID="txtTrainerCode" Width="100%" runat="server" /></td>
+                                                        <td>&nbsp;</td>
+                                                        <td><asp:TextBox ID="txtTrainerName" Width="200px" runat="server" ReadOnly="true" /></td>
                                                     </tr>
                                                 </table>
                                             </td>
@@ -238,12 +284,16 @@ CodeBehind="LeadsTrackingLogEntry.aspx.cs" Inherits="QIS.Careq.Web.SystemSetup.P
                                                     <input type="hidden" value="<%#Eval("CRO") %>" bindingfield="CRO" />
                                                     <input type="hidden" value="<%#Eval("CROCode") %>" bindingfield="CROCode" />
                                                     <input type="hidden" value="<%#Eval("CROName") %>" bindingfield="CROName" />
+                                                    <input type="hidden" value="<%#Eval("TrainerID") %>" bindingfield="TrainerID" />
+                                                    <input type="hidden" value="<%#Eval("TrainerCode") %>" bindingfield="TrainerCode" />
+                                                    <input type="hidden" value="<%#Eval("TrainerName") %>" bindingfield="TrainerName" />
                                                     <input type="hidden" value="<%#Eval("Remarks") %>" bindingfield="Remarks" />
                                                 </ItemTemplate>
                                             </asp:TemplateField>
                                             <asp:BoundField DataField="LogDateInString" HeaderText="Date" HeaderStyle-Width="150px" ItemStyle-HorizontalAlign="Center" />
                                             <asp:BoundField DataField="LogTime" HeaderText="Time" HeaderStyle-Width="150px" ItemStyle-HorizontalAlign="Center" />
                                             <asp:BoundField DataField="CROName" HeaderText="CRO" HeaderStyle-Width="150px" />
+                                            <asp:BoundField DataField="TrainerName" HeaderText="Trainer" HeaderStyle-Width="150px" />
                                             <asp:BoundField DataField="ActivityType" HeaderText="Activity Type" HeaderStyle-Width="150px" />
                                             <asp:BoundField DataField="Remarks" HeaderText="Remarks" />
                                         </Columns>

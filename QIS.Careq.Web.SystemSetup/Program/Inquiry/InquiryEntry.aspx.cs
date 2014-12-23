@@ -7,6 +7,8 @@ using System.Web.UI.WebControls;
 using QIS.Careq.Web.Common.UI;
 using QIS.Careq.Web.Common;
 using QIS.Careq.Data.Service;
+using QIS.Data.Core.Dal;
+using System.Data;
 
 namespace QIS.Careq.Web.SystemSetup.Program
 {
@@ -48,6 +50,10 @@ namespace QIS.Careq.Web.SystemSetup.Program
             SetControlEntrySetting(txtEmployeeCode, new ControlEntrySetting(true, true, true));
             SetControlEntrySetting(txtEmployeeName, new ControlEntrySetting(false, false, true));
 
+            SetControlEntrySetting(hdnTrainerID, new ControlEntrySetting(true, true, false));
+            SetControlEntrySetting(txtTrainerCode, new ControlEntrySetting(true, true, false));
+            SetControlEntrySetting(txtTrainerName, new ControlEntrySetting(false, false, false));
+
             SetControlEntrySetting(txtMemberCode, new ControlEntrySetting(true, true, true));
             SetControlEntrySetting(txtSubject, new ControlEntrySetting(true, true, true));
         }
@@ -65,6 +71,10 @@ namespace QIS.Careq.Web.SystemSetup.Program
             hdnMemberID.Value = entity.MemberID.ToString();
             txtMemberCode.Text = entity.MemberCode;
             txtMemberName.Text = entity.MemberName;
+
+            hdnTrainerID.Value = entity.PIC_TrainerID.ToString();
+            txtTrainerCode.Text = entity.TrainerCode;
+            txtTrainerName.Text = entity.TrainerName;
             txtSubject.Text = entity.Subject;
             txtRemarks.Text = entity.Remarks;
         }
@@ -76,6 +86,10 @@ namespace QIS.Careq.Web.SystemSetup.Program
 
             entity.CompanyID = Convert.ToInt32(hdnCompanyID.Value);
             entity.PIC_CRO = Convert.ToInt32(hdnEmployeeID.Value);
+            if (hdnTrainerID.Value != "")
+                entity.PIC_TrainerID = Convert.ToInt32(hdnTrainerID.Value);
+            else
+                entity.PIC_TrainerID = null;
             entity.MemberID = Convert.ToInt32(hdnMemberID.Value);
             entity.Subject = txtSubject.Text;
             entity.Remarks = txtRemarks.Text;
@@ -108,20 +122,34 @@ namespace QIS.Careq.Web.SystemSetup.Program
 
         protected override bool OnSaveAddRecord(ref string errMessage)
         {
+            bool result = true;
+            IDbContext ctx = DbFactory.Configure(true);            
+            InquiryDao entityDao = new InquiryDao(ctx);
             try
             {
                 Inquiry entity = new Inquiry();
                 ControlToEntity(entity);
+                entity.InquiryNo = BusinessLayer.GenerateInquiryCode(DateTime.Now.ToString("yy"), ctx);
+                ctx.CommandType = CommandType.Text;
+                ctx.Command.Parameters.Clear();
+
                 entity.LastUpdatedBy = entity.CreatedBy = AppSession.UserLogin.UserID;
                 entity.GCInquiryStatus = Constant.LeadStatus.OPENED;
-                BusinessLayer.InsertInquiry(entity);
-                return true;
+                entityDao.Insert(entity);
+
+                ctx.CommitTransaction();
             }
             catch (Exception ex)
             {
                 errMessage = ex.Message;
-                return false;
+                result = false;
+                ctx.RollBackTransaction();
             }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
         }
 
         protected override bool OnSaveEditRecord(ref string errMessage)

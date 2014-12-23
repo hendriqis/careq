@@ -162,6 +162,8 @@
     <Content Include="Program\Company\CompanyContactPersonEntryCtl.ascx" />
     <Content Include="Program\Company\CompanyEntry.aspx" />
     <Content Include="Program\Company\CompanyList.aspx" />
+    <Content Include="Program\ChangeInquiryStatus\ChangeInquiryStatusCtl.ascx" />
+    <Content Include="Program\ChangeInquiryStatus\ChangeInquiryStatusList.aspx" />
     <Content Include="Program\InquiryTrackingLog\InquiryTrackingLogEntry.aspx" />
     <Content Include="Program\InquiryTrackingLog\InquiryTrackingLogList.aspx" />
     <Content Include="Program\Inquiry\InquiryEntry.aspx" />
@@ -573,6 +575,20 @@
     </Compile>
     <Compile Include="Program\Company\CompanyList.aspx.designer.cs">
       <DependentUpon>CompanyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ChangeInquiryStatus\ChangeInquiryStatusCtl.ascx.cs">
+      <DependentUpon>ChangeInquiryStatusCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ChangeInquiryStatus\ChangeInquiryStatusCtl.ascx.designer.cs">
+      <DependentUpon>ChangeInquiryStatusCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ChangeInquiryStatus\ChangeInquiryStatusList.aspx.cs">
+      <DependentUpon>ChangeInquiryStatusList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ChangeInquiryStatus\ChangeInquiryStatusList.aspx.designer.cs">
+      <DependentUpon>ChangeInquiryStatusList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Program\InquiryTrackingLog\InquiryTrackingLogEntry.aspx.cs">
       <DependentUpon>InquiryTrackingLogEntry.aspx</DependentUpon>

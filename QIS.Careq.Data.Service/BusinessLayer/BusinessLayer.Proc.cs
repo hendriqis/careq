@@ -183,5 +183,42 @@ namespace QIS.Careq.Data.Service
             return (string)param.Value;
         }
         #endregion
+        #region GenerateProposalCode
+        public static string GenerateProposalCode(String ProposalYear, IDbContext ctx = null)
+        {
+            bool IsCtxNull = false;
+            if (ctx == null)
+            {
+                IsCtxNull = true;
+                ctx = DbFactory.Configure();
+            }
+            ctx.CommandText = "GenerateProposalCode";
+            ctx.CommandType = CommandType.StoredProcedure;
+            ctx.Command.Parameters.Add(new SqlParameter("@ProposalYear", ProposalYear));
+            SqlParameter param = new SqlParameter();
+            param.ParameterName = "@Result";
+            param.SqlDbType = SqlDbType.VarChar;
+            param.Size = 30;
+            param.Direction = ParameterDirection.Output;
+
+            ctx.Command.Parameters.Add(param);
+
+            try
+            {
+                DaoBase.ExecuteNonQuery(ctx);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                if (IsCtxNull)
+                    ctx.Close();
+            }
+
+            return (string)param.Value;
+        }
+        #endregion
     }
 }

@@ -1023,6 +1023,46 @@ namespace QIS.Careq.Data.Service
             return result;
         }
         #endregion
+        #region ProposalHd
+        public static ProposalHd GetProposalHd(Int32 ProposalID)
+        {
+            return new ProposalHdDao().Get(ProposalID);
+        }
+        public static int InsertProposalHd(ProposalHd record)
+        {
+            return new ProposalHdDao().Insert(record);
+        }
+        public static int UpdateProposalHd(ProposalHd record)
+        {
+            return new ProposalHdDao().Update(record);
+        }
+        public static int DeleteProposalHd(Int32 ProposalID)
+        {
+            return new ProposalHdDao().Delete(ProposalID);
+        }
+        public static List<ProposalHd> GetProposalHdList(string filterExpression)
+        {
+            List<ProposalHd> result = new List<ProposalHd>();
+            IDbContext ctx = DbFactory.Configure();
+            try
+            {
+                DbHelper helper = new DbHelper(typeof(ProposalHd));
+                ctx.CommandText = helper.Select(filterExpression);
+                using (IDataReader reader = DaoBase.GetDataReader(ctx))
+                    while (reader.Read())
+                        result.Add((ProposalHd)helper.IDataReaderToObject(reader, new ProposalHd()));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        #endregion
         #region Region
         public static Region GetRegion(Int32 RegionID)
         {

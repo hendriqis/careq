@@ -140,6 +140,7 @@ namespace QIS.Careq.Web.Common
 
             public const string INQUIRY_REGISTRATION = "PQ4100";
             public const string INQUIRY_TRACKING_LOG_ENTRY = "PQ4200";
+            public const string CHANGE_INQUIRY_STATUS = "PQ4300";
 
             public const string APPLICATION = "PQ7101";
             public const string MODULE = "PQ7102";

@@ -158,6 +158,8 @@
     <Content Include="Program\Application\ApplicationList.aspx" />
     <Content Include="Program\ChangeLeadStatus\ChangeLeadStatusList.aspx" />
     <Content Include="Program\ChangeLeadStatus\ChangeLeadStatusCtl.ascx" />
+    <Content Include="Program\ChangeProposalStatus\ChangeProposalStatusCtl.ascx" />
+    <Content Include="Program\ChangeProposalStatus\ChangeProposalStatusList.aspx" />
     <Content Include="Program\CloseEvent\CloseEventList.aspx" />
     <Content Include="Program\Company\CompanyContactPersonEntryCtl.ascx" />
     <Content Include="Program\Company\CompanyEntry.aspx" />
@@ -184,6 +186,10 @@
     <Content Include="Program\LeadsTrackingLog\LeadsTrackingLogList.aspx" />
     <Content Include="Program\MailingLabel\MailingLabelList.aspx" />
     <Content Include="Program\Member\MemberPastTrainingCtl.ascx" />
+    <Content Include="Program\ProposalTrackingLog\ProposalTrackingLogEntry.aspx" />
+    <Content Include="Program\ProposalTrackingLog\ProposalTrackingLogList.aspx" />
+    <Content Include="Program\Proposal\ProposalEntry.aspx" />
+    <Content Include="Program\Proposal\ProposalList.aspx" />
     <Content Include="Program\ReportConfiguration\ReportParameterEntryCtl.ascx" />
     <Content Include="Program\ReportConfiguration\ReportConfigurationEntry.aspx" />
     <Content Include="Program\ReportConfiguration\ReportConfigurationList.aspx" />
@@ -548,6 +554,20 @@
     <Compile Include="Program\ChangeLeadStatus\ChangeLeadStatusCtl.ascx.designer.cs">
       <DependentUpon>ChangeLeadStatusCtl.ascx</DependentUpon>
     </Compile>
+    <Compile Include="Program\ChangeProposalStatus\ChangeProposalStatusCtl.ascx.cs">
+      <DependentUpon>ChangeProposalStatusCtl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ChangeProposalStatus\ChangeProposalStatusCtl.ascx.designer.cs">
+      <DependentUpon>ChangeProposalStatusCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ChangeProposalStatus\ChangeProposalStatusList.aspx.cs">
+      <DependentUpon>ChangeProposalStatusList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ChangeProposalStatus\ChangeProposalStatusList.aspx.designer.cs">
+      <DependentUpon>ChangeProposalStatusList.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Program\CloseEvent\CloseEventList.aspx.cs">
       <DependentUpon>CloseEventList.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -729,6 +749,34 @@
     </Compile>
     <Compile Include="Program\Member\MemberPastTrainingCtl.ascx.designer.cs">
       <DependentUpon>MemberPastTrainingCtl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ProposalTrackingLog\ProposalTrackingLogEntry.aspx.cs">
+      <DependentUpon>ProposalTrackingLogEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ProposalTrackingLog\ProposalTrackingLogEntry.aspx.designer.cs">
+      <DependentUpon>ProposalTrackingLogEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\ProposalTrackingLog\ProposalTrackingLogList.aspx.cs">
+      <DependentUpon>ProposalTrackingLogList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\ProposalTrackingLog\ProposalTrackingLogList.aspx.designer.cs">
+      <DependentUpon>ProposalTrackingLogList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Proposal\ProposalEntry.aspx.cs">
+      <DependentUpon>ProposalEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Proposal\ProposalEntry.aspx.designer.cs">
+      <DependentUpon>ProposalEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Program\Proposal\ProposalList.aspx.cs">
+      <DependentUpon>ProposalList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Program\Proposal\ProposalList.aspx.designer.cs">
+      <DependentUpon>ProposalList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Program\ReportConfiguration\ReportParameterEntryCtl.ascx.cs">
       <DependentUpon>ReportParameterEntryCtl.ascx</DependentUpon>
@@ -1215,8 +1263,7 @@
           <IISUrl>http://localhost/careq/SystemSetup</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl>http://localhost/careq/SystemSetup</CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>

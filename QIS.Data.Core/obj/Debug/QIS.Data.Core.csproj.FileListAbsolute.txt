@@ -10,3 +10,9 @@ D:\Project\Source\Git\careq\QIS.Data.Core\bin\Debug\QIS.Data.Core.pdb
 D:\Project\Source\Git\careq\QIS.Data.Core\obj\Debug\QIS.Data.Core.dll
 D:\Project\Source\Git\careq\QIS.Data.Core\obj\Debug\QIS.Data.Core.pdb
 D:\Project\Source\Git\careq\QIS.Data.Core\obj\Debug\QIS.Data.Core.csprojResolveAssemblyReference.cache
+D:\Project\GitHub\careq\QIS.Data.Core\bin\Debug\App_Lib\Gurock.SmartInspect.dll
+D:\Project\GitHub\careq\QIS.Data.Core\bin\Debug\QIS.Data.Core.dll
+D:\Project\GitHub\careq\QIS.Data.Core\bin\Debug\QIS.Data.Core.pdb
+D:\Project\GitHub\careq\QIS.Data.Core\obj\Debug\QIS.Data.Core.csprojResolveAssemblyReference.cache
+D:\Project\GitHub\careq\QIS.Data.Core\obj\Debug\QIS.Data.Core.dll
+D:\Project\GitHub\careq\QIS.Data.Core\obj\Debug\QIS.Data.Core.pdb

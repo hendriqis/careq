@@ -16,3 +16,12 @@ D:\Project\Source\Git\careq\QIS.Careq.Web.Control\bin\Debug\QIS.Data.Core.pdb
 D:\Project\Source\Git\careq\QIS.Careq.Web.Control\obj\Debug\QIS.Careq.Web.CustomControl.csprojResolveAssemblyReference.cache
 D:\Project\Source\Git\careq\QIS.Careq.Web.Control\obj\Debug\QIS.Careq.Web.CustomControl.dll
 D:\Project\Source\Git\careq\QIS.Careq.Web.Control\obj\Debug\QIS.Careq.Web.CustomControl.pdb
+D:\Project\GitHub\careq\QIS.Careq.Web.Control\bin\Debug\QIS.Careq.Web.CustomControl.dll
+D:\Project\GitHub\careq\QIS.Careq.Web.Control\bin\Debug\QIS.Careq.Web.CustomControl.pdb
+D:\Project\GitHub\careq\QIS.Careq.Web.Control\bin\Debug\QIS.Careq.Data.Service.dll
+D:\Project\GitHub\careq\QIS.Careq.Web.Control\bin\Debug\QIS.Data.Core.dll
+D:\Project\GitHub\careq\QIS.Careq.Web.Control\bin\Debug\QIS.Careq.Data.Service.pdb
+D:\Project\GitHub\careq\QIS.Careq.Web.Control\bin\Debug\QIS.Data.Core.pdb
+D:\Project\GitHub\careq\QIS.Careq.Web.Control\obj\Debug\QIS.Careq.Web.CustomControl.csprojResolveAssemblyReference.cache
+D:\Project\GitHub\careq\QIS.Careq.Web.Control\obj\Debug\QIS.Careq.Web.CustomControl.dll
+D:\Project\GitHub\careq\QIS.Careq.Web.Control\obj\Debug\QIS.Careq.Web.CustomControl.pdb

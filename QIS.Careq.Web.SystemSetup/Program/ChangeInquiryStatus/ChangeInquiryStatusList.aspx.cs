@@ -36,7 +36,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
             string filterExpression = hdnFilterExpression.Value;
             if (filterExpression != "")
                 filterExpression += " AND ";
-            filterExpression += String.Format("GCInquiryStatus = '{0}'",Constant.LeadStatus.OPENED);
+            filterExpression += String.Format("GCInquiryStatus = '{0}'", Constant.EventStatus.OPENED);
 
             if (isCountPageCount)
             {
@@ -85,7 +85,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
                 foreach (String id in lstID)
                 {
                     entity = leadDao.Get(Convert.ToInt32(id));
-                    entity.GCInquiryStatus = Constant.LeadStatus.CLOSED;
+                    entity.GCInquiryStatus = Constant.EventStatus.CLOSED;
                     leadDao.Update(entity);
                 }
                 ctx.CommitTransaction();

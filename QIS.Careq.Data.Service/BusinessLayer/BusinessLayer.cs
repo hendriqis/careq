@@ -1023,6 +1023,86 @@ namespace QIS.Careq.Data.Service
             return result;
         }
         #endregion
+        #region ProposalActivityLog
+        public static ProposalActivityLog GetProposalActivityLog(Int32 ID)
+        {
+            return new ProposalActivityLogDao().Get(ID);
+        }
+        public static int InsertProposalActivityLog(ProposalActivityLog record)
+        {
+            return new ProposalActivityLogDao().Insert(record);
+        }
+        public static int UpdateProposalActivityLog(ProposalActivityLog record)
+        {
+            return new ProposalActivityLogDao().Update(record);
+        }
+        public static int DeleteProposalActivityLog(Int32 ID)
+        {
+            return new ProposalActivityLogDao().Delete(ID);
+        }
+        public static List<ProposalActivityLog> GetProposalActivityLogList(string filterExpression)
+        {
+            List<ProposalActivityLog> result = new List<ProposalActivityLog>();
+            IDbContext ctx = DbFactory.Configure();
+            try
+            {
+                DbHelper helper = new DbHelper(typeof(ProposalActivityLog));
+                ctx.CommandText = helper.Select(filterExpression);
+                using (IDataReader reader = DaoBase.GetDataReader(ctx))
+                    while (reader.Read())
+                        result.Add((ProposalActivityLog)helper.IDataReaderToObject(reader, new ProposalActivityLog()));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        #endregion
+        #region ProposalDt
+        public static ProposalDt GetProposalDt(Int32 ID)
+        {
+            return new ProposalDtDao().Get(ID);
+        }
+        public static int InsertProposalDt(ProposalDt record)
+        {
+            return new ProposalDtDao().Insert(record);
+        }
+        public static int UpdateProposalDt(ProposalDt record)
+        {
+            return new ProposalDtDao().Update(record);
+        }
+        public static int DeleteProposalDt(Int32 ID)
+        {
+            return new ProposalDtDao().Delete(ID);
+        }
+        public static List<ProposalDt> GetProposalDtList(string filterExpression)
+        {
+            List<ProposalDt> result = new List<ProposalDt>();
+            IDbContext ctx = DbFactory.Configure();
+            try
+            {
+                DbHelper helper = new DbHelper(typeof(ProposalDt));
+                ctx.CommandText = helper.Select(filterExpression);
+                using (IDataReader reader = DaoBase.GetDataReader(ctx))
+                    while (reader.Read())
+                        result.Add((ProposalDt)helper.IDataReaderToObject(reader, new ProposalDt()));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        #endregion
         #region ProposalHd
         public static ProposalHd GetProposalHd(Int32 ProposalID)
         {
@@ -1051,6 +1131,28 @@ namespace QIS.Careq.Data.Service
                 using (IDataReader reader = DaoBase.GetDataReader(ctx))
                     while (reader.Read())
                         result.Add((ProposalHd)helper.IDataReaderToObject(reader, new ProposalHd()));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message, ex);
+            }
+            finally
+            {
+                ctx.Close();
+            }
+            return result;
+        }
+        public static Int32 GetProposalHdMaxID(IDbContext ctx = null)
+        {
+            Int32 result = 0;
+            if (ctx == null)
+                ctx = DbFactory.Configure();
+            try
+            {
+                DbHelper helper = new DbHelper(typeof(ProposalHd));
+                ctx.CommandText = helper.SelectMaxColumn("ProposalID");
+                DataRow row = DaoBase.GetDataRow(ctx);
+                result = Convert.ToInt32(row.ItemArray.GetValue(0));
             }
             catch (Exception ex)
             {

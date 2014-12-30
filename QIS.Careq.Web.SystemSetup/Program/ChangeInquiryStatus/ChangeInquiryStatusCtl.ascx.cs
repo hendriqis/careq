@@ -46,7 +46,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
                     entityInquiry.OtherInquiryProcessType = txtOtherInquiryProcessType.Text;
                 else
                     entityInquiry.OtherInquiryProcessType = "";
-                entityInquiry.GCInquiryStatus = Constant.LeadStatus.CLOSED;
+                entityInquiry.GCInquiryStatus = Constant.EventStatus.CLOSED;
                 entityInquiry.LastUpdatedBy = AppSession.UserLogin.UserID;
                 entityInquiryDao.Update(entityInquiry);
 
@@ -64,7 +64,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
                     entityProposalHd.MemberID = entityInquiry.MemberID;
                     entityProposalHd.Subject = entityInquiry.Subject;
                     entityProposalHd.Remarks = entityInquiry.Remarks;
-                    entityProposalHd.GCProposalStatus = Constant.LeadStatus.OPENED;
+                    entityProposalHd.GCProposalStatus = Constant.EventStatus.OPENED;
                     entityProposalHd.CreatedBy = AppSession.UserLogin.UserID;
                     entityProposalHdDao.Insert(entityProposalHd);
                 }

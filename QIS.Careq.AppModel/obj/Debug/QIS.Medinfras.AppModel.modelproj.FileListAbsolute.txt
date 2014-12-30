@@ -5,3 +5,7 @@ D:\Project\Source\Git\careq\QIS.Careq.AppModel\bin\Debug\App_Lib\Gurock.SmartIns
 D:\Project\Source\Git\careq\QIS.Careq.AppModel\bin\Debug\QIS.Data.Core.dll
 D:\Project\Source\Git\careq\QIS.Careq.AppModel\bin\Debug\QIS.Data.Core.pdb
 D:\Project\Source\Git\careq\QIS.Careq.AppModel\obj\Debug\QIS.Medinfras.AppModel.modelprojResolveAssemblyReference.cache
+D:\Project\GitHub\careq\QIS.Careq.AppModel\bin\Debug\App_Lib\Gurock.SmartInspect.dll
+D:\Project\GitHub\careq\QIS.Careq.AppModel\bin\Debug\QIS.Data.Core.dll
+D:\Project\GitHub\careq\QIS.Careq.AppModel\bin\Debug\QIS.Data.Core.pdb
+D:\Project\GitHub\careq\QIS.Careq.AppModel\obj\Debug\QIS.Medinfras.AppModel.modelprojResolveAssemblyReference.cache

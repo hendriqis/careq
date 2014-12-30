@@ -15,6 +15,18 @@
     </intellisensetexts>
   </searchdialog>
   <!-- #EndRegion -->
+  <!-- #Region Employee -->
+  <searchdialog type="employee" methodname="GetvEmployeeList" keyfieldname="EmployeeCode">
+    <gridcolumns>
+      <gridcolumn datafield="EmployeeCode" headertext="Employee Code" width="100px" />
+      <gridcolumn datafield="FirstName" displaycustomfield="EmployeeName" headertext="Employee Name" width="300px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="FirstName MiddleName LastName" headertext="Employee Name" description="" />
+      <intellisensetext datafield="EmployeeCode" headertext="Employee Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
   <!-- #Region Event -->
   <searchdialog type="event" methodname="GetvEventList" filterexpression="GCEventStatus != 'X150^003'" keyfieldname="EventCode">
     <gridcolumns>
@@ -38,6 +50,18 @@
     <intellisensetexts>
       <intellisensetext datafield="FilterParameterName" headertext="Filter Parameter Name" description="" />
       <intellisensetext datafield="FilterParameterCode" headertext="Filter Parameter Code" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
+  <!-- #Region Inquiry -->
+  <searchdialog type="inquiry" methodname="GetvInquiryList" keyfieldname="InquiryID">
+    <gridcolumns>
+      <gridcolumn datafield="InquiryNo" headertext="Inquiry" width="100px" />
+      <gridcolumn datafield="InquiryDateInString" headertext="Date" width="100px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="InquiryNo" headertext="Inquiry" description="" />
+      <intellisensetext datafield="InquiryDateInString" headertext="Date" description="" />
     </intellisensetexts>
   </searchdialog>
   <!-- #EndRegion -->

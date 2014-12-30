@@ -134,7 +134,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
                 ctx.Command.Parameters.Clear();
 
                 entity.LastUpdatedBy = entity.CreatedBy = AppSession.UserLogin.UserID;
-                entity.GCInquiryStatus = Constant.LeadStatus.OPENED;
+                entity.GCInquiryStatus = Constant.EventStatus.OPENED;
                 entityDao.Insert(entity);
 
                 ctx.CommitTransaction();

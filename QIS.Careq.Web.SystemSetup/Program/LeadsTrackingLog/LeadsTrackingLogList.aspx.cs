@@ -93,7 +93,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
             if (hdnID.Value.ToString() != "")
             {
                 Lead entity = BusinessLayer.GetLead(Convert.ToInt32(hdnID.Value));
-                entity.GCLeadStatus = Constant.LeadStatus.DELETED;
+                entity.GCLeadStatus = Constant.LeadStatus.VOID;
                 entity.LastUpdatedBy = AppSession.UserLogin.UserID;
                 BusinessLayer.UpdateLead(entity);
                 return true;

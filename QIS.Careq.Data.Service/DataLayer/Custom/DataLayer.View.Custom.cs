@@ -871,6 +871,97 @@ namespace QIS.Careq.Data.Service
         }
     }
     #endregion
+    #region vProposalActivityLog
+    public partial class vProposalActivityLog
+    {
+        public String CROName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _CROLastName).
+                    Replace("MiddleName", _CROMiddleName).
+                    Replace("FirstName", _CROFirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+        public String TrainerName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _TrainerLastName).
+                    Replace("MiddleName", _TrainerMiddleName).
+                    Replace("FirstName", _TrainerFirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+        public string LogDateInString
+        {
+            get { return _LogDate.ToString(Constant.FormatString.DATE_FORMAT); }
+        }
+
+        public string LogDateInDatePicker
+        {
+            get { return _LogDate.ToString(Constant.FormatString.DATE_PICKER_FORMAT); }
+        }
+    }
+    #endregion
+    #region vProposalHd
+    public partial class vProposalHd 
+    {
+        public String ProposalDateInString 
+        {
+            get { return _ProposalDate.ToString(Constant.FormatString.DATE_FORMAT); }
+        }
+
+        public String TrainerName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _TrainerLastName).
+                    Replace("MiddleName", _TrainerMiddleName).
+                    Replace("FirstName", _TrainerFirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+
+        public String PIC_CROName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _EmployeeLastName).
+                    Replace("MiddleName", _EmployeeMiddleName).
+                    Replace("FirstName", _EmployeeFirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+
+        public String MemberName
+        {
+            get
+            {
+                StringBuilder result = new StringBuilder(AppConfigManager.QISFullNameFormat);
+                result = result.Replace("LastName", _LastName).
+                    Replace("MiddleName", _MiddleName).
+                    Replace("FirstName", _FirstName).
+                    Replace(",  ", "").
+                    Replace("  ", " ");
+                return result.ToString();
+            }
+        }
+    }
+    #endregion
     #region vTrainer
     public partial class vTrainer
     {

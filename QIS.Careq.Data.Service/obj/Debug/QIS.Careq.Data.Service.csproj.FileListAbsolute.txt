@@ -14,3 +14,11 @@ D:\Project\Source\Git\careq\QIS.Careq.Data.Service\bin\Debug\QIS.Data.Core.pdb
 D:\Project\Source\Git\careq\QIS.Careq.Data.Service\obj\Debug\QIS.Careq.Data.Service.csprojResolveAssemblyReference.cache
 D:\Project\Source\Git\careq\QIS.Careq.Data.Service\obj\Debug\QIS.Careq.Data.Service.dll
 D:\Project\Source\Git\careq\QIS.Careq.Data.Service\obj\Debug\QIS.Careq.Data.Service.pdb
+D:\Project\GitHub\careq\QIS.Careq.Data.Service\bin\Debug\App_Lib\Gurock.SmartInspect.dll
+D:\Project\GitHub\careq\QIS.Careq.Data.Service\bin\Debug\QIS.Careq.Data.Service.dll
+D:\Project\GitHub\careq\QIS.Careq.Data.Service\bin\Debug\QIS.Careq.Data.Service.pdb
+D:\Project\GitHub\careq\QIS.Careq.Data.Service\bin\Debug\QIS.Data.Core.dll
+D:\Project\GitHub\careq\QIS.Careq.Data.Service\bin\Debug\QIS.Data.Core.pdb
+D:\Project\GitHub\careq\QIS.Careq.Data.Service\obj\Debug\QIS.Careq.Data.Service.csprojResolveAssemblyReference.cache
+D:\Project\GitHub\careq\QIS.Careq.Data.Service\obj\Debug\QIS.Careq.Data.Service.dll
+D:\Project\GitHub\careq\QIS.Careq.Data.Service\obj\Debug\QIS.Careq.Data.Service.pdb

@@ -53,6 +53,18 @@
     </intellisensetexts>
   </searchdialog>
   <!-- #EndRegion -->
+  <!-- #Region Inquiry -->
+  <searchdialog type="inquiry" methodname="GetvInquiryList" keyfieldname="InquiryID">
+    <gridcolumns>
+      <gridcolumn datafield="InquiryNo" headertext="Inquiry" width="100px" />
+      <gridcolumn datafield="InquiryDateInString" headertext="Date" width="100px" />
+    </gridcolumns>
+    <intellisensetexts>
+      <intellisensetext datafield="InquiryNo" headertext="Inquiry" description="" />
+      <intellisensetext datafield="InquiryDateInString" headertext="Date" description="" />
+    </intellisensetexts>
+  </searchdialog>
+  <!-- #EndRegion -->
   <!-- #Region LOB Class -->
   <searchdialog type="lobclass" methodname="GetvLOBClassificationList" keyfieldname="LOBClassCode">
     <gridcolumns>

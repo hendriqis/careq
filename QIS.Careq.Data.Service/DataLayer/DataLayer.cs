@@ -3375,6 +3375,309 @@ namespace QIS.Careq.Data.Service
         }
     }
     #endregion
+    #region ProposalActivityLog
+    [Serializable]
+    [Table(Name = "ProposalActivityLog")]
+    public class ProposalActivityLog : DbDataModel
+    {
+        private Int32 _ID;
+        private Int32 _ProposalID;
+        private DateTime _LogDate;
+        private String _LogTime;
+        private Int32? _CRO;
+        private Int32? _TrainerID;
+        private String _GCActivityType;
+        private String _Remarks;
+        private Boolean _IsDeleted;
+        private Int32 _CreatedBy;
+        private DateTime _CreatedDate;
+        private Int32? _LastUpdatedBy;
+        private DateTime _LastUpdatedDate;
+
+        [Column(Name = "ID", DataType = "Int32", IsPrimaryKey = true, IsIdentity = true)]
+        public Int32 ID
+        {
+            get { return _ID; }
+            set { _ID = value; }
+        }
+        [Column(Name = "ProposalID", DataType = "Int32")]
+        public Int32 ProposalID
+        {
+            get { return _ProposalID; }
+            set { _ProposalID = value; }
+        }
+        [Column(Name = "LogDate", DataType = "DateTime")]
+        public DateTime LogDate
+        {
+            get { return _LogDate; }
+            set { _LogDate = value; }
+        }
+        [Column(Name = "LogTime", DataType = "String")]
+        public String LogTime
+        {
+            get { return _LogTime; }
+            set { _LogTime = value; }
+        }
+        [Column(Name = "CRO", DataType = "Int32", IsNullable = true)]
+        public Int32? CRO
+        {
+            get { return _CRO; }
+            set { _CRO = value; }
+        }
+        [Column(Name = "TrainerID", DataType = "Int32", IsNullable = true)]
+        public Int32? TrainerID
+        {
+            get { return _TrainerID; }
+            set { _TrainerID = value; }
+        }
+        [Column(Name = "GCActivityType", DataType = "String")]
+        public String GCActivityType
+        {
+            get { return _GCActivityType; }
+            set { _GCActivityType = value; }
+        }
+        [Column(Name = "Remarks", DataType = "String", IsNullable = true)]
+        public String Remarks
+        {
+            get { return _Remarks; }
+            set { _Remarks = value; }
+        }
+        [Column(Name = "IsDeleted", DataType = "Boolean")]
+        public Boolean IsDeleted
+        {
+            get { return _IsDeleted; }
+            set { _IsDeleted = value; }
+        }
+        [Column(Name = "CreatedBy", DataType = "Int32")]
+        public Int32 CreatedBy
+        {
+            get { return _CreatedBy; }
+            set { _CreatedBy = value; }
+        }
+        [Column(Name = "CreatedDate", DataType = "DateTime")]
+        public DateTime CreatedDate
+        {
+            get { return _CreatedDate; }
+            set { _CreatedDate = value; }
+        }
+        [Column(Name = "LastUpdatedBy", DataType = "Int32", IsNullable = true)]
+        public Int32? LastUpdatedBy
+        {
+            get { return _LastUpdatedBy; }
+            set { _LastUpdatedBy = value; }
+        }
+        [Column(Name = "LastUpdatedDate", DataType = "DateTime", IsNullable = true)]
+        public DateTime LastUpdatedDate
+        {
+            get { return _LastUpdatedDate; }
+            set { _LastUpdatedDate = value; }
+        }
+    }
+
+    public class ProposalActivityLogDao
+    {
+        private readonly IDbContext _ctx = DbFactory.Configure();
+        private readonly DbHelper _helper = new DbHelper(typeof(ProposalActivityLog));
+        private bool _isAuditLog = false;
+        private const string p_ID = "@p_ID";
+        public ProposalActivityLogDao() { }
+        public ProposalActivityLogDao(IDbContext ctx)
+        {
+            _ctx = ctx;
+        }
+        public ProposalActivityLog Get(Int32 ID)
+        {
+            _ctx.CommandText = _helper.GetRecord();
+            _ctx.Add(p_ID, ID);
+            DataRow row = DaoBase.GetDataRow(_ctx);
+            return (row == null) ? null : (ProposalActivityLog)_helper.DataRowToObject(row, new ProposalActivityLog());
+        }
+        public int Insert(ProposalActivityLog record)
+        {
+            record.CreatedDate = DateTime.Now;
+            _helper.Insert(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx);
+        }
+        public int Update(ProposalActivityLog record)
+        {
+            record.LastUpdatedDate = DateTime.Now;
+            _helper.Update(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx, true);
+        }
+        public int Delete(Int32 ID)
+        {
+            ProposalActivityLog record;
+            if (_ctx.Transaction == null)
+                record = new ProposalActivityLogDao().Get(ID);
+            else
+                record = Get(ID);
+            _helper.Delete(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx);
+        }
+    }
+    #endregion
+    #region ProposalDt
+    [Serializable]
+    [Table(Name = "ProposalDt")]
+    public class ProposalDt : DbDataModel
+    {
+        private Int32 _ID;
+        private Int32 _ProposalID;
+        private String _GCItemType;
+        private Int32 _ItemID;
+        private Int16 _Duration;
+        private Decimal _NoOfPerson;
+        private Decimal _Amount;
+        private Decimal _MarginPercentage;
+        private String _ProposalContent;
+        private Boolean _IsActive;
+        private Boolean _IsRevision;
+        private DateTime _RevisionDate;
+        private Int32 _CreatedBy;
+        private DateTime _CreatedDate;
+        private Int32? _LastUpdatedBy;
+        private DateTime _LastUpdatedDate;
+
+        [Column(Name = "ID", DataType = "Int32", IsPrimaryKey = true, IsIdentity = true)]
+        public Int32 ID
+        {
+            get { return _ID; }
+            set { _ID = value; }
+        }
+        [Column(Name = "ProposalID", DataType = "Int32")]
+        public Int32 ProposalID
+        {
+            get { return _ProposalID; }
+            set { _ProposalID = value; }
+        }
+        [Column(Name = "GCItemType", DataType = "String")]
+        public String GCItemType
+        {
+            get { return _GCItemType; }
+            set { _GCItemType = value; }
+        }
+        [Column(Name = "ItemID", DataType = "Int32")]
+        public Int32 ItemID
+        {
+            get { return _ItemID; }
+            set { _ItemID = value; }
+        }
+        [Column(Name = "Duration", DataType = "Int16")]
+        public Int16 Duration
+        {
+            get { return _Duration; }
+            set { _Duration = value; }
+        }
+        [Column(Name = "NoOfPerson", DataType = "Decimal")]
+        public Decimal NoOfPerson
+        {
+            get { return _NoOfPerson; }
+            set { _NoOfPerson = value; }
+        }
+        [Column(Name = "Amount", DataType = "Decimal")]
+        public Decimal Amount
+        {
+            get { return _Amount; }
+            set { _Amount = value; }
+        }
+        [Column(Name = "MarginPercentage", DataType = "Decimal")]
+        public Decimal MarginPercentage
+        {
+            get { return _MarginPercentage; }
+            set { _MarginPercentage = value; }
+        }
+        [Column(Name = "ProposalContent", DataType = "String")]
+        public String ProposalContent
+        {
+            get { return _ProposalContent; }
+            set { _ProposalContent = value; }
+        }
+        [Column(Name = "IsActive", DataType = "Boolean")]
+        public Boolean IsActive
+        {
+            get { return _IsActive; }
+            set { _IsActive = value; }
+        }
+        [Column(Name = "IsRevision", DataType = "Boolean")]
+        public Boolean IsRevision
+        {
+            get { return _IsRevision; }
+            set { _IsRevision = value; }
+        }
+        [Column(Name = "RevisionDate", DataType = "DateTime", IsNullable = true)]
+        public DateTime RevisionDate
+        {
+            get { return _RevisionDate; }
+            set { _RevisionDate = value; }
+        }
+        [Column(Name = "CreatedBy", DataType = "Int32")]
+        public Int32 CreatedBy
+        {
+            get { return _CreatedBy; }
+            set { _CreatedBy = value; }
+        }
+        [Column(Name = "CreatedDate", DataType = "DateTime")]
+        public DateTime CreatedDate
+        {
+            get { return _CreatedDate; }
+            set { _CreatedDate = value; }
+        }
+        [Column(Name = "LastUpdatedBy", DataType = "Int32", IsNullable = true)]
+        public Int32? LastUpdatedBy
+        {
+            get { return _LastUpdatedBy; }
+            set { _LastUpdatedBy = value; }
+        }
+        [Column(Name = "LastUpdatedDate", DataType = "DateTime", IsNullable = true)]
+        public DateTime LastUpdatedDate
+        {
+            get { return _LastUpdatedDate; }
+            set { _LastUpdatedDate = value; }
+        }
+    }
+
+    public class ProposalDtDao
+    {
+        private readonly IDbContext _ctx = DbFactory.Configure();
+        private readonly DbHelper _helper = new DbHelper(typeof(ProposalDt));
+        private bool _isAuditLog = false;
+        private const string p_ID = "@p_ID";
+        public ProposalDtDao() { }
+        public ProposalDtDao(IDbContext ctx)
+        {
+            _ctx = ctx;
+        }
+        public ProposalDt Get(Int32 ID)
+        {
+            _ctx.CommandText = _helper.GetRecord();
+            _ctx.Add(p_ID, ID);
+            DataRow row = DaoBase.GetDataRow(_ctx);
+            return (row == null) ? null : (ProposalDt)_helper.DataRowToObject(row, new ProposalDt());
+        }
+        public int Insert(ProposalDt record)
+        {
+            record.CreatedDate = DateTime.Now;
+            _helper.Insert(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx);
+        }
+        public int Update(ProposalDt record)
+        {
+            record.LastUpdatedDate = DateTime.Now;
+            _helper.Update(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx, true);
+        }
+        public int Delete(Int32 ID)
+        {
+            ProposalDt record;
+            if (_ctx.Transaction == null)
+                record = new ProposalDtDao().Get(ID);
+            else
+                record = Get(ID);
+            _helper.Delete(_ctx, record, _isAuditLog);
+            return DaoBase.ExecuteNonQuery(_ctx);
+        }
+    }
+    #endregion
     #region ProposalHd
     [Serializable]
     [Table(Name = "ProposalHd")]

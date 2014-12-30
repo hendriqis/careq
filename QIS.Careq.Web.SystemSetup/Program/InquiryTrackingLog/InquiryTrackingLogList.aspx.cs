@@ -35,7 +35,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
             string filterExpression = hdnFilterExpression.Value;
             if (filterExpression != "")
                 filterExpression += " AND ";
-            filterExpression += String.Format("GCInquiryStatus = '{0}'",Constant.LeadStatus.OPENED);
+            filterExpression += String.Format("GCInquiryStatus = '{0}'", Constant.EventStatus.OPENED);
 
             if (isCountPageCount)
             {
@@ -93,7 +93,7 @@ namespace QIS.Careq.Web.SystemSetup.Program
             if (hdnID.Value.ToString() != "")
             {
                 Inquiry entity = BusinessLayer.GetInquiry(Convert.ToInt32(hdnID.Value));
-                entity.GCInquiryStatus = Constant.LeadStatus.DELETED;
+                entity.GCInquiryStatus = Constant.EventStatus.DELETED;
                 entity.LastUpdatedBy = AppSession.UserLogin.UserID;
                 BusinessLayer.UpdateInquiry(entity);
                 return true;

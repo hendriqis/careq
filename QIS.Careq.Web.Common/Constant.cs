@@ -142,6 +142,10 @@ namespace QIS.Careq.Web.Common
             public const string INQUIRY_TRACKING_LOG_ENTRY = "PQ4200";
             public const string CHANGE_INQUIRY_STATUS = "PQ4300";
 
+            public const string PROPOSAL_REGISTRATION = "PQ5100";
+            public const string PROPOSAL_TRACKING_LOG_ENTRY = "PQ5200";
+            public const string CHANGE_PROPOSAL_STATUS = "PQ5300";
+
             public const string APPLICATION = "PQ7101";
             public const string MODULE = "PQ7102";
             public const string MENU = "PQ7103";
@@ -181,9 +185,12 @@ namespace QIS.Careq.Web.Common
 
         public static class LeadStatus
         {
-            public const string OPENED = "X150^001";
-            public const string CLOSED = "X150^002";
-            public const string DELETED = "X150^003";
+            public const string OPENED = "X152^001";
+            public const string FOLLOW_UP = "X152^002";
+            public const string NON_MC_LEADS = "X152^003";
+            public const string MC_INQUIRY= "X152^004";	
+            public const string CLOSED = "X152^005";
+            public const string VOID = "X152^999";
         }
 
         public static class LeadSourceType 
